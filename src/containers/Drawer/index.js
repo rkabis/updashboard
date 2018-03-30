@@ -14,9 +14,10 @@ export default class extends Component {
 					display: 'flex',
 					flexDirection: 'column',
 					height: '100vh',
-					width: '5vw',
+					width: '4vw',
 					backgroundColor: '#1C232C',
-					padding: '10px'
+					zIndex: 10,
+					overflow: 'hidden'
 				}}
 			>
 				<Button
@@ -34,6 +35,14 @@ export default class extends Component {
 					icon={'jeep'}
 					onChangeMapData={onChangeMapData}
 				/>
+				<div
+					style={{
+						width: '40px',
+						height: '2px',
+						backgroundColor: '#3A4047',
+					}}
+				>
+				</div>
 				<Button
 					icon={'rental'}
 					onChangeMapData={onChangeMapData}
@@ -42,6 +51,14 @@ export default class extends Component {
 					icon={'toilet'}
 					onChangeMapData={onChangeMapData}
 				/>
+				<div
+					style={{
+						width: '40px',
+						height: '2px',
+						backgroundColor: '#3A4047',
+					}}
+				>
+				</div>
 				<Button
 					icon={'plus'}
 				/>

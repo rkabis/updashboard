@@ -7,12 +7,13 @@ export default class extends Component {
 		return (
 			<div
 				style={{
-					position: 'fixed',
 					display: 'flex',
 					flexDirection: 'row',
 					backgroundColor: '#A31F25',
-					width: '95vw',
-					height: '7vh'
+					width: '97vw',
+					height: '6vh',
+					zIndex: 10,
+					overflow: 'hidden'
 				}}
 			>
 				<div
