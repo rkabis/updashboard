@@ -19,7 +19,8 @@ export default class extends Component {
 					color: 'white',
 					display: 'flex',
 					flexDirection: 'column',
-					fontFamily: 'Muli'
+					fontFamily: 'Muli',
+					cursor: 'pointer'
 				}}
 			>
 				{title}

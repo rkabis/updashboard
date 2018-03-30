@@ -18,13 +18,16 @@ export default class extends Component {
 
 		return (
 			<div
+				style={{
+					cursor: 'pointer'
+				}}
 				onClick={onChangeMapData ? () => onChangeMapData(icon) : null}
 			>
 				<img
 					src={require('./icons/' + icon + '.png')}
 					alt={icon}
-					width={'40vw'}
-					height={'45vh'}
+					width={'35vw'}
+					height={'40vh'}
 				/>
 				{title}
 			</div>

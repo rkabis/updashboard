@@ -29,7 +29,14 @@ export default class extends Component {
 		} = this.props
 
 		return (
-			<div>
+			<div
+				style={{
+					position: 'absolute',
+					marginTop: '6vh',
+					marginLeft: '0.5vw',
+					zIndex: 5,
+				}}
+			>
 				<Map
 					center={mapCenter}
 					zoom={zoomLevel}

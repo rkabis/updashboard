@@ -7,6 +7,6 @@ body {
 .leaflet-container {
 	position: absolute;
 	overflow: hidden;
-	height: 93vh;
-	width: 95vw;
+	height: 94vh;
+	width: 99.5vw;
 }
