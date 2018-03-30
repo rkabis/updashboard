@@ -14,7 +14,7 @@ export default class extends Component {
 		const {
 			mapdata
 		} = this.props
-		console.log('test')
+
 		return (
 			<div>
 				<Map
@@ -27,7 +27,10 @@ export default class extends Component {
 						id={mapboxId}
 						accessToken={mapboxAccess}
 					/>
-					<GeoJSON data={mapdata ? require('./geojson/UP' + mapdata + '.json') : null} />
+					<GeoJSON
+						key={mapdata}
+						data={mapdata ? require('./geojson/UP' + mapdata + '.json') : null}
+					/>
 				</Map>
 			</div>
 		)
