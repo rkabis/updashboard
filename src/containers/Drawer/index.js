@@ -3,18 +3,11 @@ import React, { Component} from 'react'
 import Button from './Button'
 
 export default class extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			mapdata: null
-		}
-	}
-
-	renderMap(i) {
-		
-	}
-
 	render() {
+		const {
+			onChangeMapData
+		} = this.props
+
 		return (
 			<div
 				style={{
@@ -31,19 +24,23 @@ export default class extends Component {
 				/>
 				<Button
 					icon={'building'}
+					onChangeMapData={onChangeMapData}
 				/>
 				<Button
 					icon={'bike'}
-					onClick={() => this.renderMap('bike')}
+					onChangeMapData={onChangeMapData}
 				/>
 				<Button
 					icon={'jeep'}
+					onChangeMapData={onChangeMapData}
 				/>
 				<Button
 					icon={'rental'}
+					onChangeMapData={onChangeMapData}
 				/>
 				<Button
 					icon={'toilet'}
+					onChangeMapData={onChangeMapData}
 				/>
 				<Button
 					icon={'plus'}

@@ -12,11 +12,14 @@ export default class extends Component {
 	render() {
 		const {
 			title,
-			icon
+			icon,
+			onChangeMapData
 		} = this.props
 
 		return (
-			<div>
+			<div
+				onClick={onChangeMapData ? () => onChangeMapData(icon) : null}
+			>
 				<img
 					src={require('./icons/' + icon + '.png')}
 					alt={icon}
