@@ -15,6 +15,7 @@ export default class extends Component {
 		const {
 			mapdata
 		} = this.props
+		
 		var popupContent = switchFunctionTest(feature, mapdata)
 		layer.bindPopup(popupContent)
 		layer.on('mouseover', function (e) {
