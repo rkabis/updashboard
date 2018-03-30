@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import Drawer from './Drawer'
-import Header from './Header'
-import LeafletMap from './LeafletMap'
+import Header from './AppBar'
+import BackgroundMap from './BackgroundMap'
 
 export default class extends Component {
 	constructor () {
@@ -31,7 +31,7 @@ export default class extends Component {
 					onChangeMapData={(e) => this.setState({ mapdata: e })}
 				/>
 				<Header />
-				<LeafletMap
+				<BackgroundMap
 					mapdata={mapdata}
 				/>
 			</div>
