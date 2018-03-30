@@ -7,6 +7,7 @@ export default class extends Component {
 		return (
 			<div
 				style={{
+					position: 'fixed',
 					display: 'flex',
 					flexDirection: 'row',
 					backgroundColor: '#A31F25',
