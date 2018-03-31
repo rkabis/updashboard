@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Button from './Button'
+import AppButton from './AppButton'
 
 export default class extends Component {
 	render() {
@@ -25,10 +25,10 @@ export default class extends Component {
 					{'UP Dashboard'}
 				</div>
 
-				<Button
+				<AppButton
 					title={'ABOUT US'}
 				/>
-				<Button
+				<AppButton
 					title={'FEEDBACK'}
 				/>
 			</div>

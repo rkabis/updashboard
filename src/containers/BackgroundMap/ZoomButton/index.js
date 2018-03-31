@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 
 export default class extends Component {
 	render() {
+		const {
+			zoomIn,
+			zoomOut
+		} = this.props
+		
 		return (
 			<div
 				style={{
@@ -15,12 +20,14 @@ export default class extends Component {
 					alt={'in'}
 					width={'35vw'}
 					height={'40vh'}
+					onClick={zoomIn}
 				/>
 				<img
 					src={require('./icons/out.png')}
 					alt={'out'}
 					width={'35vw'}
 					height={'40vh'}
+					onClick={zoomOut}
 				/>
 			</div>
 		)

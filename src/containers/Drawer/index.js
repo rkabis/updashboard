@@ -1,6 +1,6 @@
 import React, { Component} from 'react'
 
-import Button from './Button'
+import DrawerButton from './DrawerButton'
 
 export default class extends Component {
 	render() {
@@ -20,18 +20,18 @@ export default class extends Component {
 					overflow: 'hidden'
 				}}
 			>
-				<Button
+				<DrawerButton
 					icon={'menu'}
 				/>
-				<Button
+				<DrawerButton
 					icon={'building'}
 					onChangeMapData={onChangeMapData}
 				/>
-				<Button
+				<DrawerButton
 					icon={'bike'}
 					onChangeMapData={onChangeMapData}
 				/>
-				<Button
+				<DrawerButton
 					icon={'jeep'}
 					onChangeMapData={onChangeMapData}
 				/>
@@ -43,11 +43,11 @@ export default class extends Component {
 					}}
 				>
 				</div>
-				<Button
+				<DrawerButton
 					icon={'rental'}
 					onChangeMapData={onChangeMapData}
 				/>
-				<Button
+				<DrawerButton
 					icon={'toilet'}
 					onChangeMapData={onChangeMapData}
 				/>
@@ -59,13 +59,13 @@ export default class extends Component {
 					}}
 				>
 				</div>
-				<Button
+				<DrawerButton
 					icon={'plus'}
 				/>
-				<Button
+				<DrawerButton
 					icon={'plus'}
 				/>
-				<Button
+				<DrawerButton
 					icon={'news'}
 				/>
 			</div>
