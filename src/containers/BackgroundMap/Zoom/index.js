@@ -2,26 +2,26 @@ import React, { Component } from 'react'
 
 export default class extends Component {
 	render() {
-		const {
-			title,
-			icon,
-			onChangeMapData
-		} = this.props
-
 		return (
 			<div
 				style={{
+					display: 'flex',
+					flexDirection: 'column',
 					cursor: 'pointer'
 				}}
-				onClick={onChangeMapData ? () => onChangeMapData(icon) : null}
 			>
 				<img
-					src={require('./icons/' + icon + '.png')}
-					alt={icon}
+					src={require('./icons/in.png')}
+					alt={'in'}
 					width={'35vw'}
 					height={'40vh'}
 				/>
-				{title}
+				<img
+					src={require('./icons/out.png')}
+					alt={'out'}
+					width={'35vw'}
+					height={'40vh'}
+				/>
 			</div>
 		)
 	}
