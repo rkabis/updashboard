@@ -29,6 +29,7 @@ export default class extends Component {
 			>
 				<Drawer
 					onChangeMapData={(e) => this.setState({ mapdata: e })}
+					mapdata={mapdata}
 				/>
 				<Header />
 				<BackgroundMap

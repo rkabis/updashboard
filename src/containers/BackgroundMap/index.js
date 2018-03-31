@@ -9,9 +9,6 @@ const mapboxAttr =  'Map data &copy; <a href="http://openstreetmap.org">OpenStre
 const mapboxId = 'mapbox.streets'
 const mapboxAccess = 'your.mapbox.access.token'
 
-// const mapCenter = [14.654912, 121.064264]
-// let zoomLevel = 16
-
 export default class extends Component {
 	onEachFeature(feature, layer) {
 		const {

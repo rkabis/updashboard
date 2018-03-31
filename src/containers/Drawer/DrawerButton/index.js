@@ -5,7 +5,8 @@ export default class extends Component {
 		const {
 			title,
 			icon,
-			onChangeMapData
+			onChangeMapData,
+			mapdata
 		} = this.props
 
 		return (
@@ -13,7 +14,8 @@ export default class extends Component {
 				style={{
 					cursor: 'pointer'
 				}}
-				onClick={onChangeMapData ? () => onChangeMapData(icon) : null}
+				// onClick={onChangeMapData ? () => onChangeMapData(icon) : () => onChangeMapData(null)}
+				onClick={mapdata!==icon ? () => onChangeMapData(icon) : () => onChangeMapData(null)}
 			>
 				<img
 					src={require('./icons/' + icon + '.png')}
