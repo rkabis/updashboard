@@ -9,6 +9,13 @@ const mapboxAttr =  'Map data &copy; <a href="http://openstreetmap.org">OpenStre
 const mapboxId = 'mapbox.streets'
 const mapboxAccess = 'your.mapbox.access.token'
 
+const componentStyle = {
+	position: 'absolute',
+	marginTop: '6vh',
+	marginLeft: '0.5vw',
+	zIndex: 5
+}
+
 export default class extends Component {
 	onEachFeature(feature, layer) {
 		const {
@@ -38,14 +45,7 @@ export default class extends Component {
 		} = this.props
 
 		return (
-			<div
-				style={{
-					position: 'absolute',
-					marginTop: '6vh',
-					marginLeft: '0.5vw',
-					zIndex: 5
-				}}
-			>
+			<div style={componentStyle}>
 				<Map
 					center={this.state.mapCenter}
 					zoom={this.state.zoomLevel}

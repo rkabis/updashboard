@@ -2,6 +2,22 @@ import React, { Component} from 'react'
 
 import DrawerButton from './DrawerButton'
 
+const componentStyle = {
+	display: 'flex',
+	flexDirection: 'column',
+	height: '100vh',
+	width: '4vw',
+	backgroundColor: '#1C232C',
+	zIndex: 10,
+	overflow: 'hidden'
+}
+
+const lineStyle = {
+	width: '40px',
+	height: '2px',
+	backgroundColor: '#3A4047'
+}
+
 export default class extends Component {
 	render() {
 		const {
@@ -10,17 +26,7 @@ export default class extends Component {
 		} = this.props
 
 		return (
-			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					height: '100vh',
-					width: '4vw',
-					backgroundColor: '#1C232C',
-					zIndex: 10,
-					overflow: 'hidden'
-				}}
-			>
+			<div style={componentStyle}>
 				<DrawerButton
 					icon={'menu'}
 				/>
@@ -39,14 +45,7 @@ export default class extends Component {
 					onChangeMapData={onChangeMapData}
 					mapdata={mapdata}
 				/>
-				<div
-					style={{
-						width: '40px',
-						height: '2px',
-						backgroundColor: '#3A4047',
-					}}
-				>
-				</div>
+				<div style={lineStyle} />
 				<DrawerButton
 					icon={'rental'}
 					onChangeMapData={onChangeMapData}
@@ -57,14 +56,7 @@ export default class extends Component {
 					onChangeMapData={onChangeMapData}
 					mapdata={mapdata}
 				/>
-				<div
-					style={{
-						width: '40px',
-						height: '2px',
-						backgroundColor: '#3A4047',
-					}}
-				>
-				</div>
+				<div style={lineStyle} />
 				<DrawerButton
 					icon={'plus'}
 				/>

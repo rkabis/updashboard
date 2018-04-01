@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 
+const componentStyle = {
+	display: 'flex',
+	flexDirection: 'column',
+	cursor: 'pointer'	
+}
+
 export default class extends Component {
 	render() {
 		const {
@@ -8,13 +14,7 @@ export default class extends Component {
 		} = this.props
 		
 		return (
-			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					cursor: 'pointer'
-				}}
-			>
+			<div style={componentStyle}>
 				<img
 					src={require('./icons/in.png')}
 					alt={'in'}

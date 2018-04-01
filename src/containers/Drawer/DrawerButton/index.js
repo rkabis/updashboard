@@ -14,8 +14,7 @@ export default class extends Component {
 				style={{
 					cursor: 'pointer'
 				}}
-				// onClick={onChangeMapData ? () => onChangeMapData(icon) : () => onChangeMapData(null)}
-				onClick={mapdata!==icon ? () => onChangeMapData(icon) : () => onChangeMapData(null)}
+				onClick={onChangeMapData ? (mapdata!==icon ? () => onChangeMapData(icon) : () => onChangeMapData(null)) : null}
 			>
 				<img
 					src={require('./icons/' + icon + '.png')}
