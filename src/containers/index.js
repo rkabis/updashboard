@@ -4,12 +4,21 @@ import Drawer from './Drawer'
 import Header from './AppBar'
 import BackgroundMap from './BackgroundMap'
 
+const componentStyle = {
+	display: 'flex',
+	flexDirection: 'row',
+	height: '100vh',
+	widght: '100vw',
+	backgroundColor: 'white'	
+}
+
 export default class extends Component {
 	constructor () {
 		super()
 		this.state = {
 			mapdata: null
 		}
+		this.onChangeMapData = (e) => this.setState({mapdata: e})
 	}
 
 	render() {
@@ -18,17 +27,10 @@ export default class extends Component {
 		} = this.state
 
 		return (
-			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'row',
-					height: '100vh',
-					widght: '100vw',
-					backgroundColor: 'white'
-				}}
-			>
+			<div style={componentStyle}>
 				<Drawer
-					onChangeMapData={(e) => this.setState({ mapdata: e })}
+					onChangeMapData={this.onChangeMapData}
+					mapdata={mapdata}
 				/>
 				<Header />
 				<BackgroundMap
