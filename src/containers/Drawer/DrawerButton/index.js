@@ -20,6 +20,9 @@ export default class extends Component {
 					alt={icon}
 					width={'35vw'}
 					height={'40vh'}
+					style={{
+						filter: 'brightness(30)'
+					}}
 				/>
 			</div>
 		)

@@ -6,14 +6,6 @@ let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
 let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
 
 export default class extends Component {
-	// constructor() {
-	// 	super()
-	// 	this.state = {
-	// 		arrayForCategoryOne: ['utility', 'gym', 'admin', 'library', 'museum'],
-	// 		arrayForCategoryTwo: ['org', 'parking', 'wifi', 'bucket', 'gates']
-	// 	}
-	// }
-
 	render() {
 		const {
 			arrayOfFeatures
@@ -30,6 +22,7 @@ export default class extends Component {
 							icon={featureElement}
 							arrayForCategory={arrayForCategoryOne}
 							arrayOfFeatures={arrayOfFeatures}
+							onClose={this.props.onClose}
 						/>
 					)}
 				</div>
@@ -41,6 +34,7 @@ export default class extends Component {
 							icon={featureElement}
 							arrayForCategory={arrayForCategoryTwo}
 							arrayOfFeatures={arrayOfFeatures}
+							onClose={this.props.onClose}
 						/>
 					)}
 				</div>
