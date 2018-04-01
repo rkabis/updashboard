@@ -14,7 +14,7 @@ const componentStyle = {
 
 const lineStyle = {
 	width: '40px',
-	height: '2px',
+	height: '4px',
 	backgroundColor: '#3A4047'
 }
 
