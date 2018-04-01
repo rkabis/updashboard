@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Weather from './Weather'
+import News from './News'
 
 const backdropStyle = {
   position: 'fixed',
@@ -15,10 +16,11 @@ const backdropStyle = {
 const modalStyle = {
   backgroundColor: '#fff',
   borderRadius: 5,
-  maxWidth: 500,
-  minHeight: 300,
+  width: 500,
+  height: 300,
   margin: '0 auto',
-  padding: 30
+  padding: 30,
+  overflow: 'scroll'
 }
 
 export default class extends Component {
@@ -30,6 +32,7 @@ export default class extends Component {
       <div style={backdropStyle}>
         <div style={modalStyle}>
           <Weather />
+          <News />
           <button onClick={this.props.onClose}>
             x
           </button>

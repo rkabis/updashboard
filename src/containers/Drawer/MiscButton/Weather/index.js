@@ -4,10 +4,6 @@ let requestObj = null
 
 export default class extends Component {
 	render() {
-	const {
-		result
-	} = this.props
-	
 		function convertKelvinToCelsius(kelvin) {
 			if (kelvin < (0)) {
 				return 'below absolute zero (0 K)'
@@ -31,6 +27,12 @@ export default class extends Component {
 			let UPsunset = result.sys.sunset
 			UPsunset = new Date(UPsunset*1000).toString()
 			UPsunset = UPsunset.substring(16, 21)
+			document.getElementById("dashDate").innerHTML = "<strong>Date:</strong> " + UPdate
+			document.getElementById("dashTemp").innerHTML = "<strong>Temperature:</strong> " + UPtemp
+			document.getElementById("dashHumid").innerHTML = "<strong>Humidity:</strong> " + UPhumid
+			document.getElementById("dashCloud").innerHTML = "<strong>Cloudiness:</strong> " + UPcloud
+			document.getElementById("dashRise").innerHTML = "<strong>Sunrise:</strong> " + UPsunrise
+			document.getElementById("dashSet").innerHTML = "<strong>Sunset:</strong> " + UPsunset
 		}
 
 		function fetchWeather() {
@@ -40,12 +42,17 @@ export default class extends Component {
 			requestObj.open('GET', requestLocation, true)
 			requestObj.send(null)
 		}
+
 		fetchWeather()
+
 		return (
 			<div>
-				<button onClick={() => console.log(result)}>
-					asdf
-				</button>
+				<div id="dashDate"/>
+				<div id="dashTemp"/>
+				<div id="dashHumid"/>
+				<div id="dashCloud"/>
+				<div id="dashRise"/>
+				<div id="dashSet"/>
 			</div>
 		)
 	}
