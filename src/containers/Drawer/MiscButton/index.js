@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
+
+import Weather from './Weather'
+import News from './News'
 
 const backdropStyle = {
   position: 'fixed',
@@ -13,17 +16,14 @@ const backdropStyle = {
 const modalStyle = {
   backgroundColor: '#fff',
   borderRadius: 5,
-  maxWidth: 500,
-  minHeight: 300,
+  width: 500,
+  height: 300,
   margin: '0 auto',
-  padding: 30
+  padding: 30,
+  overflow: 'scroll'
 }
 
-const feedbackText = {
-	content: 'feedback yo'
-}
-
-export default class AboutButton extends React.Component {
+export default class extends Component {
   render() {
     if(!this.props.show) {
       return null
@@ -31,7 +31,8 @@ export default class AboutButton extends React.Component {
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-        	{feedbackText.content}
+          <Weather />
+          <News />
           <button onClick={this.props.onClose}>
             x
           </button>
