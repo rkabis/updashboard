@@ -14,17 +14,25 @@ const componentStyle = {
 	overflow: 'hidden'
 }
 
+const lineStyle = {
+	width: '40px',
+	height: '2px',
+	backgroundColor: '#3A4047'
+}
+
 export default class extends Component {
 	constructor() {
 		super()
 		this.state = {
+			addOne: 'plus',
+			addTwo: 'plus',
 			addOpen: false,
-			arrayOfFeatures: ['building', 'bike', 'jeep', 'rental', 'toilet'],
 			newsOpen: false
 		}
 		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
 		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
 	}
+
 
 	render() {
 		const {
@@ -37,29 +45,50 @@ export default class extends Component {
 				<DrawerButton
 					icon={'menu'}
 				/>
-
-				{this.state.arrayOfFeatures.map(featureElement => 
-					<DrawerButton
-						key={featureElement}
-						icon={featureElement}
-						onChangeMapData={onChangeMapData}
-						mapdata={mapdata}
-					/>
-				)}
+				<DrawerButton
+					icon={'building'}
+					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
+				/>
+				<DrawerButton
+					icon={'bike'}
+					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
+				/>
+				<DrawerButton
+					icon={'jeep'}
+					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
+				/>
+				<div style={lineStyle} />
+				<DrawerButton
+					icon={'rental'}
+					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
+				/>
+				<DrawerButton
+					icon={'toilet'}
+					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
+				/>
+				<div style={lineStyle} />
 
 				<div>
 					<div onClick={this.addModal}>
 						<DrawerButton
-							icon={'plus'}
+							icon={this.state.addOne}
 						/>
 					</div>
 					<AddFeature
 						show={this.state.addOpen}
 						onClose={this.addModal}
-						arrayOfFeatures={this.state.arrayOfFeatures}
 					>
 					</AddFeature>
 				</div>
+
+				<DrawerButton
+					icon={this.state.addTwo}
+				/>
 
 				<div>
 					<div onClick={this.newsModal}>

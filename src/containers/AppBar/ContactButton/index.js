@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 const backdropStyle = {
   position: 'fixed',
@@ -19,11 +19,11 @@ const modalStyle = {
   padding: 30
 }
 
-const feedbackText = {
+const contactText = {
 	content: 'feedback yo'
 }
 
-export default class AboutButton extends React.Component {
+export default class extends Component {
   render() {
     if(!this.props.show) {
       return null
@@ -31,7 +31,7 @@ export default class AboutButton extends React.Component {
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-        	{feedbackText.content}
+        	{contactText.content}
           <button onClick={this.props.onClose}>
             x
           </button>

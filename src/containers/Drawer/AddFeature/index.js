@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { Component }  from 'react'
+
+import FeatureList from './FeatureList'
 
 const backdropStyle = {
   position: 'fixed',
@@ -19,22 +21,25 @@ const modalStyle = {
   padding: 30
 }
 
-const newsText = {
-	content: 'News!!'
-}
-
-export default class extends React.Component {
+export default class extends Component {
   render() {
     if(!this.props.show) {
       return null
     }
+
+    const {
+      arrayOfFeatures
+    } = this.props
+
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-        	{newsText.content}
           <button onClick={this.props.onClose}>
             x
           </button>
+          <FeatureList
+            arrayOfFeatures={arrayOfFeatures}
+          />
         </div>
       </div>
     )

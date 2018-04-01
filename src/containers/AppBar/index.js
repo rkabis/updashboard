@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import FeedbackButton from './FeedbackButton'
+import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
 
 const componentStyle = {
@@ -37,10 +37,10 @@ export default class extends Component {
 		super()
 		this.state = {
 			aboutOpen: false,
-			feedOpen: false
+			contactOpen: false
 		}
 		this.aboutModal = () => this.setState({aboutOpen: !this.state.aboutOpen})
-		this.feedModal = () => this.setState({feedOpen: !this.state.feedOpen})
+		this.contactModal = () => this.setState({contactOpen: !this.state.contactOpen})
 	}
 
 	render() {
@@ -67,17 +67,17 @@ export default class extends Component {
 
 				<div>
 					<div
-						onClick={this.feedModal}
+						onClick={this.contactModal}
 						style={buttonStyle}
 					>
-						Feedback
+						Contact Us
 					</div>
 					<div style={lineStyle} />
-					<FeedbackButton
-						show={this.state.feedOpen}
-						onClose={this.feedModal}
+					<ContactButton
+						show={this.state.contactOpen}
+						onClose={this.contactModal}
 					>
-					</FeedbackButton>
+					</ContactButton>
 				</div>
 
 			</div>
