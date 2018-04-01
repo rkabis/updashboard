@@ -13,14 +13,11 @@ const backdropStyle = {
 const modalStyle = {
   backgroundColor: '#fff',
   borderRadius: 5,
-  maxWidth: 500,
-  minHeight: 300,
+  width: 500,
+  height: 300,
   margin: '0 auto',
-  padding: 30
-}
-
-const contactText = {
-	content: 'feedback yo'
+  padding: 30,
+  overflow: 'hidden'
 }
 
 export default class extends Component {
@@ -31,10 +28,10 @@ export default class extends Component {
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-        	{contactText.content}
           <button onClick={this.props.onClose}>
             x
           </button>
+        	<iframe title='Dashboard Survey' src="https://docs.google.com/forms/d/e/1FAIpQLSehba86m0qvlBiDFnp_9ol6WXsSD52RnfLK4HO4zP9QFrZFvQ/viewform?embedded=true" width="500" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
       </div>
     )
