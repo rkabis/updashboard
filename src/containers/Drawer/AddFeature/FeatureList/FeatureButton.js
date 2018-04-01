@@ -14,7 +14,6 @@ export default class extends Component {
 			icon,
 			arrayForCategory,
 			arrayOfFeatures,
-			handleClick
 		} = this.props
 
 		const featureTitle = FeatureTitle(icon)
@@ -24,7 +23,7 @@ export default class extends Component {
 				style={componentStyle}
 				onClick={
 					() => {
-						this.setState({arrayOfFeatures: arrayOfFeatures.push(icon)})
+						arrayOfFeatures.push(icon)
 						const categoryIndex = arrayForCategory.indexOf(icon)
 						this.setState({arrayForCategory: arrayForCategory.splice(categoryIndex, 1)})
 					}

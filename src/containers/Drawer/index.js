@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import DrawerButton from './DrawerButton'
-import NewsButton from './NewsButton'
+import MiscButton from './MiscButton'
 import AddFeature from './AddFeature'
 
 const componentStyle = {
@@ -67,11 +67,11 @@ export default class extends Component {
 							icon={'news'}
 						/>
 					</div>
-					<NewsButton
+					<MiscButton
 						show={this.state.newsOpen}
 						onClose={this.newsModal}
 					>
-					</NewsButton>
+					</MiscButton>
 				</div>
 				
 			</div>
