@@ -1,71 +1,69 @@
 import React, { Component} from 'react'
 
-import Button from './Button'
+import DrawerButton from './DrawerButton'
+
+const componentStyle = {
+	display: 'flex',
+	flexDirection: 'column',
+	height: '100vh',
+	width: '4vw',
+	backgroundColor: '#1C232C',
+	zIndex: 10,
+	overflow: 'hidden'
+}
+
+const lineStyle = {
+	width: '40px',
+	height: '2px',
+	backgroundColor: '#3A4047'
+}
 
 export default class extends Component {
 	render() {
 		const {
-			onChangeMapData
+			onChangeMapData,
+			mapdata
 		} = this.props
 
 		return (
-			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					height: '100vh',
-					width: '4vw',
-					backgroundColor: '#1C232C',
-					zIndex: 10,
-					overflow: 'hidden'
-				}}
-			>
-				<Button
+			<div style={componentStyle}>
+				<DrawerButton
 					icon={'menu'}
 				/>
-				<Button
+				<DrawerButton
 					icon={'building'}
 					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
 				/>
-				<Button
+				<DrawerButton
 					icon={'bike'}
 					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
 				/>
-				<Button
+				<DrawerButton
 					icon={'jeep'}
 					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
 				/>
-				<div
-					style={{
-						width: '40px',
-						height: '2px',
-						backgroundColor: '#3A4047',
-					}}
-				>
-				</div>
-				<Button
+				<div style={lineStyle} />
+				<DrawerButton
 					icon={'rental'}
 					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
 				/>
-				<Button
+				<DrawerButton
 					icon={'toilet'}
 					onChangeMapData={onChangeMapData}
+					mapdata={mapdata}
 				/>
-				<div
-					style={{
-						width: '40px',
-						height: '2px',
-						backgroundColor: '#3A4047',
-					}}
-				>
-				</div>
-				<Button
+				<div style={lineStyle} />
+				<DrawerButton
 					icon={'plus'}
 				/>
-				<Button
+				<DrawerButton
 					icon={'plus'}
 				/>
-				<Button
+				<DrawerButton
 					icon={'news'}
 				/>
 			</div>

@@ -1,19 +1,12 @@
 import React, { Component } from 'react'
 
 export default class extends Component {
-
-	constructor(props){
-		super(props)
-		this.state = {
-			clicked: false
-		}
-	}
-
 	render() {
 		const {
 			title,
 			icon,
-			onChangeMapData
+			onChangeMapData,
+			mapdata
 		} = this.props
 
 		return (
@@ -21,7 +14,7 @@ export default class extends Component {
 				style={{
 					cursor: 'pointer'
 				}}
-				onClick={onChangeMapData ? () => onChangeMapData(icon) : null}
+				onClick={onChangeMapData ? (mapdata!==icon ? () => onChangeMapData(icon) : () => onChangeMapData(null)) : null}
 			>
 				<img
 					src={require('./icons/' + icon + '.png')}
