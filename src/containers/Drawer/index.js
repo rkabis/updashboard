@@ -1,6 +1,8 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 
 import DrawerButton from './DrawerButton'
+import MiscButton from './MiscButton'
+import AddFeature from './AddFeature'
 
 const componentStyle = {
 	display: 'flex',
@@ -12,13 +14,18 @@ const componentStyle = {
 	overflow: 'hidden'
 }
 
-const lineStyle = {
-	width: '40px',
-	height: '2px',
-	backgroundColor: '#3A4047'
-}
-
 export default class extends Component {
+	constructor() {
+		super()
+		this.state = {
+			addOpen: false,
+			arrayOfFeatures: ['building', 'bike', 'jeep', 'rental', 'toilet'],
+			newsOpen: false
+		}
+		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
+		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
+	}
+
 	render() {
 		const {
 			onChangeMapData,
@@ -30,42 +37,43 @@ export default class extends Component {
 				<DrawerButton
 					icon={'menu'}
 				/>
-				<DrawerButton
-					icon={'building'}
-					onChangeMapData={onChangeMapData}
-					mapdata={mapdata}
-				/>
-				<DrawerButton
-					icon={'bike'}
-					onChangeMapData={onChangeMapData}
-					mapdata={mapdata}
-				/>
-				<DrawerButton
-					icon={'jeep'}
-					onChangeMapData={onChangeMapData}
-					mapdata={mapdata}
-				/>
-				<div style={lineStyle} />
-				<DrawerButton
-					icon={'rental'}
-					onChangeMapData={onChangeMapData}
-					mapdata={mapdata}
-				/>
-				<DrawerButton
-					icon={'toilet'}
-					onChangeMapData={onChangeMapData}
-					mapdata={mapdata}
-				/>
-				<div style={lineStyle} />
-				<DrawerButton
-					icon={'plus'}
-				/>
-				<DrawerButton
-					icon={'plus'}
-				/>
-				<DrawerButton
-					icon={'news'}
-				/>
+
+				{this.state.arrayOfFeatures.map(featureElement => 
+					<DrawerButton
+						key={featureElement}
+						icon={featureElement}
+						onChangeMapData={onChangeMapData}
+						mapdata={mapdata}
+					/>
+				)}
+
+				<div>
+					<div onClick={this.addModal}>
+						<DrawerButton
+							icon={'plus'}
+						/>
+					</div>
+					<AddFeature
+						show={this.state.addOpen}
+						onClose={this.addModal}
+						arrayOfFeatures={this.state.arrayOfFeatures}
+					>
+					</AddFeature>
+				</div>
+
+				<div>
+					<div onClick={this.newsModal}>
+						<DrawerButton
+							icon={'news'}
+						/>
+					</div>
+					<MiscButton
+						show={this.state.newsOpen}
+						onClose={this.newsModal}
+					>
+					</MiscButton>
+				</div>
+				
 			</div>
 		)
 	}
