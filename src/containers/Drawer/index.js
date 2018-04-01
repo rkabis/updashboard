@@ -1,6 +1,8 @@
 import React, { Component} from 'react'
 
 import DrawerButton from './DrawerButton'
+import NewsButton from './NewsButton'
+import AddFeature from './AddFeature'
 
 const componentStyle = {
 	display: 'flex',
@@ -19,6 +21,19 @@ const lineStyle = {
 }
 
 export default class extends Component {
+	constructor() {
+		super()
+		this.state = {
+			addOne: 'plus',
+			addTwo: 'plus',
+			addOpen: false,
+			newsOpen: false
+		}
+		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
+		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
+	}
+
+
 	render() {
 		const {
 			onChangeMapData,
@@ -57,15 +72,30 @@ export default class extends Component {
 					mapdata={mapdata}
 				/>
 				<div style={lineStyle} />
+
 				<DrawerButton
-					icon={'plus'}
+					icon={this.state.addOne}
 				/>
 				<DrawerButton
-					icon={'plus'}
+					icon={this.state.addTwo}
 				/>
-				<DrawerButton
-					icon={'news'}
-				/>
+
+				<div>
+					<div onClick={this.newsModal}>
+						<img
+							src={require('./icons/news.png')}
+							alt={'news'}
+							width={'35vw'}
+							height={'40vh'}
+						/>
+					</div>
+					<NewsButton
+						show={this.state.newsOpen}
+						onClose={this.newsModal}
+					>
+					</NewsButton>
+				</div>
+				
 			</div>
 		)
 	}
