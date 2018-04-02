@@ -9,6 +9,7 @@ const componentStyle = {
 }
 
 const removableFeatures = ['utility', 'gym', 'admin', 'library', 'museum', 'org', 'parking', 'wifi', 'bucket', 'gates']
+const returnableArrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
 
 export default class extends Component {
 	render() {
@@ -16,7 +17,8 @@ export default class extends Component {
 			icon,
 			onChangeMapData,
 			mapdata,
-			arrayOfFeatures
+			arrayOfFeatures,
+			removeFeature
 		} = this.props
 
 		let state = false
@@ -39,9 +41,13 @@ export default class extends Component {
 							filter: 'brightness(30)',
 						}}
 				/>
-				<DeleteBox
-					show={state}
-				/>
+				<div
+					onClick={() => this.props.removeFeature(icon)}
+				>
+					<DeleteBox
+						show={state}
+					/>
+				</div>
 			</div>
 		)
 	}

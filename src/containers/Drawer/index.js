@@ -25,6 +25,14 @@ export default class extends Component {
 		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
 		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
 		this.plusOpen = () => this.setState({plusStatus: !this.state.plusStatus})
+		this.removeFeature = this.removeFeature.bind(this)
+	}
+
+	removeFeature(icon) {
+		const categoryIndex = this.state.arrayOfFeatures.indexOf(icon)
+		let test = this.state.arrayOfFeatures
+		test.splice(categoryIndex, 1)
+		this.setState({arrayOfFeatures: test})
 	}
 
 	render() {
@@ -46,6 +54,7 @@ export default class extends Component {
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
 						arrayOfFeatures={this.state.arrayOfFeatures}
+						removeFeature={this.removeFeature}
 					/>
 				)}
 
