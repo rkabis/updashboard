@@ -8,15 +8,14 @@ const deleteStyle = {
 
 export default class extends Component {
 	render() {
-		const {
-			show
-		} = this.props
-		console.log(show)
 		if (!this.props.show) {
 			return null
 		}
+
 		return (
-			<div style={deleteStyle}>
+			<div
+				style={deleteStyle}
+			>
 				{'x'}
 			</div>
 		)

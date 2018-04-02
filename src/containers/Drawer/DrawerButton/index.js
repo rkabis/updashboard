@@ -16,7 +16,6 @@ export default class extends Component {
 			icon,
 			onChangeMapData,
 			mapdata,
-			arrayOfFeatures
 		} = this.props
 
 		let state = false
@@ -39,9 +38,13 @@ export default class extends Component {
 							filter: 'brightness(30)',
 						}}
 				/>
-				<DeleteBox
-					show={state}
-				/>
+				<div
+					onClick={() => this.props.removeFeature(icon)}
+				>
+					<DeleteBox
+						show={state}
+					/>
+				</div>
 			</div>
 		)
 	}
