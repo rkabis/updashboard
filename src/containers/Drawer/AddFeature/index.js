@@ -31,6 +31,8 @@ export default class extends Component {
     const {
       arrayOfFeatures,
       onClose,
+      arrayForCategoryOne,
+      arrayForCategoryTwo
     } = this.props
 
     return (
@@ -40,6 +42,8 @@ export default class extends Component {
             x
           </button>
           <FeatureList
+            arrayForCategoryOne={arrayForCategoryOne}
+            arrayForCategoryTwo={arrayForCategoryTwo}
             arrayOfFeatures={arrayOfFeatures}
             onClose={onClose}
           />

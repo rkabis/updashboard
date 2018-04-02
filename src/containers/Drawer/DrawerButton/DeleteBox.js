@@ -6,6 +6,8 @@ const deleteStyle = {
 	width: '25px'
 }
 
+const arrayCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
+
 export default class extends Component {
 	render() {
 		if (!this.props.show) {
@@ -15,6 +17,7 @@ export default class extends Component {
 		return (
 			<div
 				style={deleteStyle}
+				onClick={() => console.log('test')}
 			>
 				{'x'}
 			</div>
