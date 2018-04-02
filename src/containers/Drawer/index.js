@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import DrawerButton from './DrawerButton'
 import MiscButton from './MiscButton'
-import AddFeature from './AddFeature'
 import AddButton from './AddButton.js'
 
 const componentStyle = {
@@ -11,8 +10,7 @@ const componentStyle = {
 	height: '100vh',
 	width: '4vw',
 	backgroundColor: '#1C232C',
-	zIndex: 10,
-	overflow: 'hidden'
+	zIndex: 10
 }
 
 export default class extends Component {
@@ -22,11 +20,11 @@ export default class extends Component {
 			addOpen: false,
 			arrayOfFeatures: ['building', 'bike', 'jeep', 'rental', 'toilet'],
 			newsOpen: false,
-			plusOpen: true
+			plusStatus: true
 		}
 		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
 		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
-		this.plusButton = () => this.setState({plusOpen: !this.state.addOpen})
+		this.plusOpen = () => this.setState({plusStatus: !this.state.plusStatus})
 	}
 
 	render() {
@@ -47,11 +45,13 @@ export default class extends Component {
 						icon={featureElement}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						arrayOfFeatures={this.state.arrayOfFeatures}
 					/>
 				)}
 
 				<AddButton
-					status={this.state.plusOpen}
+					status={this.state.plusStatus}
+					plusOpen={this.plusOpen}
 					onClick={this.addModal}
 					icon={'plus'}
 					show={this.state.addOpen}

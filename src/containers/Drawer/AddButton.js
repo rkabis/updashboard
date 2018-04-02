@@ -10,7 +10,7 @@ export default class extends Component {
     }
 
 		const {
-			status,
+			plusOpen,
 			onClick,
 			icon,
 			show,
@@ -26,6 +26,7 @@ export default class extends Component {
 					/>
 				</div>
 				<AddFeature
+					plusOpen={plusOpen}
 					show={show}
 					onClose={onClose}
 					arrayOfFeatures={arrayOfFeatures}

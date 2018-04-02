@@ -9,7 +9,8 @@ export default class extends Component {
 	render() {
 		const {
 			arrayOfFeatures,
-			onClose
+			onClose,
+			plusOpen,
 		} = this.props
 
 		return (
@@ -24,6 +25,7 @@ export default class extends Component {
 							arrayForCategory={arrayForCategoryOne}
 							arrayOfFeatures={arrayOfFeatures}
 							onClose={onClose}
+							plusOpen={plusOpen}
 						/>
 					)}
 				</div>
@@ -36,6 +38,7 @@ export default class extends Component {
 							arrayForCategory={arrayForCategoryTwo}
 							arrayOfFeatures={arrayOfFeatures}
 							onClose={onClose}
+							plusOpen={plusOpen}
 						/>
 					)}
 				</div>
