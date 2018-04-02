@@ -31,7 +31,7 @@ export default class extends Component {
     const {
       arrayOfFeatures,
       onClose,
-      plusOpen,
+      // plusOpen,
     } = this.props
 
     return (
@@ -43,7 +43,7 @@ export default class extends Component {
           <FeatureList
             arrayOfFeatures={arrayOfFeatures}
             onClose={onClose}
-            plusOpen={plusOpen}
+            // plusOpen={plusOpen}
           />
         </div>
       </div>

@@ -25,7 +25,7 @@ export default class extends Component {
 							arrayForCategory={arrayForCategoryOne}
 							arrayOfFeatures={arrayOfFeatures}
 							onClose={onClose}
-							plusOpen={plusOpen}
+							// plusOpen={plusOpen}
 						/>
 					)}
 				</div>
@@ -38,7 +38,7 @@ export default class extends Component {
 							arrayForCategory={arrayForCategoryTwo}
 							arrayOfFeatures={arrayOfFeatures}
 							onClose={onClose}
-							plusOpen={plusOpen}
+							// plusOpen={plusOpen}
 						/>
 					)}
 				</div>
