@@ -8,7 +8,8 @@ let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
 export default class extends Component {
 	render() {
 		const {
-			arrayOfFeatures
+			arrayOfFeatures,
+			onClose
 		} = this.props
 
 		return (
@@ -22,7 +23,7 @@ export default class extends Component {
 							icon={featureElement}
 							arrayForCategory={arrayForCategoryOne}
 							arrayOfFeatures={arrayOfFeatures}
-							onClose={this.props.onClose}
+							onClose={onClose}
 						/>
 					)}
 				</div>
@@ -34,7 +35,7 @@ export default class extends Component {
 							icon={featureElement}
 							arrayForCategory={arrayForCategoryTwo}
 							arrayOfFeatures={arrayOfFeatures}
-							onClose={this.props.onClose}
+							onClose={onClose}
 						/>
 					)}
 				</div>

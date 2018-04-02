@@ -29,18 +29,19 @@ export default class extends Component {
     }
 
     const {
-      arrayOfFeatures
+      arrayOfFeatures,
+      onClose
     } = this.props
 
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-          <button onClick={this.props.onClose}>
+          <button onClick={onClose}>
             x
           </button>
           <FeatureList
             arrayOfFeatures={arrayOfFeatures}
-            onClose={this.props.onClose}
+            onClose={onClose}
           />
         </div>
       </div>
