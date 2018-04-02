@@ -16,6 +16,8 @@ export default class extends Component {
 			icon,
 			onChangeMapData,
 			mapdata,
+			arrayForCategoryOne,
+			arrayForCategoryTwo
 		} = this.props
 
 		let state = false
@@ -42,6 +44,9 @@ export default class extends Component {
 					onClick={() => this.props.removeFeature(icon)}
 				>
 					<DeleteBox
+						arrayForCategoryOne={arrayForCategoryOne}
+						arrayForCategoryTwo={arrayForCategoryTwo}
+						icon={icon}
 						show={state}
 					/>
 				</div>

@@ -2,14 +2,16 @@ import React, { Component } from 'react'
 
 import FeatureButton from './FeatureButton.js'
 
-let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
-let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
+// let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
+// let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
 
 export default class extends Component {
 	render() {
 		const {
 			arrayOfFeatures,
 			onClose,
+			arrayForCategoryOne,
+			arrayForCategoryTwo
 		} = this.props
 
 		return (

@@ -13,6 +13,9 @@ const componentStyle = {
 	zIndex: 10
 }
 
+let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
+let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
+
 export default class extends Component {
 	constructor() {
 		super()
@@ -24,7 +27,6 @@ export default class extends Component {
 		}
 		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
 		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
-		// this.plusOpen = () => this.setState({plusStatus: !this.state.plusStatus})
 		this.removeFeature = this.removeFeature.bind(this)
 	}
 
@@ -41,8 +43,8 @@ export default class extends Component {
 			mapdata
 		} = this.props
 
-		const changeState = (x) => {
-			this.state.plusStatus = x
+		const changeState = (i) => {
+			this.state.plusStatus = i
 		}
 
 		{this.state.arrayOfFeatures.length >= 8 ? changeState(false) : changeState(true)}
@@ -59,10 +61,14 @@ export default class extends Component {
 						mapdata={mapdata}
 						arrayOfFeatures={this.state.arrayOfFeatures}
 						removeFeature={this.removeFeature}
+						arrayForCategoryOne={arrayForCategoryOne}
+						arrayForCategoryTwo={arrayForCategoryTwo}
 					/>
 				)}
 
 				<AddButton
+					arrayForCategoryOne={arrayForCategoryOne}
+					arrayForCategoryTwo={arrayForCategoryTwo}
 					status={this.state.plusStatus}
 					plusOpen={this.plusOpen}
 					onClick={this.addModal}

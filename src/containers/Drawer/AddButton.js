@@ -16,6 +16,8 @@ export default class extends Component {
 			show,
 			onClose,
 			arrayOfFeatures,
+			arrayForCategoryOne,
+			arrayForCategoryTwo
 		} = this.props
 
 		return (
@@ -26,6 +28,8 @@ export default class extends Component {
 					/>
 				</div>
 				<AddFeature
+					arrayForCategoryOne={arrayForCategoryOne}
+					arrayForCategoryTwo={arrayForCategoryTwo}
 					plusOpen={plusOpen}
 					show={show}
 					onClose={onClose}
