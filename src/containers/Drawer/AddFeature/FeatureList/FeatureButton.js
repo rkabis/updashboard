@@ -8,7 +8,6 @@ const componentStyle = {
 }
 
 export default class extends Component {
-
 	render() {
 		const {
 			icon,

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import DrawerButton from './DrawerButton'
 import MiscButton from './MiscButton'
 import AddFeature from './AddFeature'
+import AddButton from './AddButton.js'
 
 const componentStyle = {
 	display: 'flex',
@@ -20,10 +21,12 @@ export default class extends Component {
 		this.state = {
 			addOpen: false,
 			arrayOfFeatures: ['building', 'bike', 'jeep', 'rental', 'toilet'],
-			newsOpen: false
+			newsOpen: false,
+			plusOpen: true
 		}
 		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
 		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
+		this.plusButton = () => this.setState({plusOpen: !this.state.addOpen})
 	}
 
 	render() {
@@ -47,19 +50,14 @@ export default class extends Component {
 					/>
 				)}
 
-				<div>
-					<div onClick={this.addModal}>
-						<DrawerButton
-							icon={'plus'}
-						/>
-					</div>
-					<AddFeature
-						show={this.state.addOpen}
-						onClose={this.addModal}
-						arrayOfFeatures={this.state.arrayOfFeatures}
-					>
-					</AddFeature>
-				</div>
+				<AddButton
+					status={this.state.plusOpen}
+					onClick={this.addModal}
+					icon={'plus'}
+					show={this.state.addOpen}
+					onClose={this.addModal}
+					arrayOfFeatures={this.state.arrayOfFeatures}
+				/>
 
 				<div>
 					<div onClick={this.newsModal}>
