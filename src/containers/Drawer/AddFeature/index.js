@@ -15,10 +15,11 @@ const backdropStyle = {
 const modalStyle = {
   backgroundColor: '#fff',
   borderRadius: 5,
-  maxWidth: 500,
-  minHeight: 300,
+  width: 500,
+  height: 300,
   margin: '0 auto',
-  padding: 30
+  padding: 30,
+  overflow: 'scroll'
 }
 
 export default class extends Component {
@@ -28,17 +29,19 @@ export default class extends Component {
     }
 
     const {
-      arrayOfFeatures
+      arrayOfFeatures,
+      onClose
     } = this.props
 
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-          <button onClick={this.props.onClose}>
+          <button onClick={onClose}>
             x
           </button>
           <FeatureList
             arrayOfFeatures={arrayOfFeatures}
+            onClose={onClose}
           />
         </div>
       </div>
