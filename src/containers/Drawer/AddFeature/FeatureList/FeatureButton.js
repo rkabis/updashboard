@@ -8,13 +8,13 @@ const componentStyle = {
 }
 
 export default class extends Component {
-
 	render() {
 		const {
 			icon,
 			arrayForCategory,
 			arrayOfFeatures,
-			onClose
+			onClose,
+			plusOpen
 		} = this.props
 
 		const featureTitle = FeatureTitle(icon)
@@ -27,6 +27,7 @@ export default class extends Component {
 						arrayOfFeatures.push(icon)
 						const categoryIndex = arrayForCategory.indexOf(icon)
 						this.setState({arrayForCategory: arrayForCategory.splice(categoryIndex, 1)})
+						{arrayOfFeatures.length >= 8 ? plusOpen() : null}
 					}
 				}
 			>

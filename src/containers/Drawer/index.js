@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import DrawerButton from './DrawerButton'
 import MiscButton from './MiscButton'
-import AddFeature from './AddFeature'
+import AddButton from './AddButton.js'
 
 const componentStyle = {
 	display: 'flex',
@@ -10,8 +10,7 @@ const componentStyle = {
 	height: '100vh',
 	width: '4vw',
 	backgroundColor: '#1C232C',
-	zIndex: 10,
-	overflow: 'hidden'
+	zIndex: 10
 }
 
 export default class extends Component {
@@ -20,10 +19,12 @@ export default class extends Component {
 		this.state = {
 			addOpen: false,
 			arrayOfFeatures: ['building', 'bike', 'jeep', 'rental', 'toilet'],
-			newsOpen: false
+			newsOpen: false,
+			plusStatus: true
 		}
 		this.newsModal = () => this.setState({newsOpen: !this.state.newsOpen})
 		this.addModal = () => this.setState({addOpen: !this.state.addOpen})
+		this.plusOpen = () => this.setState({plusStatus: !this.state.plusStatus})
 	}
 
 	render() {
@@ -44,22 +45,19 @@ export default class extends Component {
 						icon={featureElement}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						arrayOfFeatures={this.state.arrayOfFeatures}
 					/>
 				)}
 
-				<div>
-					<div onClick={this.addModal}>
-						<DrawerButton
-							icon={'plus'}
-						/>
-					</div>
-					<AddFeature
-						show={this.state.addOpen}
-						onClose={this.addModal}
-						arrayOfFeatures={this.state.arrayOfFeatures}
-					>
-					</AddFeature>
-				</div>
+				<AddButton
+					status={this.state.plusStatus}
+					plusOpen={this.plusOpen}
+					onClick={this.addModal}
+					icon={'plus'}
+					show={this.state.addOpen}
+					onClose={this.addModal}
+					arrayOfFeatures={this.state.arrayOfFeatures}
+				/>
 
 				<div>
 					<div onClick={this.newsModal}>
