@@ -9,6 +9,6 @@ export default (
 			let x = jeepStyle(feature)
 			return x
 		default:
-			return "pending"
+			return true
 	}
 }

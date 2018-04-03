@@ -9,6 +9,6 @@ export default (
 			let x = jeepFilter(feature)
 			return x
 		default:
-			return "pending"
+			return true
 	}
 }
