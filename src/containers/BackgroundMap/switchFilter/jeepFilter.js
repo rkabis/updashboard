@@ -1,7 +1,10 @@
 export default (
 	feature
 ) => {
-	if (feature.properties.routeName === 'Katipunan') {
-		return {color: '#C6010E'}
+	switch(feature.properties.routeName) {
+		case 'Katipunan':
+			return true
+		default:
+			return false
 	}
 }
