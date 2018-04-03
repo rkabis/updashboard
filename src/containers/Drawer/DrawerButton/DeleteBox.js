@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 
 const deleteStyle = {
-	backgroundColor: 'white',
-	height: '25px',
-	width: '25px'
+	backgroundColor: '#A31F25',
+	height: '12px',
+	width: '12px',
+	overflow: 'hidden',
+	fontFamily: 'Lato',
+	fontSize: '8pt',
+	borderRadius: '5pt',
+	textAlign: 'center',
+	paddingBottom: '2px',
+	paddingRight: '1px'
 }
 
 const arrayCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
@@ -29,7 +36,7 @@ export default class extends Component {
 				style={deleteStyle}
 				onClick={() => addToCategory(icon)}
 			>
-				{'x'}
+				x
 			</div>
 		)
 	}
