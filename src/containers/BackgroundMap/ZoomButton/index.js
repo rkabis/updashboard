@@ -6,6 +6,8 @@ const componentStyle = {
 	cursor: 'pointer',
 }
 
+const iconSize = '34px'
+
 export default class extends Component {
 	render() {
 		const {
@@ -19,8 +21,8 @@ export default class extends Component {
 					<img
 						src={require('./icons/in.png')}
 						alt={'in'}
-						width={'34px'}
-						height={'34px'}
+						width={iconSize}
+						height={iconSize}
 						onClick={zoomIn}
 					/>
 				</div>
@@ -28,8 +30,8 @@ export default class extends Component {
 					<img
 						src={require('./icons/out.png')}
 						alt={'out'}
-						width={'34px'}
-						height={'34px'}
+						width={iconSize}
+						height={iconSize}
 						onClick={zoomOut}
 					/>
 				</div>

@@ -6,8 +6,7 @@ const componentStyle = {
 	cursor: 'pointer',
 	display: 'flex',
 	flexDirection: 'row',
-	marginLeft: '12px',
-	marginTop: '15px'
+	marginTop: '10px',
 }
 
 const removableFeatures = ['utility', 'gym', 'admin', 'library', 'museum', 'org', 'parking', 'wifi', 'bucket', 'gates']

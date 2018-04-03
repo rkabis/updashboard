@@ -30,7 +30,7 @@ const buttonStyle = {
 	fontSize: '10pt'
 }
 
-const lineStyle = {
+const aboutLineStyle = {
 	width: '78px',
 	height: '7px',
 	backgroundColor: 'white',
@@ -39,7 +39,7 @@ const lineStyle = {
 	marginLeft: '2px'
 }
 
-const lineStyle1 = {
+const contactlineStyle = {
 	width: '90px',
 	height: '7px',
 	backgroundColor: 'white',
@@ -50,6 +50,13 @@ const lineStyle1 = {
 
 const contactStyle = {
 	marginLeft: '38px'
+}
+
+const buttonGroupStyle = {
+	display: 'flex',
+	flexDirection: 'row',
+	marginLeft: '780px',
+	marginTop: '20px'	
 }
 
 export default class extends Component {
@@ -70,14 +77,7 @@ export default class extends Component {
 					{'UP Dashboard'}
 				</div>
 
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'row',
-						marginLeft: '780px',
-						marginTop: '20px'
-					}}
-				>
+				<div style={buttonGroupStyle}>
 					<div>
 						<div
 							onClick={this.aboutModal}
@@ -85,7 +85,7 @@ export default class extends Component {
 						>
 							ABOUT US
 						</div>
-						<div style={lineStyle} />
+						<div style={aboutLineStyle} />
 						<AboutButton
 							show={this.state.aboutOpen}
 							onClose={this.aboutModal}
@@ -100,7 +100,7 @@ export default class extends Component {
 						>
 							CONTACT US
 						</div>
-						<div style={lineStyle1} />
+						<div style={contactlineStyle} />
 						<ContactButton
 							show={this.state.contactOpen}
 							onClose={this.contactModal}
