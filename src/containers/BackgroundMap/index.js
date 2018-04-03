@@ -19,6 +19,8 @@ const componentStyle = {
 	zIndex: 5
 }
 
+const filterValue = 'College of Social Work and Community Development Library'
+
 export default class extends Component {
 	onEachFeature(feature, layer) {
 		const {
@@ -48,7 +50,7 @@ export default class extends Component {
 		} = this.props
 
 		const callFilter = (feature) => {
-			let xFilter = switchFilter(feature, mapdata)
+			let xFilter = switchFilter(feature, mapdata, filterValue)
 			return xFilter
 		}
 
