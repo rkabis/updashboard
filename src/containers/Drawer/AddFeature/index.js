@@ -19,9 +19,23 @@ const modalStyle = {
   marginTop: '100px',
   marginLeft: ' 340px',
   padding: 30,
-  overflow: 'scroll',
+  overflow: 'scroll'
+}
+
+const closeStyle = {
+  position: 'fixed',
+  marginTop: '-25px',
+  marginLeft: '500px',
   fontFamily: 'Lato',
-  fontSize: '10pt',
+  fontSize: '20pt',
+  color: '#3A4047',
+  cursor: 'pointer'
+}
+
+const titleStyle = {
+  fontFamily: 'Lato',
+  fontSize: '22pt',
+  fontWeight: 'bold'
 }
 
 export default class extends Component {
@@ -40,9 +54,12 @@ export default class extends Component {
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-          <button onClick={onClose}>
+          <div style={closeStyle} onClick={onClose}>
             x
-          </button>
+          </div>
+          <div style={titleStyle}>
+            Features
+          </div>
           <FeatureList
             arrayForCategoryOne={arrayForCategoryOne}
             arrayForCategoryTwo={arrayForCategoryTwo}
