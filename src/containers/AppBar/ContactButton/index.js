@@ -12,12 +12,14 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  borderRadius: 5,
-  width: 500,
-  height: 300,
-  margin: '0 auto',
+  width: '500px',
+  height: '300px',
+  marginTop: '100px',
+  marginLeft: ' 340px',
   padding: 30,
-  overflow: 'hidden'
+  overflow: 'scroll',
+  fontFamily: 'Lato',
+  fontSize: '10pt',
 }
 
 export default class extends Component {

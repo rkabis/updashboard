@@ -14,12 +14,10 @@ const mapboxAccess = 'your.mapbox.access.token'
 
 const componentStyle = {
 	position: 'absolute',
-	marginTop: '6vh',
-	marginLeft: '0.5vw',
+	height: '704px',
+	width: '1280px',
 	zIndex: 5
 }
-
-const filterValue = 'College of Social Work and Community Development Library'
 
 export default class extends Component {
 	onEachFeature(feature, layer) {
@@ -38,7 +36,7 @@ export default class extends Component {
 		super()
 		this.state = {
 			mapCenter: [14.654912, 121.064264],
-			zoomLevel: 16
+			zoomLevel: 16,
 		}
 		this.zoomIn = () => this.setState({zoomLevel: this.state.zoomLevel+1})
 		this.zoomOut = () => this.setState({zoomLevel: this.state.zoomLevel-1})
@@ -47,6 +45,7 @@ export default class extends Component {
 	render() {
 		const {
 			mapdata,
+			filterValue
 		} = this.props
 
 		const callFilter = (feature) => {

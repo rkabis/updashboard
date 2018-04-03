@@ -7,10 +7,40 @@ import AddButton from './AddButton.js'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'column',
-	height: '100vh',
-	width: '4vw',
+	height: '704px',
+	width: '54px',
 	backgroundColor: '#1C232C',
+	overflow: 'hidden',
 	zIndex: 10
+}
+
+const lineStyle = {
+	height: '2px',
+	width: '40px',
+	backgroundColor: '#3A4047',
+	margin: '4px'
+}
+
+const menuStyle = {
+	marginTop: '3px',
+	marginLeft: '12px'
+}
+
+const firstSetStyle = {
+	marginLeft: '12px',
+	marginTop: '10px',
+	marginBottom: '8px'
+}
+
+const secondSetStyle = {
+	marginLeft: '12px',
+	marginBottom: '8px'	
+}
+
+const newsStyle = {
+	position: 'fixed',
+	marginLeft: '12px',
+	marginTop: '650px'
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
@@ -21,7 +51,7 @@ export default class extends Component {
 		super()
 		this.state = {
 			addOpen: false,
-			arrayOfFeatures: ['building', 'bike', 'jeep', 'rental', 'toilet'],
+			arrayOfFeatures: [],
 			newsOpen: false,
 			plusStatus: true
 		}
@@ -47,38 +77,82 @@ export default class extends Component {
 			this.state.plusStatus = i
 		}
 
-		{this.state.arrayOfFeatures.length >= 8 ? changeState(false) : changeState(true)}
+		{this.state.arrayOfFeatures.length >= 3 ? changeState(false) : changeState(true)}
+		
 		return (
 			<div style={componentStyle}>
-				<DrawerButton
-					icon={'menu'}
-				/>
-				{this.state.arrayOfFeatures.map(featureElement => 
+				<div style={menuStyle}>
 					<DrawerButton
-						key={featureElement}
-						icon={featureElement}
+						icon={'menu'}
+					/>
+				</div>
+				<div style={firstSetStyle}>
+					<DrawerButton
+						icon={'building'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
-						arrayOfFeatures={this.state.arrayOfFeatures}
-						removeFeature={this.removeFeature}
+					/>
+
+					<DrawerButton
+						icon={'bike'}
+						onChangeMapData={onChangeMapData}
+						mapdata={mapdata}
+					/>
+
+					<DrawerButton
+						icon={'jeep'}
+						onChangeMapData={onChangeMapData}
+						mapdata={mapdata}
+					/>	
+
+				</div>
+
+				<div style={lineStyle} />
+
+				<div style={secondSetStyle}>
+					<DrawerButton
+						icon={'rental'}
+						onChangeMapData={onChangeMapData}
+						mapdata={mapdata}
+					/>
+
+					<DrawerButton
+						icon={'toilet'}
+						onChangeMapData={onChangeMapData}
+						mapdata={mapdata}
+					/>
+				</div>
+
+				<div style={lineStyle} />
+
+				<div style={secondSetStyle}>
+					{this.state.arrayOfFeatures.map(featureElement => 
+						<DrawerButton
+							key={featureElement}
+							icon={featureElement}
+							onChangeMapData={onChangeMapData}
+							mapdata={mapdata}
+							arrayOfFeatures={this.state.arrayOfFeatures}
+							removeFeature={this.removeFeature}
+							arrayForCategoryOne={arrayForCategoryOne}
+							arrayForCategoryTwo={arrayForCategoryTwo}
+						/>
+					)}
+
+					<AddButton
 						arrayForCategoryOne={arrayForCategoryOne}
 						arrayForCategoryTwo={arrayForCategoryTwo}
+						status={this.state.plusStatus}
+						plusOpen={this.plusOpen}
+						onClick={this.addModal}
+						icon={'plus'}
+						show={this.state.addOpen}
+						onClose={this.addModal}
+						arrayOfFeatures={this.state.arrayOfFeatures}
 					/>
-				)}
+				</div>
 
-				<AddButton
-					arrayForCategoryOne={arrayForCategoryOne}
-					arrayForCategoryTwo={arrayForCategoryTwo}
-					status={this.state.plusStatus}
-					plusOpen={this.plusOpen}
-					onClick={this.addModal}
-					icon={'plus'}
-					show={this.state.addOpen}
-					onClose={this.addModal}
-					arrayOfFeatures={this.state.arrayOfFeatures}
-				/>
-
-				<div>
+				<div style={newsStyle}>
 					<div onClick={this.newsModal}>
 						<DrawerButton
 							icon={'news'}

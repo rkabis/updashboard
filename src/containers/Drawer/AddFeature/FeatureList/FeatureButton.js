@@ -7,6 +7,8 @@ const componentStyle = {
 	cursor: 'pointer'
 }
 
+const iconSize = '25px'
+
 export default class extends Component {
 	render() {
 		const {
@@ -33,8 +35,8 @@ export default class extends Component {
 					<img
 						src={require('../../icons/' + icon + '.png')}
 						alt={icon}
-						width={'35vw'}
-						height={'40vh'}
+						width={iconSize}
+						height={iconSize}
 					/>
 					{featureTitle}
 				</div>
