@@ -6,6 +6,8 @@ const componentStyle = {
 	cursor: 'pointer',
 	display: 'flex',
 	flexDirection: 'row',
+	marginLeft: '12px',
+	marginTop: '15px'
 }
 
 const removableFeatures = ['utility', 'gym', 'admin', 'library', 'museum', 'org', 'parking', 'wifi', 'bucket', 'gates']
@@ -34,8 +36,8 @@ export default class extends Component {
 						onClick={onChangeMapData ? (mapdata !== icon ? () => onChangeMapData(icon) : () => onChangeMapData(null)) : null}
 						src={require('../icons/' + icon + '.png')}
 						alt={icon}
-						width={'35vw'}
-						height={'40vh'}
+						width={'25px'}
+						height={'25px'}
 						style={{
 							filter: 'brightness(30)',
 						}}

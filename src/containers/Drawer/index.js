@@ -7,8 +7,8 @@ import AddButton from './AddButton.js'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'column',
-	height: '100vh',
-	width: '4vw',
+	height: '704px',
+	width: '54px',
 	backgroundColor: '#1C232C',
 	zIndex: 10
 }

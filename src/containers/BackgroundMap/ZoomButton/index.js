@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'column',
-	cursor: 'pointer'	
+	cursor: 'pointer',
 }
 
 export default class extends Component {
@@ -15,20 +15,24 @@ export default class extends Component {
 		
 		return (
 			<div style={componentStyle}>
-				<img
-					src={require('./icons/in.png')}
-					alt={'in'}
-					width={'35vw'}
-					height={'40vh'}
-					onClick={zoomIn}
-				/>
-				<img
-					src={require('./icons/out.png')}
-					alt={'out'}
-					width={'35vw'}
-					height={'40vh'}
-					onClick={zoomOut}
-				/>
+				<div>
+					<img
+						src={require('./icons/in.png')}
+						alt={'in'}
+						width={'34px'}
+						height={'34px'}
+						onClick={zoomIn}
+					/>
+				</div>
+				<div>
+					<img
+						src={require('./icons/out.png')}
+						alt={'out'}
+						width={'34px'}
+						height={'34px'}
+						onClick={zoomOut}
+					/>
+				</div>
 			</div>
 		)
 	}

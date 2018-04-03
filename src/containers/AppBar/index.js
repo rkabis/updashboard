@@ -7,15 +7,17 @@ const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: '97vw',
-	height: '6vh',
+	width: '1280px',
+	height: '54px',
 	zIndex: 10,
-	overflow: 'hidden'
 }
 
 const titleStyle = {
 	color: 'white',
-	fontFamily: 'Maven Pro'
+	fontFamily: 'Maven Pro',
+	marginLeft: '21px',
+	fontSize: '18pt',
+	marginTop: '12px'
 }
 
 const buttonStyle = {
@@ -23,13 +25,31 @@ const buttonStyle = {
 	display: 'flex',
 	flexDirection: 'column',
 	fontFamily: 'Muli',
-	cursor: 'pointer'
+	letterSpacing: '2px',
+	cursor: 'pointer',
+	fontSize: '10pt'
 }
 
 const lineStyle = {
+	width: '78px',
+	height: '7px',
+	backgroundColor: 'white',
+	fontSize: '8pt',
+	marginTop: '14px',
+	marginLeft: '2px'
+}
+
+const lineStyle1 = {
 	width: '90px',
-	height: '2px',
-	backgroundColor: 'white',	
+	height: '7px',
+	backgroundColor: 'white',
+	fontSize: '8pt',
+	marginTop: '14px',
+	marginLeft: '6px'
+}
+
+const contactStyle = {
+	marginLeft: '38px'
 }
 
 export default class extends Component {
@@ -50,34 +70,43 @@ export default class extends Component {
 					{'UP Dashboard'}
 				</div>
 
-				<div>
-					<div
-						onClick={this.aboutModal}
-						style={buttonStyle}
-					>
-						About Us
+				<div
+					style={{
+						display: 'flex',
+						flexDirection: 'row',
+						marginLeft: '780px',
+						marginTop: '20px'
+					}}
+				>
+					<div>
+						<div
+							onClick={this.aboutModal}
+							style={buttonStyle}
+						>
+							ABOUT US
+						</div>
+						<div style={lineStyle} />
+						<AboutButton
+							show={this.state.aboutOpen}
+							onClose={this.aboutModal}
+						>
+						</AboutButton>
 					</div>
-					<div style={lineStyle} />
-					<AboutButton
-						show={this.state.aboutOpen}
-						onClose={this.aboutModal}
-					>
-					</AboutButton>
-				</div>
 
-				<div>
-					<div
-						onClick={this.contactModal}
-						style={buttonStyle}
-					>
-						Contact Us
+					<div style={contactStyle}>
+						<div
+							onClick={this.contactModal}
+							style={buttonStyle}
+						>
+							CONTACT US
+						</div>
+						<div style={lineStyle1} />
+						<ContactButton
+							show={this.state.contactOpen}
+							onClose={this.contactModal}
+						>
+						</ContactButton>
 					</div>
-					<div style={lineStyle} />
-					<ContactButton
-						show={this.state.contactOpen}
-						onClose={this.contactModal}
-					>
-					</ContactButton>
 				</div>
 
 			</div>
