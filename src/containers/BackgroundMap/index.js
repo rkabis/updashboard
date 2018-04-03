@@ -4,6 +4,7 @@ import { Map, TileLayer, GeoJSON } from 'react-leaflet'
 
 import switchPopupContent from './switchPopupContent'
 import switchFilter from './switchFilter/'
+import switchStyle from './switchStyle/'
 import ZoomButton from './ZoomButton'
 
 const mapboxTiles = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicmthYmlzIiwiYSI6ImNqNnZ5b2p5ZjE3OXkycW1uY2pobDJnaWgifQ.yCMd_pWrokn1fJ6xDFGvzg'
@@ -51,6 +52,11 @@ export default class extends Component {
 			return xFilter
 		}
 
+		const callStyle = (feature) => {
+			let xStyle = switchStyle(feature, mapdata)
+			return xStyle
+		}
+
 		return (
 			<div style={componentStyle}>
 				<Map
@@ -75,6 +81,7 @@ export default class extends Component {
 						key={mapdata}
 						data={mapdata ? require('./geojson/UP' + mapdata + '.json') : null}
 						onEachFeature={this.onEachFeature.bind(this)}
+						style={(feature) => callStyle(feature)}
 						filter={(feature) => callFilter(feature)}
 					/>
 				</Map>
