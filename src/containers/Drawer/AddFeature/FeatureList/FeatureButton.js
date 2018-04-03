@@ -8,12 +8,12 @@ const componentStyle = {
 }
 
 export default class extends Component {
-
 	render() {
 		const {
 			icon,
 			arrayForCategory,
 			arrayOfFeatures,
+			onClose,
 		} = this.props
 
 		const featureTitle = FeatureTitle(icon)
@@ -29,13 +29,15 @@ export default class extends Component {
 					}
 				}
 			>
-				<img
-					src={require('../../icons/' + icon + '.png')}
-					alt={icon}
-					width={'35vw'}
-					height={'40vh'}
-				/>
-				{featureTitle}
+				<div onClick={onClose}>
+					<img
+						src={require('../../icons/' + icon + '.png')}
+						alt={icon}
+						width={'35vw'}
+						height={'40vh'}
+					/>
+					{featureTitle}
+				</div>
 			</div>
 		)
 	}}
