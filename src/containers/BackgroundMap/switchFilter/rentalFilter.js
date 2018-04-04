@@ -6,6 +6,6 @@ export default (
 		case '':
 			return true
 		default:
-			return (filterValue === feature.properties.routeName ? true : false)
+			return (filterValue === feature.properties.venueName ? true : false)
 	}
 }

@@ -7,8 +7,8 @@ import BackgroundMap from './BackgroundMap'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	height: '100vh',
-	widght: '100vw',
+	height: '704px',
+	width: '1280px',
 	backgroundColor: 'white'	
 }
 
@@ -16,14 +16,17 @@ export default class extends Component {
 	constructor () {
 		super()
 		this.state = {
-			mapdata: null
+			mapdata: null,
+			filterValue: ''
 		}
 		this.onChangeMapData = (e) => this.setState({mapdata: e})
+		this.onChangeMapFilter = (e) => this.setState({filterValue: e})
 	}
 
 	render() {
 		const {
-			mapdata
+			mapdata,
+			filterValue
 		} = this.state
 
 		return (
@@ -35,6 +38,7 @@ export default class extends Component {
 				<Header />
 				<BackgroundMap
 					mapdata={mapdata}
+					filterValue={filterValue}
 				/>
 			</div>
 		)

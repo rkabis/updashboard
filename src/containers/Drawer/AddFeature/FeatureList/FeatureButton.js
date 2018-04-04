@@ -4,7 +4,21 @@ import FeatureTitle from './FeatureTitle.js'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	cursor: 'pointer'
+	cursor: 'pointer',
+	marginTop: '5px',
+}
+
+const iconSize = '25px'
+
+const titleStyle = {
+	marginLeft: '7px',
+	marginTop: '4px'
+}
+
+const featureStyle = {
+	display: 'flex',
+	flexDirection: 'row',
+	marginLeft: '1px'
 }
 
 export default class extends Component {
@@ -29,14 +43,16 @@ export default class extends Component {
 					}
 				}
 			>
-				<div onClick={onClose}>
+				<div style={featureStyle} onClick={onClose}>
 					<img
 						src={require('../../icons/' + icon + '.png')}
 						alt={icon}
-						width={'35vw'}
-						height={'40vh'}
+						width={iconSize}
+						height={iconSize}
 					/>
-					{featureTitle}
+					<div style={titleStyle}>
+						{featureTitle}
+					</div>
 				</div>
 			</div>
 		)

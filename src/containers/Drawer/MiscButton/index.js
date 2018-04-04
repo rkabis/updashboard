@@ -15,12 +15,30 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  borderRadius: 5,
-  width: 500,
-  height: 300,
-  margin: '0 auto',
+  width: '500px',
+  height: '300px',
+  marginTop: '100px',
+  marginLeft: ' 340px',
   padding: 30,
-  overflow: 'scroll'
+  overflow: 'scroll',
+  fontFamily: 'Lato',
+  fontSize: '10pt',
+}
+
+const lineStyle = {
+  width: '500px',
+  height: '2px',
+  backgroundColor: '#3A4047'
+}
+
+const closeStyle = {
+  position: 'fixed',
+  marginTop: '-25px',
+  marginLeft: '500px',
+  fontFamily: 'Lato',
+  fontSize: '20pt',
+  color: '#3A4047',
+  cursor: 'pointer'
 }
 
 export default class extends Component {
@@ -31,11 +49,12 @@ export default class extends Component {
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
-          <Weather />
-          <News />
-          <button onClick={this.props.onClose}>
+          <div style={closeStyle} onClick={this.props.onClose}>
             x
-          </button>
+          </div>
+          <Weather />
+          <div style={lineStyle} />
+          <News />
         </div>
       </div>
     )

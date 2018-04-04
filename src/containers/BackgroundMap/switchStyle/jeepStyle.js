@@ -1,16 +1,20 @@
 export default (
 	feature
 ) => {
-	if (feature.properties.routeName === 'Katipunan') {
-		return {color: '#C6010E'}
-	}
-	if (feature.properties.routeName === "IKOT") {
-		return {color: '#F4670E'}
-	}
-	if (feature.properties.routeName === "SM North" || feature.properties.routeName === "Philcoa" || feature.properties.routeName === "Pantranco") {
-		return {color: '#0B9B00'}
-	}
-	if (feature.properties.routeName === "TOKI") {
-		return {color: '#FDCC00'}
+	switch(feature.properties.routeName) {
+		case 'Katipunan':
+			return {color: '#C6010E'}
+		case 'IKOT':
+			return {color: '#F4670E'}
+		case 'TOKI':
+			return {color: '#FDCC00'}
+		case 'SM North':
+			return {color: '#0B9B00'}
+		case 'Philcoa':
+			return {color: '#0B9B00'}
+		case 'Pantranco':
+			return {color: '#0B9B00'}
+		default:
+			return true
 	}
 }

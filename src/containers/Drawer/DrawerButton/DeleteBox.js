@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
+const deleteSize = '24px'
+const arrayCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
 const deleteStyle = {
-	backgroundColor: 'white',
-	height: '25px',
-	width: '25px'
+	zIndex: 500,
+	position: 'fixed',
+	marginLeft: '15px'
 }
 
-const arrayCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
 
 export default class extends Component {
 	render() {
@@ -25,12 +26,14 @@ export default class extends Component {
 		}
 
 		return (
-			<div
-				style={deleteStyle}
+			<img
+				src={require('./icons/delete.png')}
+				height={deleteSize}
+				width={deleteSize}
 				onClick={() => addToCategory(icon)}
-			>
-				{'x'}
-			</div>
+				style={deleteStyle}
+				alt={'delete'}
+			/>
 		)
 	}
 }
