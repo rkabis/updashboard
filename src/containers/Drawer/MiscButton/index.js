@@ -25,6 +25,12 @@ const modalStyle = {
   fontSize: '10pt',
 }
 
+const lineStyle = {
+  width: '500px',
+  height: '2px',
+  backgroundColor: '#3A4047'
+}
+
 export default class extends Component {
   render() {
     if(!this.props.show) {
@@ -34,6 +40,7 @@ export default class extends Component {
       <div style={backdropStyle}>
         <div style={modalStyle}>
           <Weather />
+          <div style={lineStyle} />
           <News />
           <button onClick={this.props.onClose}>
             x

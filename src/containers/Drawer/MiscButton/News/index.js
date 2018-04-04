@@ -4,6 +4,17 @@ let requestObj = null
 let newsNum = 0
 let newsMax
 
+const arrowSize = '26px'
+const arrowStyle = {
+	cursor: 'pointer'
+}
+
+const changeNewsStyle = {
+	position: 'fixed',
+	marginLeft: '450px',
+	marginTop: '280px'
+}
+
 export default class extends Component {
 	render() {
 		fetchNews()
@@ -45,9 +56,23 @@ export default class extends Component {
 
 		return (
 			<div>
-				<button onClick={() => changeNews('plus')}> Older </button>
 				<div id='newsInfo' />
-				<button onClick={() => changeNews('minus')}> Newer </button>
+				<div style={changeNewsStyle}>
+					<img
+						onClick={() => changeNews('minus')}
+						src={require('../icons/left.png')}
+						height={arrowSize}
+						width={arrowSize}
+						style={arrowStyle}
+					/>
+					<img
+						onClick={() => changeNews('plus')}
+						src={require('../icons/right.png')}
+						height={arrowSize}
+						width={arrowSize}
+						style={arrowStyle}
+					/>
+				</div>
 			</div>
 		)
 	}
