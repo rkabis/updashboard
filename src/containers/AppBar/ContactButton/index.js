@@ -91,7 +91,7 @@ export default class extends Component {
     }
 
     return (
-      <div style={backdropStyle}>
+      <div style={backdropStyle} onClick={this.props.onClose}>
         <div style={modalStyle}>
           <div style={closeStyle} onClick={this.props.onClose}>
             x
