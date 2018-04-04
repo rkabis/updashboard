@@ -70,7 +70,7 @@ export default class extends Component {
             <br/><br/>
             Today, the Dashboard has its eyes set on making the flow of data a two-way stream. <b> All users are invited to share facts, statistics, and insights they’d like applied to the website </b>. After all, who better to write the living history of UP Diliman than its community?
             <br/><br/>
-            You can <a href='www.fb.com/updashboard'>connect with us on Facebook</a>, <a href='mailto:updashboard@gmail.com'> email us</a>, or leave your thoughts in the Contact Us tab of our website.
+            You can <a href='https://www.fb.com/updashboard'>connect with us on Facebook</a>, <a href='mailto:updashboard@gmail.com'> email us</a>, or leave your thoughts in the Contact Us tab of our website.
             <br/><br/>
             Enjoy the Dashboard —it’s yours to explore.
             <br/><br/>
