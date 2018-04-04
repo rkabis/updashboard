@@ -70,7 +70,8 @@ export default class extends Component {
 	render() {
 		const {
 			onChangeMapData,
-			mapdata
+			mapdata,
+			filterModal
 		} = this.props
 
 		const changeState = (i) => {
@@ -91,18 +92,21 @@ export default class extends Component {
 						icon={'building'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
 					/>
 
 					<DrawerButton
 						icon={'bike'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
 					/>
 
 					<DrawerButton
 						icon={'jeep'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
 					/>	
 
 				</div>
@@ -114,12 +118,14 @@ export default class extends Component {
 						icon={'rental'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
 					/>
 
 					<DrawerButton
 						icon={'toilet'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
 					/>
 				</div>
 
@@ -132,6 +138,7 @@ export default class extends Component {
 							icon={featureElement}
 							onChangeMapData={onChangeMapData}
 							mapdata={mapdata}
+							filterModal={filterModal}
 							arrayOfFeatures={this.state.arrayOfFeatures}
 							removeFeature={this.removeFeature}
 							arrayForCategoryOne={arrayForCategoryOne}
