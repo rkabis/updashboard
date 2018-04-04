@@ -2,9 +2,24 @@ import React, { Component } from 'react'
 
 import FeatureButton from './FeatureButton.js'
 
-// let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
-// let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
+const lineStyle = {
+	height: '2px',
+	width: '200px',
+	backgroundColor: '#3A4047',
+	marginTop: '5px',
+	marginBottom: '8px',
+	justifyContent: 'space-between'
+}
 
+const categoryStyle = {
+	display: 'flex',
+	flexDirection: 'row',
+	marginTop: '20px'
+}
+
+const categoryTwoStyle = {
+	marginLeft: '80px'
+}
 export default class extends Component {
 	render() {
 		const {
@@ -15,10 +30,10 @@ export default class extends Component {
 		} = this.props
 
 		return (
-			<div>
-				{'Features'}
+			<div style={categoryStyle}>
 				<div>
-					{'Category 1'}			
+					CATEGORY ONE
+					<div style={lineStyle} />	
 					{arrayForCategoryOne.map(featureElement => 
 						<FeatureButton
 							key={featureElement}
@@ -29,8 +44,9 @@ export default class extends Component {
 						/>
 					)}
 				</div>
-				<div>
-					{'Category 2'}
+				<div style={categoryTwoStyle}>
+					CATEGORY TWO
+					<div style={lineStyle} />
 					{arrayForCategoryTwo.map(featureElement => 
 						<FeatureButton
 							key={featureElement}

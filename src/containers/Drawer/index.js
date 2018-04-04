@@ -40,7 +40,7 @@ const secondSetStyle = {
 const newsStyle = {
 	position: 'fixed',
 	marginLeft: '12px',
-	marginTop: '650px'
+	marginTop: '92vh'
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']

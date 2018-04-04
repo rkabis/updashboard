@@ -22,7 +22,23 @@ const modalStyle = {
   fontSize: '10pt',
 }
 
+const formButtonStyle = {
+  backgroundColor: 'black',
+  color: 'white',
+  width: '100px'
+}
+
+const requestForm = <iframe title='Event Request' src="https://docs.google.com/forms/d/e/1FAIpQLScR2oUzpVYisNrzAsy2voF-j1e8uUYWvPhlyEYsdvJkW9qZCQ/viewform?embedded=true" width="500" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>
+const surveyForm = <iframe title='Dashboard Survey' src="https://docs.google.com/forms/d/e/1FAIpQLSehba86m0qvlBiDFnp_9ol6WXsSD52RnfLK4HO4zP9QFrZFvQ/viewform?embedded=true" width="500" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>
+
 export default class extends Component {
+  constructor() {
+    super()
+    this.state = {
+      currentForm: surveyForm
+    }
+  }
+
   render() {
     if(!this.props.show) {
       return null
@@ -33,7 +49,13 @@ export default class extends Component {
           <button onClick={this.props.onClose}>
             x
           </button>
-        	<iframe title='Dashboard Survey' src="https://docs.google.com/forms/d/e/1FAIpQLSehba86m0qvlBiDFnp_9ol6WXsSD52RnfLK4HO4zP9QFrZFvQ/viewform?embedded=true" width="500" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>
+          <div style={formButtonStyle} onClick={() => this.setState({currentForm: requestForm})}>
+            request form
+          </div>
+          <div style={formButtonStyle} onClick={() => this.setState({currentForm: surveyForm})}>
+            survey form
+          </div>
+          {this.state.currentForm}
         </div>
       </div>
     )
