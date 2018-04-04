@@ -12,7 +12,7 @@ const arrowStyle = {
 const changeNewsStyle = {
 	position: 'fixed',
 	marginLeft: '450px',
-	marginTop: '240px'
+	marginTop: '160px'
 }
 
 const titleStyle = {

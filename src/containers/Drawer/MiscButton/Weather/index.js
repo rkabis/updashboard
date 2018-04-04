@@ -2,6 +2,34 @@ import React, { Component } from 'react'
 
 let requestObj = null
 
+const contentStyle = {
+	fontFamily: 'Lato',
+	fontSize: '12pt',
+	marginLeft: '3px'
+}
+
+const titleStyle = {
+	fontFamily: 'Lato',
+	fontSize: '12pt',
+	fontWeight: 'bold'
+}
+
+const headerStyle = {
+	display: 'flex',
+	flexDirection: 'row'
+}
+
+const bodyOneStyle = {
+	display: 'flex',
+	flexDirection: 'row',
+	marginTop: '5px',
+	marginBottom: '5px'
+}
+
+const innerBodyStyle = {
+	marginLeft: '120px'
+}
+
 export default class extends Component {
 	render() {
 		function convertKelvinToCelsius(kelvin) {
@@ -27,12 +55,12 @@ export default class extends Component {
 			let UPsunset = result.sys.sunset
 			UPsunset = new Date(UPsunset*1000).toString()
 			UPsunset = UPsunset.substring(16, 21)
-			document.getElementById("dashDate").innerHTML = "<strong>Date:</strong> " + UPdate
-			document.getElementById("dashTemp").innerHTML = "<strong>Temperature:</strong> " + UPtemp
-			document.getElementById("dashHumid").innerHTML = "<strong>Humidity:</strong> " + UPhumid
-			document.getElementById("dashCloud").innerHTML = "<strong>Cloudiness:</strong> " + UPcloud
-			document.getElementById("dashRise").innerHTML = "<strong>Sunrise:</strong> " + UPsunrise
-			document.getElementById("dashSet").innerHTML = "<strong>Sunset:</strong> " + UPsunset
+			document.getElementById("dashDate").innerHTML = UPdate
+			document.getElementById("dashTemp").innerHTML = UPtemp
+			document.getElementById("dashHumid").innerHTML = UPhumid
+			document.getElementById("dashCloud").innerHTML = UPcloud
+			document.getElementById("dashRise").innerHTML = UPsunrise
+			document.getElementById("dashSet").innerHTML = UPsunset
 		}
 
 		function fetchWeather() {
@@ -47,12 +75,50 @@ export default class extends Component {
 
 		return (
 			<div>
-				<div id="dashDate"/>
-				<div id="dashTemp"/>
-				<div id="dashHumid"/>
-				<div id="dashCloud"/>
-				<div id="dashRise"/>
-				<div id="dashSet"/>
+				<div style={headerStyle}>
+					<div style={titleStyle}>
+						Today's Weather:
+					</div>
+					<div style={contentStyle} id="dashDate"/>
+				</div>
+
+				<div style={bodyOneStyle}>
+					<div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Temperature:
+							</div>
+							<div style={contentStyle} id="dashTemp"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Humidity:
+							</div>
+							<div style={contentStyle} id="dashHumid"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Cloudiness:
+							</div>
+							<div style={contentStyle} id="dashCloud"/>
+						</div>
+					</div>
+
+					<div style={innerBodyStyle}>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Sunrise:
+							</div>
+							<div style={contentStyle} id="dashRise"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Sunset:
+							</div>
+							<div style={contentStyle} id="dashSet"/>
+						</div>
+					</div>
+				</div>
 			</div>
 		)
 	}
