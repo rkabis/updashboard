@@ -32,6 +32,7 @@ export default class extends Component {
 				width={deleteSize}
 				onClick={() => addToCategory(icon)}
 				style={deleteStyle}
+				alt={'delete'}
 			/>
 		)
 	}

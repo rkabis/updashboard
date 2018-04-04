@@ -75,6 +75,7 @@ export default class extends Component {
 						height={arrowSize}
 						width={arrowSize}
 						style={arrowStyle}
+						alt={'minus'}
 					/>
 					<img
 						onClick={() => changeNews('plus')}
@@ -82,6 +83,7 @@ export default class extends Component {
 						height={arrowSize}
 						width={arrowSize}
 						style={arrowStyle}
+						alt={'plus'}
 					/>
 				</div>
 			</div>
