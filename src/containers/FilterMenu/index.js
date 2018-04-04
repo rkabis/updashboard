@@ -11,10 +11,15 @@ const modalStyle = {
 	marginLeft: '200px'
 }
 
+const featuresWithToggles = ['jeep', 'building', 'org']
 
 export default class extends Component {
 	render() {
 		if (!this.props.show) {
+			return null
+		}
+
+		if (!featuresWithToggles.includes(this.props.show)) {
 			return null
 		}
 

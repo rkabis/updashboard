@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import JeepToggle from './JeepToggle.js'
 import BuildingToggle from './BuildingToggle.js'
-// import OrgToggle  from './OrgToggle.js'
+import OrgToggle  from './OrgToggle.js'
 // import RentalToggle from './RentalToggle.js'
 // import UtilityToggle from './UtilityToggle.js'
 // import AdminToggle from './AdminToggle.js'
@@ -25,8 +25,9 @@ export default class extends Component {
 			case 'building':
 				toggle = <BuildingToggle onChangeMapFilter={onChangeMapFilter} />
 				break
-			// case 'org':
-			// 	toggle = <OrgToggle onChangeMapFilter={onChangeMapFilter} />
+			case 'org':
+				toggle = <OrgToggle onChangeMapFilter={onChangeMapFilter} />
+				break
 			// case 'rental':
 			// 	toggle = <RentalToggle onChangeMapFilter={onChangeMapFilter} />
 			// case 'utility':
