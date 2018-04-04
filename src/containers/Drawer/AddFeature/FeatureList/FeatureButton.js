@@ -17,7 +17,8 @@ const titleStyle = {
 
 const featureStyle = {
 	display: 'flex',
-	flexDirection: 'row'
+	flexDirection: 'row',
+	marginLeft: '1px'
 }
 
 export default class extends Component {
