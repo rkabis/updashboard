@@ -31,6 +31,16 @@ const lineStyle = {
   backgroundColor: '#3A4047'
 }
 
+const closeStyle = {
+  position: 'fixed',
+  marginTop: '-25px',
+  marginLeft: '500px',
+  fontFamily: 'Lato',
+  fontSize: '20pt',
+  color: '#3A4047',
+  cursor: 'pointer'
+}
+
 export default class extends Component {
   render() {
     if(!this.props.show) {
@@ -39,12 +49,12 @@ export default class extends Component {
     return (
       <div style={backdropStyle}>
         <div style={modalStyle}>
+          <div style={closeStyle} onClick={this.props.onClose}>
+            x
+          </div>
           <Weather />
           <div style={lineStyle} />
           <News />
-          <button onClick={this.props.onClose}>
-            x
-          </button>
         </div>
       </div>
     )

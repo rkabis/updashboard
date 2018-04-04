@@ -4,7 +4,7 @@ let requestObj = null
 let newsNum = 0
 let newsMax
 
-const arrowSize = '26px'
+const arrowSize = '28px'
 const arrowStyle = {
 	cursor: 'pointer'
 }
@@ -12,7 +12,15 @@ const arrowStyle = {
 const changeNewsStyle = {
 	position: 'fixed',
 	marginLeft: '450px',
-	marginTop: '280px'
+	marginTop: '240px'
+}
+
+const titleStyle = {
+	fontFamily: 'Lato',
+	fontSize: '18pt',
+	fontWeight: 'bold',
+	marginTop: '5px',
+	marginBottom: '5px'
 }
 
 export default class extends Component {
@@ -56,6 +64,9 @@ export default class extends Component {
 
 		return (
 			<div>
+				<div style={titleStyle}>
+					News
+				</div>
 				<div id='newsInfo' />
 				<div style={changeNewsStyle}>
 					<img
