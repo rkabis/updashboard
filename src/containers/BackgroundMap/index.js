@@ -60,8 +60,6 @@ export default class extends Component {
 			return xStyle
 		}
 
-		let x = true
-		
 		return (
 			<div style={componentStyle}>
 				<Map
