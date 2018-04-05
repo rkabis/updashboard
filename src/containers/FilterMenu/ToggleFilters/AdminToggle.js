@@ -55,6 +55,13 @@ export default class extends Component {
 		let fileSource = require('../../BackgroundMap/geojson/UP' + show + '.json')
 		let choices = []
 		for (let x=0; x<fileSource.features.length; x++) {
+      let tempName = fileSource.features[x].properties.officeName;
+      if (tempName == null) {
+        tempName = "";
+      };
+      choices.push(tempName);
+     }
+		for (let x=0; x<fileSource.features.length; x++) {
       let tempName = fileSource.features[x].properties.adminName;
       if (tempName == null) {
         tempName = "";
