@@ -7,7 +7,7 @@ const modalStyle = {
 	zIndex: 200,
 }
 
-const featuresWithToggles = ['jeep', 'building', 'org', 'toilet']
+const featuresWithToggles = ['jeep', 'building', 'org', 'toilet', 'utility', 'rental', 'admin', 'library']
 
 export default class extends Component {
 	render() {
