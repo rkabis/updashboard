@@ -5,6 +5,7 @@ export default (
 	if (filterValue.length === 0) {
 		return true
 	}
-	let temp = filterValue.includes(feature.properties.venueName)
-	return temp
+	if (filterValue[0] <= feature.properties.venueCap) {
+		return true
+	}
 }

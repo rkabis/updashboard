@@ -28,7 +28,7 @@ export default class extends Component {
 				toggle = <OrgToggle onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'rental':
-				toggle = <RentalToggle onChangeMapFilter={onChangeMapFilter} />
+				toggle = <RentalToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'utility':
 				toggle = <UtilityToggle onChangeMapFilter={onChangeMapFilter} />

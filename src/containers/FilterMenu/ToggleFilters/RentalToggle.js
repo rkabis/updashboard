@@ -34,7 +34,8 @@ const searchInputStyle = {
 export default class extends Component {
 	render() {
 		const {
-			onChangeMapFilter
+			onChangeMapFilter,
+			show
 		} = this.props
 
 		const changeFilter = () => {	
@@ -42,6 +43,7 @@ export default class extends Component {
 			alert(searchValue)
 			onChangeMapFilter(1, searchValue)
 		}
+
 
 		return (
 			<div style={componentStyle}>
@@ -70,3 +72,4 @@ export default class extends Component {
 		)
 	}
 }
+
