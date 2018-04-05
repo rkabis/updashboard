@@ -13,7 +13,8 @@ export default class extends Component {
 	render() {
 		const {
 			show,
-			onChangeMapFilter
+			onChangeMapFilter,
+			resetFilter
 		} = this.props
 
 		let toggle = ''
@@ -28,7 +29,7 @@ export default class extends Component {
 				toggle = <OrgToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'rental':
-				toggle = <RentalToggle onChangeMapFilter={onChangeMapFilter} />
+				toggle = <RentalToggle resetFilter={resetFilter} onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'utility':
 				toggle = <UtilityToggle onChangeMapFilter={onChangeMapFilter} />

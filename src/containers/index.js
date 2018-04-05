@@ -24,7 +24,8 @@ export default class extends Component {
 		this.onChangeMapData = (e) => this.setState({mapdata: e})
 		this.onChangeMapFilter = this.addArrayFilter.bind(this)
 		this.filterModal = (e) => this.setState({filterOpen: e})
-		this.resetFilter = () => this.setState({filterValue: []})
+		this.resetFilter = this.resetFilter.bind(this)
+		// this.resetFilter = () => this.setState({filterValue: []})
 	}
 
 	addArrayFilter(num, e) {
@@ -39,6 +40,11 @@ export default class extends Component {
 			arrayTemp.splice(indexDelete,1)
 			this.setState({filterValue: arrayTemp})
 		}
+	}
+
+	resetFilter() {
+		console.log('reset')
+		this.setState({filterValue: []})
 	}
 
 	render() {
@@ -63,6 +69,7 @@ export default class extends Component {
 				<FilterMenu
 					show={this.state.filterOpen}
 					onChangeMapFilter={this.onChangeMapFilter}
+					resetFilter={this.resetFilter}
 				/>
 			</div>
 		)

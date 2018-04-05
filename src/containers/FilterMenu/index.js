@@ -22,7 +22,8 @@ export default class extends Component {
 
 		const {
 			show,
-			onChangeMapFilter
+			onChangeMapFilter,
+			resetFilter
 		} = this.props
 		
 		return (
@@ -31,6 +32,7 @@ export default class extends Component {
 					<FilterSwitch
 						show={show}
 						onChangeMapFilter={onChangeMapFilter}
+						resetFilter={resetFilter}
 					/>
 				</MuiThemeProvider>
 			</div>

@@ -34,12 +34,16 @@ const searchInputStyle = {
 export default class extends Component {
 	render() {
 		const {
-			onChangeMapFilter
+			onChangeMapFilter,
+			resetFilter
 		} = this.props
 
-		const changeFilter = () => {	
+		const changeFilter = () => {
+			resetFilter()
+			console.log('changing')
 			let searchValue = document.getElementById('searchBar').value
 			onChangeMapFilter(1, searchValue)
+			console.log('changed')
 		}
 		
 		return (
@@ -47,7 +51,7 @@ export default class extends Component {
 				style={componentStyle}						
 				onKeyPress={(ev) => {
 					if (ev.key === 'Enter') {
-						changeFilter()
+								changeFilter()
 							}
 					}}
 			>
