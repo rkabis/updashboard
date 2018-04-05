@@ -12,9 +12,9 @@ const componentStyle = {
 
 const buttonStyle = {
 	fontFamily: 'Lato',
-	fontSize: '12pt',
+	fontSize: '10pt',
 	backgroundColor: 'white',
-	marginTop: '3px',
+	marginTop: '5px',
 	padding: '3px',
 	cursor: 'pointer'
 }

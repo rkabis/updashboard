@@ -37,7 +37,7 @@ export default class extends Component {
 			onChangeMapFilter
 		} = this.props
 
-		const changeFilter = () => {
+		const changeFilter = () => {	
 			let searchValue = document.getElementById('searchBar').value
 			alert(searchValue)
 			onChangeMapFilter(searchValue)
@@ -57,7 +57,7 @@ export default class extends Component {
 					<input
 						id="searchBar"
 						style={searchInputStyle}
-						type={'text'}
+						type='text'
 						placeholder={'SEARCH BUILDING...'}
 						onKeyPress={(ev) => {
 							if (ev.key === 'Enter') {
