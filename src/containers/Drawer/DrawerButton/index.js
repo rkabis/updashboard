@@ -51,6 +51,8 @@ export default class extends Component {
 						arrayForCategoryTwo={arrayForCategoryTwo}
 						icon={icon}
 						show={state}
+						onChangeMapData={onChangeMapData}
+						filterModal={filterModal}
 					/>
 				</div>
 			</div>
