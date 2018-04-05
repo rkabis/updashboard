@@ -12,7 +12,7 @@ const componentStyle = {
 	marginTop: '65px',
 }
 
-const searchSize = '18px'
+const searchSize = '20px'
 
 const searchIconStyle = {
 	cursor: 'pointer',
@@ -36,7 +36,7 @@ const searchInputStyle = {
 	fontFamily: 'Lato',
 	fontSize: '10pt',
 	marginLeft: '30px',
-	marginTop: '-11px',
+	marginTop: '-11.5px',
 	overflow: 'hidden',
 }
 

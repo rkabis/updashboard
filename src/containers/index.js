@@ -29,7 +29,6 @@ export default class extends Component {
 
 	addArrayFilter(num, e) {
 		if (num === 1) {
-			alert('adding')
 			let arrayTemp = this.state.filterValue
 			arrayTemp.push(e)
 			this.setState({filterValue: arrayTemp})
