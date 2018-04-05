@@ -40,7 +40,7 @@ export default class extends Component {
 		const changeFilter = () => {	
 			let searchValue = document.getElementById('searchBar').value
 			alert(searchValue)
-			onChangeMapFilter(searchValue)
+			onChangeMapFilter(1, searchValue)
 		}
 
 		return (

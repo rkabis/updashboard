@@ -6,7 +6,7 @@ import OrgToggle  from './OrgToggle.js'
 // import RentalToggle from './RentalToggle.js'
 // import UtilityToggle from './UtilityToggle.js'
 // import AdminToggle from './AdminToggle.js'
-// import ToiletToggle from './ToiletToggle.js'
+import ToiletToggle from './ToiletToggle.js'
 // import LibraryToggle from './LibraryToggle.js'
 
 export default class extends Component {
@@ -17,7 +17,7 @@ export default class extends Component {
 		} = this.props
 
 		let toggle = ''
-
+		alert(show)
 		switch(show) {
 			case 'jeep':
 				toggle = <JeepToggle onChangeMapFilter={onChangeMapFilter} />
@@ -34,8 +34,9 @@ export default class extends Component {
 			// 	toggle = <UtilityToggle onChangeMapFilter={onChangeMapFilter} />
 			// case 'admin':
 			// 	toggle = <AdminToggle onChangeMapFilter={onChangeMapFilter} />
-			// case 'toilet':
-			// 	toggle = <ToiletToggle onChangeMapFilter={onChangeMapFilter} />
+			case 'toilet':
+				toggle = <ToiletToggle onChangeMapFilter={onChangeMapFilter} />
+				break
 			// case 'library':
 			// 	toggle = <LibraryToggle onChangeMapFilter={onChangeMapFilter} />
 			default:

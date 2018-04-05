@@ -24,6 +24,7 @@ export default class extends Component {
 		this.onChangeMapData = (e) => this.setState({mapdata: e})
 		this.onChangeMapFilter = this.addArrayFilter.bind(this)
 		this.filterModal = (e) => this.setState({filterOpen: e})
+		this.resetFilter = () => this.setState({filterValue: []})
 	}
 
 	addArrayFilter(num, e) {
@@ -54,6 +55,7 @@ export default class extends Component {
 					onChangeMapData={this.onChangeMapData}
 					mapdata={mapdata}
 					filterModal={this.filterModal}
+					resetFilter={this.resetFilter}
 				/>
 				<Header />
 				<BackgroundMap
