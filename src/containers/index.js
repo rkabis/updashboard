@@ -35,7 +35,6 @@ export default class extends Component {
 			this.setState({filterValue: arrayTemp})
 		}
 		if (num === 0) {
-			alert('removing')
 			let arrayTemp = this.state.filterValue
 			let indexDelete = arrayTemp.indexOf(e)
 			arrayTemp.splice(indexDelete,1)

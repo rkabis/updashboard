@@ -22,25 +22,25 @@ export default class extends Component {
 				toggle = <JeepToggle onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'building':
-				toggle = <BuildingToggle onChangeMapFilter={onChangeMapFilter} />
+				toggle = <BuildingToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'org':
-				toggle = <OrgToggle onChangeMapFilter={onChangeMapFilter} />
+				toggle = <OrgToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'rental':
-				toggle = <RentalToggle show={show} onChangeMapFilter={onChangeMapFilter} />
+				toggle = <RentalToggle onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'utility':
 				toggle = <UtilityToggle onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'admin':
-				toggle = <AdminToggle onChangeMapFilter={onChangeMapFilter} />
+				toggle = <AdminToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'toilet':
 				toggle = <ToiletToggle onChangeMapFilter={onChangeMapFilter} />
 				break
 			case 'library':
-				toggle = <LibraryToggle onChangeMapFilter={onChangeMapFilter} />
+				toggle = <LibraryToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			default:
 				toggle = <div/>

@@ -34,17 +34,14 @@ const searchInputStyle = {
 export default class extends Component {
 	render() {
 		const {
-			onChangeMapFilter,
-			show
+			onChangeMapFilter
 		} = this.props
 
 		const changeFilter = () => {	
 			let searchValue = document.getElementById('searchBar').value
-			alert(searchValue)
 			onChangeMapFilter(1, searchValue)
 		}
-
-
+		
 		return (
 			<div style={componentStyle}>
 				<div style={searchBarStyle}>

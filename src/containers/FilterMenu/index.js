@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import FilterSwitch from './ToggleFilters/'
 
@@ -26,10 +27,12 @@ export default class extends Component {
 		
 		return (
 			<div style={modalStyle}>
-				<FilterSwitch
-					show={show}
-					onChangeMapFilter={onChangeMapFilter}
-				/>
+				<MuiThemeProvider>
+					<FilterSwitch
+						show={show}
+						onChangeMapFilter={onChangeMapFilter}
+					/>
+				</MuiThemeProvider>
 			</div>
 		)
 	}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import AutoComplete from 'material-ui/AutoComplete'
+
 const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
@@ -13,38 +15,62 @@ const componentStyle = {
 const searchSize = '18px'
 
 const searchIconStyle = {
-	cursor: 'pointer'
+	cursor: 'pointer',
+	marginTop: '1px',
+	marginLeft: '2px'
 }
 
 const searchBarStyle = {
 	display: 'flex',
+	width: '200px',
 	flexDirection: 'row',
 	backgroundColor: 'white',
 	borderRadius: '16px',
-	padding: '6px'
+	padding: '6px',
 }
 
 const searchInputStyle = {
-	border: '0',
-	paddingLeft: '8px',
+	position: 'absolute',
+	width: '150px',
+	height: '30px',
 	fontFamily: 'Lato',
-	fontSize: '10pt'
+	fontSize: '10pt',
+	marginLeft: '30px',
+	marginTop: '-11px',
+	overflow: 'hidden',
 }
 
 export default class extends Component {
 	render() {
 		const {
-			onChangeMapFilter
+			onChangeMapFilter,
+			show
 		} = this.props
 
 		const changeFilter = () => {	
 			let searchValue = document.getElementById('searchBar').value
-			alert(searchValue)
 			onChangeMapFilter(1, searchValue)
 		}
 
+		let fileSource = require('../../BackgroundMap/geojson/UP' + show + '.json')
+		let choices = []
+		for (let x=0; x<fileSource.features.length; x++) {
+      let tempName = fileSource.features[x].properties.orgName;
+      if (tempName == null) {
+        tempName = "";
+      };
+      choices.push(tempName);
+     }
+
 		return (
-			<div style={componentStyle}>
+			<div 
+				style={componentStyle}						
+				onKeyPress={(ev) => {
+					if (ev.key === 'Enter') {
+						changeFilter()
+							}
+					}}
+			>
 				<div style={searchBarStyle}>
 					<img
 						style={searchIconStyle}
@@ -54,16 +80,13 @@ export default class extends Component {
 						width={searchSize}
 						onClick={() => changeFilter()}
 					/>
-					<input
-						id="searchBar"
+					<AutoComplete
 						style={searchInputStyle}
-						type='text'
-						placeholder={'SEARCH ORG...'}
-						onKeyPress={(ev) => {
-							if (ev.key === 'Enter') {
-								changeFilter()
-							}
-						}}
+						id="searchBar"
+						dataSource={choices}
+						filter={AutoComplete.caseInsensitiveFilter}
+						maxSearchResults={5}
+						hintText="ENTER ORG..."
 					/>
 				</div>
 			</div>
