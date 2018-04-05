@@ -4,11 +4,7 @@ import FilterSwitch from './ToggleFilters/'
 
 const modalStyle = {
 	position: 'absolute',
-	height: '300px',
-	width: '300px',
-	backgroundColor: 'blue',
 	zIndex: 200,
-	marginLeft: '200px'
 }
 
 const featuresWithToggles = ['jeep', 'building', 'org']

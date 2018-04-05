@@ -38,6 +38,9 @@ export default class extends Component {
 			// 	toggle = <ToiletToggle onChangeMapFilter={onChangeMapFilter} />
 			// case 'library':
 			// 	toggle = <LibraryToggle onChangeMapFilter={onChangeMapFilter} />
+			default:
+				toggle = <div/>
+				break
 		}
 
 		return (
