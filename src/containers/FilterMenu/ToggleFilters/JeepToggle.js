@@ -25,7 +25,7 @@ export default class extends Component {
 			onChangeMapFilter
 		} = this.props
 
-		const changeColor = (i) => {
+		const changeColor = (i, jeep) => {
 			let buttonColor = null
 			switch (i) {
 				case 2:
@@ -51,20 +51,28 @@ export default class extends Component {
 					break
 			}
 			let currentColor = document.getElementsByClassName('mapFilter')[i].style.backgroundColor
-			const changeColor = () => {
+			const defaultColor = (jeep) => {
 				buttonColor = 'white'
+				onChangeMapFilter(0, jeep)
+				document.getElementsByClassName('mapFilter')[i].style.backgroundColor = buttonColor
 			}
-			{currentColor !== 'white' ? changeColor() : null}
-			document.getElementsByClassName('mapFilter')[i].style.backgroundColor = buttonColor
+
+			const newColor = (jeep) => {
+				document.getElementsByClassName('mapFilter')[i].style.backgroundColor = buttonColor
+				onChangeMapFilter(1, jeep)
+			}
+			{currentColor !== 'white' ? defaultColor(jeep) : newColor(jeep)}
+			
 		}
+
 		return (
 			<div style={componentStyle}>
-				<div className='mapFilter' style={buttonStyle} onClick={() => {onChangeMapFilter('IKOT'), changeColor(0)}}>IKOT</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => {onChangeMapFilter('TOKI'), changeColor(1)}}>TOKI</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => {onChangeMapFilter('Katipunan'), changeColor(2)}}>KATIPUNAN</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => {onChangeMapFilter('SM North'), changeColor(3)}}>SM NORTH</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => {onChangeMapFilter('Pantranco'), changeColor(4)}}>PANTRANCO</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => {onChangeMapFilter('Philcoa'), changeColor(5)}}>PHILCOA</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(0,'IKOT')}>IKOT</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(1,'TOKI')}>TOKI</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(2,'Katipunan')}>KATIPUNAN</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(3,'SM North')}>SM NORTH</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(4,'Pantranco')}>PANTRANCO</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(5,'Philcoa')}>PHILCOA</div>
 			</div>
 		)
 	}

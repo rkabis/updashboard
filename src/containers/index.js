@@ -18,12 +18,28 @@ export default class extends Component {
 		super()
 		this.state = {
 			mapdata: null,
-			filterValue: '',
+			filterValue: [],
 			filterOpen: false
 		}
 		this.onChangeMapData = (e) => this.setState({mapdata: e})
-		this.onChangeMapFilter = (e) => this.setState({filterValue: e})
+		this.onChangeMapFilter = this.addArrayFilter.bind(this)
 		this.filterModal = (e) => this.setState({filterOpen: e})
+	}
+
+	addArrayFilter(num, e) {
+		if (num === 1) {
+			alert('adding')
+			let arrayTemp = this.state.filterValue
+			arrayTemp.push(e)
+			this.setState({filterValue: arrayTemp})
+		}
+		if (num === 0) {
+			alert('removing')
+			let arrayTemp = this.state.filterValue
+			let indexDelete = arrayTemp.indexOf(e)
+			arrayTemp.splice(indexDelete,1)
+			this.setState({filterValue: arrayTemp})
+		}
 	}
 
 	render() {

@@ -59,7 +59,9 @@ export default class extends Component {
 			let xStyle = switchStyle(feature, mapdata)
 			return xStyle
 		}
+
 		let x = true
+		
 		return (
 			<div style={componentStyle}>
 				<Map
