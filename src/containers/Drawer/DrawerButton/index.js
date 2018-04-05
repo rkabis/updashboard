@@ -18,7 +18,9 @@ export default class extends Component {
 			onChangeMapData,
 			mapdata,
 			arrayForCategoryOne,
-			arrayForCategoryTwo
+			arrayForCategoryTwo,
+			filterModal,
+			resetFilter
 		} = this.props
 
 		let state = false
@@ -32,7 +34,7 @@ export default class extends Component {
 		return (
 			<div style={componentStyle}>
 				<img
-						onClick={onChangeMapData ? (mapdata !== icon ? () => onChangeMapData(icon) : () => onChangeMapData(null)) : null}
+						onClick={onChangeMapData ? (mapdata !== icon ? () => {onChangeMapData(icon), filterModal(icon), resetFilter()} : () => {onChangeMapData(null), filterModal(false), resetFilter()}) : null}
 						src={require('../icons/' + icon + '.png')}
 						alt={icon}
 						width={'25px'}

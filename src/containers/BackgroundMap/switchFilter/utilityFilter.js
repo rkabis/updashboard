@@ -1,11 +1,10 @@
 export default (
 	feature,
-	sampleValue
+	filterValue
 ) => {
-	switch(sampleValue) {
-		case '':
-			return true
-		default:
-			return (sampleValue === feature.properties.utilityType ? true : false)
+	if (filterValue.length === 0) {
+		return true
 	}
+	let temp = filterValue.includes(feature.properties.utilityType)
+	return temp
 }

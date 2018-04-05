@@ -42,6 +42,8 @@ export default class extends Component {
 		this.zoomOut = () => this.setState({zoomLevel: this.state.zoomLevel-1})
 	}
 
+
+
 	render() {
 		const {
 			mapdata,
@@ -79,7 +81,7 @@ export default class extends Component {
 						/>
 					</Control>
 					<GeoJSON
-						key={mapdata}
+						key={`${mapdata} ${filterValue}`}
 						data={mapdata ? require('./geojson/UP' + mapdata + '.json') : null}
 						onEachFeature={this.onEachFeature.bind(this)}
 						style={(feature) => callStyle(feature)}
