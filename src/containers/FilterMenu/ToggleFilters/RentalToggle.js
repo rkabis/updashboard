@@ -43,7 +43,14 @@ export default class extends Component {
 		}
 		
 		return (
-			<div style={componentStyle}>
+			<div 
+				style={componentStyle}						
+				onKeyPress={(ev) => {
+					if (ev.key === 'Enter') {
+						changeFilter()
+							}
+					}}
+			>
 				<div style={searchBarStyle}>
 					<img
 						style={searchIconStyle}
@@ -58,11 +65,6 @@ export default class extends Component {
 						style={searchInputStyle}
 						type='text'
 						placeholder={'ENTER CAPACITY...'}
-						onKeyPress={(ev) => {
-							if (ev.key === 'Enter') {
-								changeFilter()
-							}
-						}}
 					/>
 				</div>
 			</div>

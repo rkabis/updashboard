@@ -48,9 +48,9 @@ export default class extends Component {
 			<div style={componentStyle}>
 				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(0,'ATM')}>ATM</div>
 				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(1,'Bank')}>BANK</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(0,'Computer Shop')}>COMPUTER SHOP</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(0,'Money Changer')}>MONEY CHANGER</div>
-				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(0,'Postal')}>POSTAL</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(2,'Computer Shop')}>COMPUTER SHOP</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(3,'Money Changer')}>MONEY CHANGER</div>
+				<div className='mapFilter' style={buttonStyle} onClick={() => changeColor(4,'Postal')}>POSTAL</div>
 			</div>
 		)
 	}
