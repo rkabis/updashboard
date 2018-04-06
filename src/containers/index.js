@@ -25,7 +25,6 @@ export default class extends Component {
 		this.onChangeMapFilter = this.addArrayFilter.bind(this)
 		this.filterModal = (e) => this.setState({filterOpen: e})
 		this.resetFilter = this.resetFilter.bind(this)
-		// this.resetFilter = () => this.setState({filterValue: []})
 	}
 
 	addArrayFilter(num, e) {
@@ -40,7 +39,6 @@ export default class extends Component {
 			arrayTemp.splice(indexDelete,1)
 			this.setState({filterValue: arrayTemp})
 		}
-		console.log('after adding/removing' + this.state.filterValue)
 	}
 
 	resetFilter() {
