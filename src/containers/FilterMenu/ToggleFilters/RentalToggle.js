@@ -34,17 +34,25 @@ const searchInputStyle = {
 export default class extends Component {
 	render() {
 		const {
-			onChangeMapFilter
+			onChangeMapFilter,
+			resetFilter
 		} = this.props
 
-		const changeFilter = () => {	
+		const changeFilter = () => {
+			resetFilter()
 			let searchValue = document.getElementById('searchBar').value
-			alert(searchValue)
 			onChangeMapFilter(1, searchValue)
 		}
-
+		
 		return (
-			<div style={componentStyle}>
+			<div 
+				style={componentStyle}						
+				onKeyPress={(ev) => {
+					if (ev.key === 'Enter') {
+								changeFilter()
+							}
+					}}
+			>
 				<div style={searchBarStyle}>
 					<img
 						style={searchIconStyle}
@@ -59,14 +67,10 @@ export default class extends Component {
 						style={searchInputStyle}
 						type='text'
 						placeholder={'ENTER CAPACITY...'}
-						onKeyPress={(ev) => {
-							if (ev.key === 'Enter') {
-								changeFilter()
-							}
-						}}
 					/>
 				</div>
 			</div>
 		)
 	}
 }
+

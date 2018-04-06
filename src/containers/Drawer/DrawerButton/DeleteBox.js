@@ -14,7 +14,9 @@ export default class extends Component {
 		const {
 			arrayForCategoryOne,
 			arrayForCategoryTwo,
-			icon
+			icon,
+			onChangeMapData,
+			filterModal
 		} = this.props
 
 		const addToCategory = (icon) => {
@@ -30,7 +32,7 @@ export default class extends Component {
 				src={require('./icons/delete.png')}
 				height={deleteSize}
 				width={deleteSize}
-				onClick={() => addToCategory(icon)}
+				onClick={() => {addToCategory(icon), onChangeMapData(null), filterModal(false)}}
 				style={deleteStyle}
 				alt={'delete'}
 			/>

@@ -7,7 +7,8 @@ const backdropStyle = {
   left: 0,
   right: 0,
   backgroundColor: 'rgba(0,0,0,0.3)',
-  padding: 50
+  padding: 50,
+  zIndex: 0
 }
 
 const modalStyle = {
@@ -91,7 +92,7 @@ export default class extends Component {
     }
 
     return (
-      <div style={backdropStyle} onClick={this.props.onClose}>
+      <div style={backdropStyle }>
         <div style={modalStyle}>
           <div style={closeStyle} onClick={this.props.onClose}>
             x
