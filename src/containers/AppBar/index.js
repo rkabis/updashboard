@@ -6,8 +6,7 @@ import AboutButton from './AboutButton'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	// backgroundColor: '#A31F25',
-	backgroundColor: 'black',
+	backgroundColor: '#A31F25',
 	width: '1280px',
 	height: '54px',
 	zIndex: 10,
