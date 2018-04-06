@@ -4,6 +4,7 @@ import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
 
 const componentStyle = {
+	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'row',
 	backgroundColor: '#A31F25',

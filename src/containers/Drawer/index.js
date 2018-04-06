@@ -5,13 +5,14 @@ import MiscButton from './MiscButton'
 import AddButton from './AddButton.js'
 
 const componentStyle = {
+	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
 	height: '704px',
 	width: '54px',
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
-	zIndex: 10
+	zIndex: 20
 }
 
 const lineStyle = {

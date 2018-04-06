@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Drawer from './Drawer'
-import Header from './AppBar'
+import AppBar from './AppBar'
 import BackgroundMap from './BackgroundMap'
 import FilterMenu from './FilterMenu'
 
@@ -59,7 +59,7 @@ export default class extends Component {
 					filterModal={this.filterModal}
 					resetFilter={this.resetFilter}
 				/>
-				<Header />
+				<AppBar />
 				<BackgroundMap
 					mapdata={mapdata}
 					filterValue={filterValue}
