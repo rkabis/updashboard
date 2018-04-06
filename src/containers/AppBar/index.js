@@ -10,6 +10,7 @@ const componentStyle = {
 	backgroundColor: '#A31F25',
 	width: '1280px',
 	height: '54px',
+	marginLeft: '54px',
 	zIndex: 10,
 }
 
