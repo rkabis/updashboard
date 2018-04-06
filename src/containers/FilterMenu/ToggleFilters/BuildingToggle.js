@@ -65,11 +65,6 @@ export default class extends Component {
 		return (
 			<div 
 				style={componentStyle}						
-				onKeyPress={(ev) => {
-					if (ev.key === 'Enter') {
-						changeFilter()
-							}
-					}}
 			>
 				<div style={searchBarStyle}>
 					<img

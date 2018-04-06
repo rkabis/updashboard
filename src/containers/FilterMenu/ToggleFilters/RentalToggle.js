@@ -40,10 +40,8 @@ export default class extends Component {
 
 		const changeFilter = () => {
 			resetFilter()
-			console.log('changing')
 			let searchValue = document.getElementById('searchBar').value
 			onChangeMapFilter(1, searchValue)
-			console.log('changed')
 		}
 		
 		return (

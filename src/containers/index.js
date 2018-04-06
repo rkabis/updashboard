@@ -40,11 +40,11 @@ export default class extends Component {
 			arrayTemp.splice(indexDelete,1)
 			this.setState({filterValue: arrayTemp})
 		}
+		console.log('after adding/removing' + this.state.filterValue)
 	}
 
 	resetFilter() {
-		console.log('reset')
-		this.setState({filterValue: []})
+		this.state.filterValue = []
 	}
 
 	render() {
