@@ -5,12 +5,15 @@ import AppBar from './AppBar'
 import BackgroundMap from './BackgroundMap'
 import FilterMenu from './FilterMenu'
 
+var scale = window.devicePixelRatio
+console.log(scale)
+
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	height: 704,
-	width: 1280,
-	backgroundColor: 'white'	
+	height: 704*scale,
+	width: 1280*scale,
+	backgroundColor: 'blue'	
 }
 
 export default class extends Component {
