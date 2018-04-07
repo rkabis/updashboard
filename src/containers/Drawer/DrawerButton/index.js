@@ -6,8 +6,10 @@ const componentStyle = {
 	cursor: 'pointer',
 	display: 'flex',
 	flexDirection: 'row',
-	marginTop: '10px',
+	marginTop: 10,
 }
+
+const iconSize = 25
 
 const removableFeatures = ['utility', 'gym', 'admin', 'library', 'museum', 'org', 'parking', 'wifi', 'bucket', 'gates']
 
@@ -37,8 +39,8 @@ export default class extends Component {
 						onClick={onChangeMapData ? (mapdata !== icon ? () => {onChangeMapData(icon), filterModal(icon), resetFilter()} : () => {onChangeMapData(null), filterModal(false), resetFilter()}) : null}
 						src={require('../icons/' + icon + '.png')}
 						alt={icon}
-						width={'25px'}
-						height={'25px'}
+						width={iconSize}
+						height={iconSize}
 						style={{
 							filter: 'brightness(30)',
 						}}

@@ -14,27 +14,27 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: '500px',
-  height: '300px',
-  marginTop: '100px',
-  marginLeft: ' 340px',
+  width: 500,
+  height: 300,
+  marginTop: 100,
+  marginLeft: 340,
   padding: 30,
   overflow: 'scroll'
 }
 
 const closeStyle = {
   position: 'fixed',
-  marginTop: '-25px',
-  marginLeft: '500px',
+  marginTop: -25,
+  marginLeft: 500,
   fontFamily: 'Lato',
-  fontSize: '20pt',
+  fontSize: 26,
   color: '#3A4047',
   cursor: 'pointer'
 }
 
 const titleStyle = {
   fontFamily: 'Lato',
-  fontSize: '22pt',
+  fontSize: 28,
   fontWeight: 'bold'
 }
 

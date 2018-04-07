@@ -5,20 +5,20 @@ const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
 	cursor: 'pointer',
-	marginTop: '5px',
+	marginTop: 5,
 }
 
-const iconSize = '25px'
+const iconSize = 25
 
 const titleStyle = {
-	marginLeft: '7px',
-	marginTop: '4px'
+	marginLeft: 7,
+	marginTop: 4
 }
 
 const featureStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginLeft: '1px'
+	marginLeft: 1
 }
 
 export default class extends Component {

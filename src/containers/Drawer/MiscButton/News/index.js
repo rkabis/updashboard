@@ -4,23 +4,23 @@ let requestObj = null
 let newsNum = 0
 let newsMax
 
-const arrowSize = '28px'
+const arrowSize = 28
 const arrowStyle = {
 	cursor: 'pointer'
 }
 
 const changeNewsStyle = {
 	position: 'fixed',
-	marginLeft: '450px',
-	marginTop: '160px'
+	marginLeft: 450,
+	marginTop: 160
 }
 
 const titleStyle = {
 	fontFamily: 'Lato',
-	fontSize: '18pt',
+	fontSize: 22,
 	fontWeight: 'bold',
-	marginTop: '5px',
-	marginBottom: '5px'
+	marginTop: 5,
+	marginBottom: 5
 }
 
 export default class extends Component {
@@ -49,7 +49,7 @@ export default class extends Component {
 				document.getElementById('newsInfo').innerHTML = newsTitle + '<br/>' + newsDate + '<br/><br/>' + newsContent;
 			}
 			if (newsID === 399) {
-				document.getElementsByTagName('span')[1].style.fontSize = '9pt'
+				document.getElementsByTagName('span')[1].style.fontSize = '5'
 			}
 		}
 

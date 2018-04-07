@@ -3,22 +3,22 @@ import React, { Component } from 'react'
 import FeatureButton from './FeatureButton.js'
 
 const lineStyle = {
-	height: '2px',
-	width: '200px',
+	height: 2,
+	width: 200,
 	backgroundColor: '#3A4047',
-	marginTop: '5px',
-	marginBottom: '8px',
+	marginTop: 5,
+	marginBottom: 8,
 	justifyContent: 'space-between'
 }
 
 const categoryStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginTop: '20px'
+	marginTop: 20
 }
 
 const categoryTwoStyle = {
-	marginLeft: '80px'
+	marginLeft: 80
 }
 export default class extends Component {
 	render() {

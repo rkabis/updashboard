@@ -4,13 +4,13 @@ let requestObj = null
 
 const contentStyle = {
 	fontFamily: 'Lato',
-	fontSize: '12pt',
-	marginLeft: '3px'
+	fontSize: 16,
+	marginLeft: 3
 }
 
 const titleStyle = {
 	fontFamily: 'Lato',
-	fontSize: '12pt',
+	fontSize: 16,
 	fontWeight: 'bold'
 }
 
@@ -22,12 +22,12 @@ const headerStyle = {
 const bodyOneStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginTop: '5px',
-	marginBottom: '5px'
+	marginTop: 5,
+	marginBottom: 5
 }
 
 const innerBodyStyle = {
-	marginLeft: '120px'
+	marginLeft: 120
 }
 
 export default class extends Component {

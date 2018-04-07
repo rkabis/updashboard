@@ -12,38 +12,38 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: '500px',
-  height: '300px',
-  marginTop: '100px',
-  marginLeft: ' 340px',
+  width: 500,
+  height: 300,
+  marginTop: 100,
+  marginLeft: 340,
   padding: 30,
   overflow: 'scroll',
   fontFamily: 'Lato',
-  fontSize: '10pt',
-  lineHeight: '1.4'
+  fontSize: 13,
+  lineHeight: 1.4
 }
 
 const closeStyle = {
   position: 'fixed',
-  marginTop: '-25px',
-  marginLeft: '500px',
+  marginTop: -25,
+  marginLeft: 500,
   fontFamily: 'Lato',
-  fontSize: '20pt',
+  fontSize: 26,
   color: '#3A4047',
   cursor: 'pointer'
 }
 
 const titleStyle = {
-  fontSize: '16pt',
+  fontSize: 22,
   fontWeight: 'bold',
-  marginBottom: '5px'
+  marginBottom: 5
 }
 
 const lineStyle = {
-  width: '500px',
-  height: '2px',
+  width: 500,
+  height: 2,
   backgroundColor: '#3A4047',
-  marginBottom: '5px'
+  marginBottom: 5
 }
 
 const bodyStyle = {
@@ -68,7 +68,7 @@ export default class extends Component {
           <div style={bodyStyle}>
             The UP Dashboard went live on January 15, 2018. Its mission was to <b> digitize the UP Diliman campus </b> by making campus-related data more accessible. In the months that followed, Dashboard became home to over a dozen useful and interesting features.
             <br/><br/>
-            Today, the Dashboard has its eyes set on making the flow of data a two-way stream. <b> All users are invited to share facts, statistics, and insights they’d like applied to the website </b>. After all, who better to write the living history of UP Diliman than its community?
+            Today, the Dashboard has its eyes set on making the flow of data a two-way stream. <b> All users are invited to share facts, statistics, and insights they’d like applied to the website</b>. After all, who better to write the living history of UP Diliman than its community?
             <br/><br/>
             You can <a href='https://www.fb.com/updashboard'>connect with us on Facebook</a>, <a href='mailto:updashboard@gmail.com'> email us</a>, or leave your thoughts in the Contact Us tab of our website.
             <br/><br/>
