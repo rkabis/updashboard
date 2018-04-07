@@ -23,6 +23,7 @@ const modalStyle = {
   overflow: 'scroll',
   fontFamily: 'Lato',
   fontSize: 13,
+  zIndex: 200
 }
 
 const lineStyle = {

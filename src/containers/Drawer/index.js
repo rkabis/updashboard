@@ -8,8 +8,10 @@ const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: 704,
-	width: 54,
+	// height: 704,
+	// width: 54,
+	height: '100vh',
+	width: '4.2vw',
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
 	zIndex: 20
@@ -38,10 +40,11 @@ const secondSetStyle = {
 	marginBottom: 8	
 }
 
-const newsStyle = {
+const miscStyle = {
 	position: 'fixed',
 	marginLeft: 12,
-	marginTop: 650
+	// marginTop: 650
+	marginTop: '93vh'
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
@@ -167,7 +170,7 @@ export default class extends Component {
 					/>
 				</div>
 
-				<div style={newsStyle}>
+				<div style={miscStyle}>
 					<div onClick={this.newsModal}>
 						<DrawerButton
 							icon={'news'}

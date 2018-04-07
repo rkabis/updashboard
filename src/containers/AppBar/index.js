@@ -8,8 +8,9 @@ const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: 1226,
+	// width: 1226,
 	height: 54,
+	width: '95.8vw',
 	marginLeft: 54,
 	zIndex: 10,
 }
