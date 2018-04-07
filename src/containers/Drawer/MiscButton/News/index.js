@@ -4,6 +4,9 @@ let requestObj = null
 let newsNum = 0
 let newsMax
 
+const devWidth = (window.screen.width/1280)
+const devHeight = (window.screen.height/800)
+
 const arrowSize = 28
 const arrowStyle = {
 	cursor: 'pointer'
@@ -11,16 +14,16 @@ const arrowStyle = {
 
 const changeNewsStyle = {
 	position: 'fixed',
-	marginLeft: 450,
-	marginTop: 160
+	marginLeft: 450*devWidth,
+	marginTop: 160*devHeight
 }
 
 const titleStyle = {
 	fontFamily: 'Lato',
 	fontSize: 22,
 	fontWeight: 'bold',
-	marginTop: 5,
-	marginBottom: 5
+	marginTop: 5*devHeight,
+	marginBottom: 5*devHeight
 }
 
 export default class extends Component {

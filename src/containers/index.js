@@ -5,17 +5,15 @@ import AppBar from './AppBar'
 import BackgroundMap from './BackgroundMap'
 import FilterMenu from './FilterMenu'
 
-const devWidth = window.screen.width
-const devHeight = window.screen.height
-console.log('width: ' + devWidth)
-console.log('height: ' + devHeight)
+const devWidth = (window.screen.width/1280)
+const devHeight = (window.screen.height/800)
 
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	height: 800,
-	width: 1280,
-	backgroundColor: 'blue'	
+	height: 800*devHeight,
+	width: 1280*devWidth,
+	backgroundColor: 'white'	
 }
 
 export default class extends Component {

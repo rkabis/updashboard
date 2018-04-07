@@ -4,44 +4,47 @@ import DrawerButton from './DrawerButton'
 import MiscButton from './MiscButton'
 import AddButton from './AddButton.js'
 
+const devWidth = (window.screen.width/1280)
+const devHeight = (window.screen.height/800)
+
 const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: 704,
-	width: 54,
+	height: 704*devHeight,
+	width: 54*devWidth,
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
 	zIndex: 20
 }
 
 const lineStyle = {
-	height: 2,
-	width: 40,
+	height: 2*devHeight,
+	width: 40*devWidth,
 	backgroundColor: '#3A4047',
 	margin: 4
 }
 
 const menuStyle = {
-	marginTop: 3,
-	marginLeft: 12
+	marginTop: 3*devHeight,
+	marginLeft: 12*devWidth
 }
 
 const firstSetStyle = {
-	marginLeft: 12,
-	marginTop: 10,
-	marginBottom: 8
+	marginLeft: 12*devWidth,
+	marginTop: 10*devHeight,
+	marginBottom: 8*devHeight
 }
 
 const secondSetStyle = {
-	marginLeft: 12,
-	marginBottom: 8	
+	marginLeft: 12*devWidth,
+	marginBottom: 8*devHeight
 }
 
 const miscStyle = {
 	position: 'fixed',
-	marginLeft: 12,
-	marginTop: 650
+	marginLeft: 12*devWidth,
+	marginTop: 650*devHeight
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']

@@ -3,6 +3,9 @@ import React, { Component } from 'react'
 import Weather from './Weather'
 import News from './News'
 
+const devWidth = (window.screen.width/1280)
+const devHeight = (window.screen.height/800)
+
 const backdropStyle = {
   position: 'fixed',
   top: 0,
@@ -15,10 +18,10 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: 500,
-  height: 300,
-  marginTop: 100,
-  marginLeft: 340,
+  width: 500*devWidth,
+  height: 300*devHeight,
+  marginTop: 100*devHeight,
+  marginLeft: 340*devWidth,
   padding: 30,
   overflow: 'scroll',
   fontFamily: 'Lato',
@@ -27,15 +30,15 @@ const modalStyle = {
 }
 
 const lineStyle = {
-  width: 500,
-  height: 2,
+  width: 500*devWidth,
+  height: 2*devHeight,
   backgroundColor: '#3A4047'
 }
 
 const closeStyle = {
   position: 'fixed',
-  marginTop: -25,
-  marginLeft: 500,
+  marginTop: -25*devHeight,
+  marginLeft: 500*devWidth,
   fontFamily: 'Lato',
   fontSize: 26,
   color: '#3A4047',
