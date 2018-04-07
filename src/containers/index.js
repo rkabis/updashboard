@@ -8,11 +8,8 @@ import FilterMenu from './FilterMenu'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	// height: 704,
-	// width: 1280,
-	height: '100vh',
-	width: '100vw',
-	// backgroundColor: 'blue'
+	height: 704,
+	width: 1280,
 	backgroundColor: 'white'	
 }
 

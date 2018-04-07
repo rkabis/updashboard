@@ -8,10 +8,8 @@ const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	// height: 704,
-	// width: 54,
-	height: '100vh',
-	width: '4.2vw',
+	height: 704,
+	width: 54,
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
 	zIndex: 20
@@ -43,8 +41,7 @@ const secondSetStyle = {
 const miscStyle = {
 	position: 'fixed',
 	marginLeft: 12,
-	// marginTop: 650
-	marginTop: '93vh'
+	marginTop: 650
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']

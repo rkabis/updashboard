@@ -14,10 +14,8 @@ const mapboxAccess = 'your.mapbox.access.token'
 
 const componentStyle = {
 	position: 'absolute',
-	// height: 650,
-	// width: 1226,
-	width: '95.8vw',
-	height: '92.4vh',
+	height: 650,
+	width: 1226,
 	marginTop: 54,
 	marginLeft: 54,
 	zIndex: 5
