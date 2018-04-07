@@ -3,26 +3,23 @@ import React, { Component } from 'react'
 import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
 
-const devWidth = (window.screen.width/1280)
-const devHeight = (window.screen.height/800)
-
 const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: 1226*devWidth,
-	height: 54*devHeight,
-	marginLeft: 54*devWidth,
+	width: 1226,
+	height: 54,
+	marginLeft: 54,
 	zIndex: 10,
 }
 
 const titleStyle = {
 	color: 'white',
 	fontFamily: 'Maven Pro',
-	marginLeft: 21*devWidth,
+	marginLeft: 21,
 	fontSize: 24,
-	marginTop: 12*devHeight
+	marginTop: 12
 }
 
 const buttonStyle = {
@@ -36,30 +33,30 @@ const buttonStyle = {
 }
 
 const aboutLineStyle = {
-	width: 78*devWidth,
-	height: 7*devHeight,
+	width: 78,
+	height: 7,
 	backgroundColor: 'white',
-	marginTop: 14*devHeight,
-	marginLeft: 2*devWidth
+	marginTop: 14,
+	marginLeft: 2
 }
 
 const contactlineStyle = {
-	width: 90*devWidth,
-	height: 7*devHeight,
+	width: 90,
+	height: 7,
 	backgroundColor: 'white',
-	marginTop: 14*devHeight,
-	marginLeft: 6*devWidth
+	marginTop: 14,
+	marginLeft: 6
 }
 
 const contactStyle = {
-	marginLeft: 38*devWidth
+	marginLeft: 38
 }
 
 const buttonGroupStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginLeft: 780*devWidth,
-	marginTop: 20*devHeight
+	marginLeft: 780,
+	marginTop: 20	
 }
 
 export default class extends Component {

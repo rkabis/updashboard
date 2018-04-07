@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 
-const devWidth = (window.screen.width/1280)
-const devHeight = (window.screen.height/800)
-
 let requestObj = null
 
 const contentStyle = {
 	fontFamily: 'Lato',
 	fontSize: 16,
-	marginLeft: 3*devWidth
+	marginLeft: 3
 }
 
 const titleStyle = {
@@ -25,12 +22,12 @@ const headerStyle = {
 const bodyOneStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginTop: 5*devHeight,
-	marginBottom: 5*devHeight
+	marginTop: 5,
+	marginBottom: 5
 }
 
 const innerBodyStyle = {
-	marginLeft: 120*devWidth
+	marginLeft: 120
 }
 
 export default class extends Component {

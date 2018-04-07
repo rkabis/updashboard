@@ -6,9 +6,6 @@ const componentStyle = {
 	cursor: 'pointer',
 }
 
-const devWidth = (window.screen.width/1280)
-const devHeight = (window.screen.height/800)
-
 const iconSize = 34
 
 export default class extends Component {
@@ -24,8 +21,8 @@ export default class extends Component {
 					<img
 						src={require('./icons/in.png')}
 						alt={'in'}
-						width={iconSize*devWidth}
-						height={iconSize*devHeight}
+						width={iconSize}
+						height={iconSize}
 						onClick={zoomIn}
 					/>
 				</div>
@@ -33,8 +30,8 @@ export default class extends Component {
 					<img
 						src={require('./icons/out.png')}
 						alt={'out'}
-						width={iconSize*devWidth}
-						height={iconSize*devHeight}
+						width={iconSize}
+						height={iconSize}
 						onClick={zoomOut}
 					/>
 				</div>

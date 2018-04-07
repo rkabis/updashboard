@@ -2,14 +2,11 @@ import React, { Component } from 'react'
 
 import DeleteBox from './DeleteBox.js'
 
-const devWidth = (window.screen.width/1280)
-const devHeight = (window.screen.height/800)
-
 const componentStyle = {
 	cursor: 'pointer',
 	display: 'flex',
 	flexDirection: 'row',
-	marginTop: 10*devHeight,
+	marginTop: 10,
 }
 
 const iconSize = 25
@@ -42,8 +39,8 @@ export default class extends Component {
 						onClick={onChangeMapData ? (mapdata !== icon ? () => {onChangeMapData(icon), filterModal(icon), resetFilter()} : () => {onChangeMapData(null), filterModal(false), resetFilter()}) : null}
 						src={require('../icons/' + icon + '.png')}
 						alt={icon}
-						width={iconSize*devWidth}
-						height={iconSize*devHeight}
+						width={iconSize}
+						height={iconSize}
 						style={{
 							filter: 'brightness(30)',
 						}}

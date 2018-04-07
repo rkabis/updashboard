@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 
-const devWidth = (window.screen.width/1280)
-const devHeight = (window.screen.height/800)
-
 const backdropStyle = {
   position: 'fixed',
   top: 0,
@@ -16,10 +13,10 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: 530*devWidth,
-  height: 330*devHeight,
-  marginTop: 100*devHeight,
-  marginLeft: 340*devWidth,
+  width: 530,
+  height: 330,
+  marginTop: 100,
+  marginLeft: 340,
   overflow: 'scroll',
   fontFamily: 'Lato',
   fontSize: 13,
@@ -27,16 +24,16 @@ const modalStyle = {
 
 const formTextStyle = {
   color: 'white',
-  width: 170*devWidth,
+  width: 170,
   cursor: 'pointer',
-  marginTop: 5*devHeight,
-  marginLeft: 8*devWidth
+  marginTop: 5,
+  marginLeft: 8
 }
 
 const closeStyle = {
   position: 'fixed',
-  marginTop: 5*devHeight,
-  marginLeft: 500*devWidth,
+  marginTop: 5,
+  marginLeft: 500,
   fontFamily: 'Lato',
   fontSize: 26,
   color: 'white',
@@ -48,14 +45,14 @@ const headerStyle = {
   position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
-  width: 530*devWidth,
-  height: 50*devHeight,
+  width: 530,
+  height: 50,
   backgroundColor: '#A31F25',
   fontSize: 16
 }
 
 const formStyle = {
-  marginTop: 50*devHeight
+  marginTop: 50
 }
 
 const iconSize = 30
@@ -63,19 +60,19 @@ const iconSize = 30
 const changeButtonStyle = {
   display: 'flex',
   flexDirection: 'row',
-  marginTop: 11*devHeight,
-  marginLeft: 40*devWidth,
-  width: 260*devWidth,
+  marginTop: 11,
+  marginLeft: 40,
+  width: 260,
 }
 
 const changeButtonStyleTwo = {
   display: 'flex',
   flexDirection: 'row',
-  width: 280*devWidth,
-  height: 39*devHeight,
+  width: 280,
+  height: 39,
   backgroundColor: '#79171C',
-  paddingTop: 11*devHeight,
-  paddingLeft: 30*devWidth
+  paddingTop: 11,
+  paddingLeft: 30
 }
 
 const requestForm = <iframe title='Event Request' src="https://docs.google.com/forms/d/e/1FAIpQLScR2oUzpVYisNrzAsy2voF-j1e8uUYWvPhlyEYsdvJkW9qZCQ/viewform?embedded=true" width="530" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>

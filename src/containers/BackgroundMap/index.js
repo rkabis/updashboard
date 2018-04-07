@@ -12,15 +12,12 @@ const mapboxAttr =  'Map data &copy; <a href="http://openstreetmap.org">OpenStre
 const mapboxId = 'mapbox.streets'
 const mapboxAccess = 'your.mapbox.access.token'
 
-const devWidth = (window.screen.width/1280)
-const devHeight = (window.screen.height/800)
-
 const componentStyle = {
 	position: 'absolute',
-	height: 650*devHeight,
-	width: 1226*devWidth,
-	marginTop: 54*devHeight,
-	marginLeft: 54*devWidth,
+	height: 650,
+	width: 1226,
+	marginTop: 54,
+	marginLeft: 54,
 	zIndex: 5
 }
 
