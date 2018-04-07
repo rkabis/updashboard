@@ -6,7 +6,7 @@ const componentStyle = {
 	cursor: 'pointer',
 }
 
-const iconSize = '34px'
+const iconSize = 34
 
 export default class extends Component {
 	render() {

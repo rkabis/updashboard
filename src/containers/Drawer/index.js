@@ -5,42 +5,43 @@ import MiscButton from './MiscButton'
 import AddButton from './AddButton.js'
 
 const componentStyle = {
+	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: '704px',
-	width: '54px',
+	height: 704,
+	width: 54,
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
-	zIndex: 10
+	zIndex: 20
 }
 
 const lineStyle = {
-	height: '2px',
-	width: '40px',
+	height: 2,
+	width: 40,
 	backgroundColor: '#3A4047',
-	margin: '4px'
+	margin: 4
 }
 
 const menuStyle = {
-	marginTop: '3px',
-	marginLeft: '12px'
+	marginTop: 3,
+	marginLeft: 12
 }
 
 const firstSetStyle = {
-	marginLeft: '12px',
-	marginTop: '10px',
-	marginBottom: '8px'
+	marginLeft: 12,
+	marginTop: 10,
+	marginBottom: 8
 }
 
 const secondSetStyle = {
-	marginLeft: '12px',
-	marginBottom: '8px'	
+	marginLeft: 12,
+	marginBottom: 8	
 }
 
 const newsStyle = {
 	position: 'fixed',
-	marginLeft: '12px',
-	marginTop: '92vh'
+	marginLeft: 12,
+	marginTop: 650
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']

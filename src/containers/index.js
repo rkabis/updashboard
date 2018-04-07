@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
 import Drawer from './Drawer'
-import Header from './AppBar'
+import AppBar from './AppBar'
 import BackgroundMap from './BackgroundMap'
 import FilterMenu from './FilterMenu'
 
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	height: '704px',
-	width: '1280px',
+	height: 704,
+	width: 1280,
 	backgroundColor: 'white'	
 }
 
@@ -59,7 +59,7 @@ export default class extends Component {
 					filterModal={this.filterModal}
 					resetFilter={this.resetFilter}
 				/>
-				<Header />
+				<AppBar />
 				<BackgroundMap
 					mapdata={mapdata}
 					filterValue={filterValue}

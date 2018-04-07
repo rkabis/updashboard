@@ -4,20 +4,22 @@ import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
 
 const componentStyle = {
+	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: '1280px',
-	height: '54px',
+	width: 1226,
+	height: 54,
+	marginLeft: 54,
 	zIndex: 10,
 }
 
 const titleStyle = {
 	color: 'white',
 	fontFamily: 'Maven Pro',
-	marginLeft: '21px',
-	fontSize: '18pt',
-	marginTop: '12px'
+	marginLeft: 21,
+	fontSize: 24,
+	marginTop: 12
 }
 
 const buttonStyle = {
@@ -25,38 +27,36 @@ const buttonStyle = {
 	display: 'flex',
 	flexDirection: 'column',
 	fontFamily: 'Muli',
-	letterSpacing: '2px',
+	letterSpacing: 2,
 	cursor: 'pointer',
-	fontSize: '10pt'
+	fontSize: 13
 }
 
 const aboutLineStyle = {
-	width: '78px',
-	height: '7px',
+	width: 78,
+	height: 7,
 	backgroundColor: 'white',
-	fontSize: '8pt',
-	marginTop: '14px',
-	marginLeft: '2px'
+	marginTop: 14,
+	marginLeft: 2
 }
 
 const contactlineStyle = {
-	width: '90px',
-	height: '7px',
+	width: 90,
+	height: 7,
 	backgroundColor: 'white',
-	fontSize: '8pt',
-	marginTop: '14px',
-	marginLeft: '6px'
+	marginTop: 14,
+	marginLeft: 6
 }
 
 const contactStyle = {
-	marginLeft: '38px'
+	marginLeft: 38
 }
 
 const buttonGroupStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginLeft: '780px',
-	marginTop: '20px'	
+	marginLeft: 780,
+	marginTop: 20	
 }
 
 export default class extends Component {

@@ -6,37 +6,37 @@ const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: '35px',
-	width:'200px',
-	marginLeft: '60px',
-	marginTop: '65px',
+	height: 35,
+	width: 200,
+	marginLeft: 60,
+	marginTop: 65,
 }
 
-const searchSize = '20px'
+const searchSize = 20
 
 const searchIconStyle = {
 	cursor: 'pointer',
-	marginTop: '1px',
-	marginLeft: '2px'
+	marginTop: 1,
+	marginLeft: 2
 }
 
 const searchBarStyle = {
 	display: 'flex',
-	width: '200px',
+	width: 200,
 	flexDirection: 'row',
 	backgroundColor: 'white',
-	borderRadius: '16px',
-	padding: '6px',
+	borderRadius: 16,
+	padding: 6,
 }
 
 const searchInputStyle = {
 	position: 'absolute',
-	width: '150px',
-	height: '30px',
+	width: 150,
+	height: 30,
 	fontFamily: 'Lato',
-	fontSize: '10pt',
-	marginLeft: '30px',
-	marginTop: '-11.5px',
+	fontSize: 10,
+	marginLeft: 30,
+	marginTop: -11.5,
 	overflow: 'hidden',
 }
 

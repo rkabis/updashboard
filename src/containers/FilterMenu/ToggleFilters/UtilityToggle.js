@@ -4,18 +4,18 @@ const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: '150px',
-	width:'150px',
-	marginLeft: '60px',
-	marginTop: '60px'
+	height: 150,
+	width: 150,
+	marginLeft: 60,
+	marginTop: 60
 }
 
 const buttonStyle = {
 	fontFamily: 'Lato',
-	fontSize: '10pt',
+	fontSize: 13,
 	backgroundColor: 'white',
-	marginTop: '5px',
-	padding: '3px',
+	marginTop: 5,
+	padding: 3,
 	cursor: 'pointer'
 }
 
