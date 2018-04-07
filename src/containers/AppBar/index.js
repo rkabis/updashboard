@@ -8,7 +8,7 @@ const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: '1280px',
+	width: '1226px',
 	height: '54px',
 	marginLeft: '54px',
 	zIndex: 10,
