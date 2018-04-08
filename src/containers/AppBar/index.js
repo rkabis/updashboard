@@ -71,7 +71,7 @@ export default class extends Component {
 				className='flex flex-row justify-between w-100 absolute top-0 left-0'
 				style={componentStyle}
 			>
-				<div className='f3-l f6-ns' style={titleStyle}>
+				<div className='f3-l f4-m f6-ns' style={titleStyle}>
 					{'UP Dashboard'}
 				</div>
 
@@ -80,7 +80,7 @@ export default class extends Component {
 						<div
 							onClick={this.aboutModal}
 							style={buttonStyle}
-							className='f6-l f6-m f7-l'
+							className='f7-ns f6-l'
 						>
 							ABOUT US
 						</div>
@@ -96,7 +96,7 @@ export default class extends Component {
 						<div
 							onClick={this.contactModal}
 							style={buttonStyle}
-							className='f6-l f6-m f7-l'
+							className='f7-ns f6-m f6-l'
 						>
 							CONTACT US
 						</div>
