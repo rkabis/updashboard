@@ -4,7 +4,7 @@ import FeatureButton from './FeatureButton.js'
 
 const lineStyle = {
 	height: 2,
-	width: 200,
+	width: 225,
 	backgroundColor: '#3A4047',
 	marginTop: 5,
 	marginBottom: 8,
@@ -18,8 +18,9 @@ const categoryStyle = {
 }
 
 const categoryTwoStyle = {
-	marginLeft: 80
+	marginLeft: 90
 }
+
 export default class extends Component {
 	render() {
 		const {

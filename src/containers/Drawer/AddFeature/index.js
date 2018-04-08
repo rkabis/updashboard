@@ -14,10 +14,10 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: 500,
+  width: 600,
   height: 300,
+  margin: 'auto',
   marginTop: 100,
-  marginLeft: 340,
   padding: 30,
   overflow: 'scroll'
 }
@@ -25,7 +25,7 @@ const modalStyle = {
 const closeStyle = {
   position: 'fixed',
   marginTop: -25,
-  marginLeft: 500,
+  marginLeft: 540,
   fontFamily: 'Lato',
   fontSize: 26,
   color: '#3A4047',
