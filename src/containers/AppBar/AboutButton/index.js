@@ -7,17 +7,17 @@ const backdropStyle = {
   left: 0,
   right: 0,
   backgroundColor: 'rgba(0,0,0,0.3)',
-  padding: 50
+  padding: 50,
 }
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: 500,
+  width: 600,
   height: 300,
-  marginTop: 100,
-  marginLeft: 340,
   padding: 30,
   overflow: 'scroll',
+  margin: 'auto',
+  marginTop: 100,
   fontFamily: 'Lato',
   fontSize: 13,
   lineHeight: 1.4
@@ -26,7 +26,7 @@ const modalStyle = {
 const closeStyle = {
   position: 'fixed',
   marginTop: -25,
-  marginLeft: 500,
+  marginLeft: 540,
   fontFamily: 'Lato',
   fontSize: 26,
   color: '#3A4047',
@@ -40,7 +40,7 @@ const titleStyle = {
 }
 
 const lineStyle = {
-  width: 500,
+  width: 550,
   height: 2,
   backgroundColor: '#3A4047',
   marginBottom: 5
