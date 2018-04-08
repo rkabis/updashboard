@@ -13,7 +13,7 @@ const titleStyle = {
 	color: 'white',
 	fontFamily: 'Maven Pro',
 	marginLeft: 70,
-	fontSize: 24,
+	// fontSize: 24,
 	marginTop: 12
 }
 
@@ -24,7 +24,7 @@ const buttonStyle = {
 	fontFamily: 'Muli',
 	letterSpacing: 2,
 	cursor: 'pointer',
-	fontSize: 13
+	// fontSize: 13
 }
 
 const aboutLineStyle = {
@@ -71,7 +71,7 @@ export default class extends Component {
 				className='flex flex-row justify-between w-100 absolute top-0 left-0'
 				style={componentStyle}
 			>
-				<div style={titleStyle}>
+				<div className='f3' style={titleStyle}>
 					{'UP Dashboard'}
 				</div>
 
@@ -80,6 +80,7 @@ export default class extends Component {
 						<div
 							onClick={this.aboutModal}
 							style={buttonStyle}
+							className='f6'
 						>
 							ABOUT US
 						</div>
@@ -95,6 +96,7 @@ export default class extends Component {
 						<div
 							onClick={this.contactModal}
 							style={buttonStyle}
+							className='f6'
 						>
 							CONTACT US
 						</div>
