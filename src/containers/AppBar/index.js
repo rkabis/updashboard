@@ -4,20 +4,15 @@ import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
 
 const componentStyle = {
-	position: 'absolute',
-	display: 'flex',
-	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: 1226,
 	height: 54,
-	marginLeft: 54,
 	zIndex: 10,
 }
 
 const titleStyle = {
 	color: 'white',
 	fontFamily: 'Maven Pro',
-	marginLeft: 21,
+	marginLeft: 70,
 	fontSize: 24,
 	marginTop: 12
 }
@@ -55,8 +50,8 @@ const contactStyle = {
 const buttonGroupStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	marginLeft: 780,
-	marginTop: 20	
+	marginTop: 20,
+	marginRight: 25
 }
 
 export default class extends Component {
@@ -72,7 +67,10 @@ export default class extends Component {
 
 	render() {
 		return (
-			<div style={componentStyle}>
+			<div
+				className='flex flex-row justify-between w-100 absolute top-0 left-0'
+				style={componentStyle}
+			>
 				<div style={titleStyle}>
 					{'UP Dashboard'}
 				</div>

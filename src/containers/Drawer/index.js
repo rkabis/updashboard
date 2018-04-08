@@ -8,7 +8,7 @@ const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: 704,
+	// height: 704,
 	width: 54,
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
@@ -39,9 +39,9 @@ const secondSetStyle = {
 }
 
 const newsStyle = {
-	position: 'fixed',
+	position: 'absolute',
+	bottom: 15,
 	marginLeft: 12,
-	marginTop: 650
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
@@ -83,7 +83,7 @@ export default class extends Component {
 		{this.state.arrayOfFeatures.length >= 3 ? changeState(false) : changeState(true)}
 		
 		return (
-			<div style={componentStyle}>
+			<div className='min-vh-100' style={componentStyle}>
 				<div style={menuStyle}>
 					<DrawerButton
 						icon={'menu'}
