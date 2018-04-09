@@ -46,7 +46,7 @@ export default (
 				return "<strong>"+ feature.properties.adminName + "</strong><br/>" + feature.properties.adminAdd + "<br/><br/><strong>Headed by: </strong>" + feature.properties.vcName + "<br/><strong>Contact No: </strong>" + feature.properties.adminNum + "<br/><strong>Email: </strong>" + feature.properties.adminEmail
 			}
 		case 'event':
-				return "<strong>" + feature.properties.eventName + "</strong><br/>" + feature.properties.eventVenue + "<br/>" + feature.properties.eventDate + "<br/><br/><i>" + feature.properties.eventDescription + "</i>"
+				return "<strong>" + feature.properties.eventName + "</strong><br/>" + feature.properties.eventHostOrg + "<br/><br/>Details: <br/>" + feature.properties.eventVenue + "<br/>" + feature.properties.eventStartDate + " until " + feature.properties.eventEndDate + "<br/>" + feature.properties.eventStartTime + " to " + feature.properties.eventEndTime + "<br/><br/> Links: <br/><a href='" + feature.properties.eventLink + "'>" + feature.properties.eventLink + "</a><br/>" + feature.properties.eventRSVPLink
 		default:
 			return "pending"
 	}
