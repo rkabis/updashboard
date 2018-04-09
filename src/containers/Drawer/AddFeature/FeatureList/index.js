@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 import FeatureButton from './FeatureButton.js'
 
@@ -31,33 +32,68 @@ export default class extends Component {
 		} = this.props
 
 		return (
-			<div style={categoryStyle}>
-				<div>
-					CATEGORY ONE
-					<div style={lineStyle} />	
-					{arrayForCategoryOne.map(featureElement => 
-						<FeatureButton
-							key={featureElement}
-							icon={featureElement}
-							arrayForCategory={arrayForCategoryOne}
-							arrayOfFeatures={arrayOfFeatures}
-							onClose={onClose}
-						/>
-					)}
+			<div>
+			<MediaQuery minWidth={480}>
+				<div style={categoryStyle}>
+					<div>
+						CATEGORY ONE
+						<div style={lineStyle} />	
+						{arrayForCategoryOne.map(featureElement => 
+							<FeatureButton
+								key={featureElement}
+								icon={featureElement}
+								arrayForCategory={arrayForCategoryOne}
+								arrayOfFeatures={arrayOfFeatures}
+								onClose={onClose}
+							/>
+						)}
+					</div>
+					<div style={categoryTwoStyle}>
+						CATEGORY TWO
+						<div style={lineStyle} />
+						{arrayForCategoryTwo.map(featureElement => 
+							<FeatureButton
+								key={featureElement}
+								icon={featureElement}
+								arrayForCategory={arrayForCategoryTwo}
+								arrayOfFeatures={arrayOfFeatures}
+								onClose={onClose}
+							/>
+						)}
+					</div>
 				</div>
-				<div style={categoryTwoStyle}>
-					CATEGORY TWO
-					<div style={lineStyle} />
-					{arrayForCategoryTwo.map(featureElement => 
-						<FeatureButton
-							key={featureElement}
-							icon={featureElement}
-							arrayForCategory={arrayForCategoryTwo}
-							arrayOfFeatures={arrayOfFeatures}
-							onClose={onClose}
-						/>
-					)}
+			</MediaQuery>
+
+			<MediaQuery maxWidth={480}>
+				<div className='flex flex-column mt2'>
+					<div>
+						CATEGORY ONE
+						<div style={lineStyle} />	
+						{arrayForCategoryOne.map(featureElement => 
+							<FeatureButton
+								key={featureElement}
+								icon={featureElement}
+								arrayForCategory={arrayForCategoryOne}
+								arrayOfFeatures={arrayOfFeatures}
+								onClose={onClose}
+							/>
+						)}
+					</div>
+					<div className='mt2'>
+						CATEGORY TWO
+						<div style={lineStyle} />
+						{arrayForCategoryTwo.map(featureElement => 
+							<FeatureButton
+								key={featureElement}
+								icon={featureElement}
+								arrayForCategory={arrayForCategoryTwo}
+								arrayOfFeatures={arrayOfFeatures}
+								onClose={onClose}
+							/>
+						)}
+					</div>
 				</div>
+			</MediaQuery>
 			</div>
 		)
 	}

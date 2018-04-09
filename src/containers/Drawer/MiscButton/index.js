@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 import Weather from './Weather'
 import News from './News'
@@ -47,16 +48,18 @@ export default class extends Component {
       return null
     }
     return (
-      <div style={backdropStyle}>
-        <div style={modalStyle}>
-          <div style={closeStyle} onClick={this.props.onClose}>
-            x
+      <MediaQuery minWidth={480}>
+        <div style={backdropStyle}>
+          <div style={modalStyle}>
+            <div style={closeStyle} onClick={this.props.onClose}>
+              x
+            </div>
+            <Weather />
+            <div style={lineStyle} />
+            <News />
           </div>
-          <Weather />
-          <div style={lineStyle} />
-          <News />
         </div>
-      </div>
+      </MediaQuery>
     )
   }
 }
