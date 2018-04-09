@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 let requestObj = null
 
@@ -22,6 +23,13 @@ const headerStyle = {
 const bodyOneStyle = {
 	display: 'flex',
 	flexDirection: 'row',
+	marginTop: 5,
+	marginBottom: 5
+}
+
+const bodyOneStyleTwo = {
+	display: 'flex',
+	flexDirection: 'column',
 	marginTop: 5,
 	marginBottom: 5
 }
@@ -82,6 +90,7 @@ export default class extends Component {
 					<div style={contentStyle} id="dashDate"/>
 				</div>
 
+				<MediaQuery minWidth={480}>
 				<div style={bodyOneStyle}>
 					<div>
 						<div style={headerStyle}>
@@ -119,6 +128,42 @@ export default class extends Component {
 						</div>
 					</div>
 				</div>
+				</MediaQuery>
+
+				<MediaQuery maxWidth={480}>
+				<div style={bodyOneStyleTwo}>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Temperature:
+							</div>
+							<div style={contentStyle} id="dashTemp"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Humidity:
+							</div>
+							<div style={contentStyle} id="dashHumid"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Cloudiness:
+							</div>
+							<div style={contentStyle} id="dashCloud"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Sunrise:
+							</div>
+							<div style={contentStyle} id="dashRise"/>
+						</div>
+						<div style={headerStyle}>
+							<div style={titleStyle}>
+								Sunset:
+							</div>
+							<div style={contentStyle} id="dashSet"/>
+						</div>
+				</div>
+				</MediaQuery>
 			</div>
 		)
 	}

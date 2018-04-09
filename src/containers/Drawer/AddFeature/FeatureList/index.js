@@ -36,7 +36,7 @@ export default class extends Component {
 			<MediaQuery minWidth={480}>
 				<div style={categoryStyle}>
 					<div>
-						CATEGORY ONE
+						THE BASICS
 						<div style={lineStyle} />	
 						{arrayForCategoryOne.map(featureElement => 
 							<FeatureButton
@@ -49,7 +49,7 @@ export default class extends Component {
 						)}
 					</div>
 					<div style={categoryTwoStyle}>
-						CATEGORY TWO
+						FOR FUN
 						<div style={lineStyle} />
 						{arrayForCategoryTwo.map(featureElement => 
 							<FeatureButton
@@ -67,7 +67,7 @@ export default class extends Component {
 			<MediaQuery maxWidth={480}>
 				<div className='flex flex-column mt2'>
 					<div>
-						CATEGORY ONE
+						THE BASICS
 						<div style={lineStyle} />	
 						{arrayForCategoryOne.map(featureElement => 
 							<FeatureButton
@@ -80,7 +80,7 @@ export default class extends Component {
 						)}
 					</div>
 					<div className='mt2'>
-						CATEGORY TWO
+						FOR FUN
 						<div style={lineStyle} />
 						{arrayForCategoryTwo.map(featureElement => 
 							<FeatureButton
