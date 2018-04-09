@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 let requestObj = null
 let newsNum = 0
@@ -13,6 +14,12 @@ const changeNewsStyle = {
 	position: 'fixed',
 	marginLeft: 500,
 	marginTop: 110
+}
+
+const changeNewsStyleTwo = {
+	position: 'fixed',
+	marginLeft: 200,
+	marginTop: 170
 }
 
 const titleStyle = {
@@ -68,6 +75,8 @@ export default class extends Component {
 					News
 				</div>
 				<div id='newsInfo' />
+
+				<MediaQuery minWidth={480}>
 				<div style={changeNewsStyle}>
 					<img
 						onClick={() => changeNews('minus')}
@@ -86,6 +95,28 @@ export default class extends Component {
 						alt={'plus'}
 					/>
 				</div>
+				</MediaQuery>
+
+				<MediaQuery maxWidth={480}>
+				<div style={changeNewsStyleTwo}>
+					<img
+						onClick={() => changeNews('minus')}
+						src={require('../icons/left.png')}
+						height={arrowSize}
+						width={arrowSize}
+						style={arrowStyle}
+						alt={'minus'}
+					/>
+					<img
+						onClick={() => changeNews('plus')}
+						src={require('../icons/right.png')}
+						height={arrowSize}
+						width={arrowSize}
+						style={arrowStyle}
+						alt={'plus'}
+					/>
+				</div>
+				</MediaQuery>
 			</div>
 		)
 	}
