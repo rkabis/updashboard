@@ -13,10 +13,7 @@ const mapboxId = 'mapbox.streets'
 const mapboxAccess = 'your.mapbox.access.token'
 
 const componentStyle = {
-	position: 'absolute',
-	height: '704px',
-	width: '1280px',
-	zIndex: 5
+	zIndex: 0
 }
 
 export default class extends Component {
@@ -41,6 +38,8 @@ export default class extends Component {
 		this.zoomIn = () => this.setState({zoomLevel: this.state.zoomLevel+1})
 		this.zoomOut = () => this.setState({zoomLevel: this.state.zoomLevel-1})
 	}
+
+
 
 	render() {
 		const {
@@ -79,7 +78,7 @@ export default class extends Component {
 						/>
 					</Control>
 					<GeoJSON
-						key={mapdata}
+						key={`${mapdata} ${filterValue}`}
 						data={mapdata ? require('./geojson/UP' + mapdata + '.json') : null}
 						onEachFeature={this.onEachFeature.bind(this)}
 						style={(feature) => callStyle(feature)}

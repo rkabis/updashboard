@@ -1,26 +1,33 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 let requestObj = null
 let newsNum = 0
 let newsMax
 
-const arrowSize = '28px'
+const arrowSize = 28
 const arrowStyle = {
 	cursor: 'pointer'
 }
 
 const changeNewsStyle = {
 	position: 'fixed',
-	marginLeft: '450px',
-	marginTop: '160px'
+	marginLeft: 500,
+	marginTop: 110
+}
+
+const changeNewsStyleTwo = {
+	position: 'fixed',
+	marginLeft: 200,
+	marginTop: 170
 }
 
 const titleStyle = {
 	fontFamily: 'Lato',
-	fontSize: '18pt',
+	fontSize: 22,
 	fontWeight: 'bold',
-	marginTop: '5px',
-	marginBottom: '5px'
+	marginTop: 5,
+	marginBottom: 5
 }
 
 export default class extends Component {
@@ -49,7 +56,7 @@ export default class extends Component {
 				document.getElementById('newsInfo').innerHTML = newsTitle + '<br/>' + newsDate + '<br/><br/>' + newsContent;
 			}
 			if (newsID === 399) {
-				document.getElementsByTagName('span')[1].style.fontSize = '9pt'
+				document.getElementsByTagName('span')[1].style.fontSize = '5'
 			}
 		}
 
@@ -68,6 +75,8 @@ export default class extends Component {
 					News
 				</div>
 				<div id='newsInfo' />
+
+				<MediaQuery minWidth={480}>
 				<div style={changeNewsStyle}>
 					<img
 						onClick={() => changeNews('minus')}
@@ -86,6 +95,28 @@ export default class extends Component {
 						alt={'plus'}
 					/>
 				</div>
+				</MediaQuery>
+
+				<MediaQuery maxWidth={480}>
+				<div style={changeNewsStyleTwo}>
+					<img
+						onClick={() => changeNews('minus')}
+						src={require('../icons/left.png')}
+						height={arrowSize}
+						width={arrowSize}
+						style={arrowStyle}
+						alt={'minus'}
+					/>
+					<img
+						onClick={() => changeNews('plus')}
+						src={require('../icons/right.png')}
+						height={arrowSize}
+						width={arrowSize}
+						style={arrowStyle}
+						alt={'plus'}
+					/>
+				</div>
+				</MediaQuery>
 			</div>
 		)
 	}

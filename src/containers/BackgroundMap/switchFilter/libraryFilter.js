@@ -2,10 +2,9 @@ export default (
 	feature,
 	filterValue
 ) => {
-	switch(filterValue) {
-		case '':
-			return true
-		default:
-			return (filterValue === feature.properties.libName ? true : false)
+	if (filterValue.length === 0) {
+		return true
 	}
+	let temp = filterValue.includes(feature.properties.libName)
+	return temp
 }

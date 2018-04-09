@@ -2,10 +2,10 @@ export default (
 	feature,
 	filterValue
 ) => {
-	switch(filterValue) {
-		case '':
-			return true
-		default:
-			return ((filterValue === feature.properties.adminName) || (filterValue === feature.properties.officeName) ? true : false)
+	if (filterValue.length === 0) {
+		return true
 	}
+	let tempOne = filterValue.includes(feature.properties.adminName)
+	let tempTwo = filterValue.includes(feature.properties.officeName)
+	return (tempTwo || tempOne ? true : false)
 }

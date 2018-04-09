@@ -2,10 +2,10 @@ export default (
 	feature,
 	filterValue
 ) => {
-	switch(filterValue) {
-		case '':
-			return true
-		default:
-			return (filterValue === feature.properties.venueName ? true : false)
+	if (filterValue.length === 0) {
+		return true
+	}
+	if (filterValue[0] <= feature.properties.venueCap) {
+		return true
 	}
 }

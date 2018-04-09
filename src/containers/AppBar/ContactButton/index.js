@@ -7,71 +7,73 @@ const backdropStyle = {
   left: 0,
   right: 0,
   backgroundColor: 'rgba(0,0,0,0.3)',
-  padding: 50
+  padding: 50,
+  zIndex: 0
 }
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: '530px',
-  height: '330px',
-  marginTop: '100px',
-  marginLeft: ' 340px',
+  width: 630,
+  height: 330,
+  margin: 'auto',
+  marginTop: 100,
   overflow: 'scroll',
   fontFamily: 'Lato',
-  fontSize: '10pt',
+  fontSize: 13,
 }
 
 const formTextStyle = {
   color: 'white',
-  width: '170px',
+  width: 170,
   cursor: 'pointer',
-  marginTop: '5px',
-  marginLeft: '8px'
+  marginTop: 5,
+  marginLeft: 8
 }
 
 const closeStyle = {
   position: 'fixed',
-  marginTop: '5px',
-  marginLeft: '500px',
+  marginTop: 5,
+  marginLeft: 600,
   fontFamily: 'Lato',
-  fontSize: '20pt',
+  fontSize: 26,
   color: 'white',
   cursor: 'pointer',
-  zIndex: '100'
+  zIndex: 100
 }
 
 const headerStyle = {
   position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
-  width: '530px',
-  height: '50px',
+  width: 630,
+  height: 50,
   backgroundColor: '#A31F25',
-  fontSize: '12pt'
+  fontSize: 16
 }
 
 const formStyle = {
-  marginTop: '50px'
+  marginLeft: 50,
+  marginTop: 50
 }
 
-const iconSize = '30px'
+const iconSize = 30
 
 const changeButtonStyle = {
   display: 'flex',
   flexDirection: 'row',
-  marginTop: '11px',
-  marginLeft: '40px',
-  width: '260px',
+  marginTop: 11,
+  marginLeft: 40,
+  width: 280,
 }
 
 const changeButtonStyleTwo = {
   display: 'flex',
   flexDirection: 'row',
-  width: '280px',
-  height: '39px',
+  width: 320,
+  height: 50,
   backgroundColor: '#79171C',
-  paddingTop: '11px',
-  paddingLeft: '30px'
+  paddingTop: 11,
+  paddingLeft: 30
 }
 
 const requestForm = <iframe title='Event Request' src="https://docs.google.com/forms/d/e/1FAIpQLScR2oUzpVYisNrzAsy2voF-j1e8uUYWvPhlyEYsdvJkW9qZCQ/viewform?embedded=true" width="530" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>
@@ -91,7 +93,7 @@ export default class extends Component {
     }
 
     return (
-      <div style={backdropStyle}>
+      <div style={backdropStyle }>
         <div style={modalStyle}>
           <div style={closeStyle} onClick={this.props.onClose}>
             x

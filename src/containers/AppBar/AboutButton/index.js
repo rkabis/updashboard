@@ -7,43 +7,43 @@ const backdropStyle = {
   left: 0,
   right: 0,
   backgroundColor: 'rgba(0,0,0,0.3)',
-  padding: 50
+  padding: 50,
 }
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: '500px',
-  height: '300px',
-  marginTop: '100px',
-  marginLeft: ' 340px',
+  width: 600,
+  height: 300,
   padding: 30,
   overflow: 'scroll',
+  margin: 'auto',
+  marginTop: 100,
   fontFamily: 'Lato',
-  fontSize: '10pt',
-  lineHeight: '1.4'
+  fontSize: 13,
+  lineHeight: 1.4
 }
 
 const closeStyle = {
   position: 'fixed',
-  marginTop: '-25px',
-  marginLeft: '500px',
+  marginTop: -25,
+  marginLeft: 540,
   fontFamily: 'Lato',
-  fontSize: '20pt',
+  fontSize: 26,
   color: '#3A4047',
   cursor: 'pointer'
 }
 
 const titleStyle = {
-  fontSize: '16pt',
+  fontSize: 22,
   fontWeight: 'bold',
-  marginBottom: '5px'
+  marginBottom: 5
 }
 
 const lineStyle = {
-  width: '500px',
-  height: '2px',
+  width: 550,
+  height: 2,
   backgroundColor: '#3A4047',
-  marginBottom: '5px'
+  marginBottom: 5
 }
 
 const bodyStyle = {
@@ -56,23 +56,25 @@ export default class extends Component {
       return null
     }
     return (
-      <div style={backdropStyle}>
+      <div style={backdropStyle} onClick={this.props.onClose}>
         <div style={modalStyle}>
           <div style={closeStyle} onClick={this.props.onClose}>
             x
           </div>
           <div style={titleStyle}>
-            The Team Behind UP Dashboard
+            The Dashboard Story
           </div>
           <div style={lineStyle} />
           <div style={bodyStyle}>
-            We are a group of students who love data. We believe that nothing is impossible if you have the right information, and so we want to make data as accessible as possible to everyone in the UP Diliman community.
+            The UP Dashboard went live on January 15, 2018. Its mission was to <b> digitize the UP Diliman campus </b> by making campus-related data more accessible. In the months that followed, Dashboard became home to over a dozen useful and interesting features.
             <br/><br/>
-            Our goal is to compile everything you’ll ever need to know about the campus, and present them on one reliable and easily-to-use platform. From looking up jeepney routes to planning your daily jogging route, our map-based interface is an easy and convenient way to master your campus. Best of all, you can access the UP Dashboard from anywhere, at any time using your laptop, tablet, or phone. Right now, we’re in the process of adding more and more features to the Dashboard. We hope you understand that the platform may contain bugs and errors, and we need your help to spot them. Simply send us your comments and suggestions using the Feedback tab below, and we’ll be sure to resolve them as quickly as possible.
+            Today, the Dashboard has its eyes set on making the flow of data a two-way stream. <b> All users are invited to share facts, statistics, and insights they’d like applied to the website</b>. After all, who better to write the living history of UP Diliman than its community?
             <br/><br/>
-            Finally, you can reach us directly at updashboardproject@gmail.com.
+            You can <a href='https://www.fb.com/updashboard'>connect with us on Facebook</a>, <a href='mailto:updashboard@gmail.com'> email us</a>, or leave your thoughts in the Contact Us tab of our website.
             <br/><br/>
-            Thank you, and welcome home!
+            Enjoy the Dashboard —it’s yours to explore.
+            <br/><br/>
+            Oh, and welcome home.
           </div>
         </div>
       </div>

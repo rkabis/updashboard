@@ -5,42 +5,43 @@ import MiscButton from './MiscButton'
 import AddButton from './AddButton.js'
 
 const componentStyle = {
+	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	height: '704px',
-	width: '54px',
+	// height: 704,
+	width: 54,
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
-	zIndex: 10
+	zIndex: 20
 }
 
 const lineStyle = {
-	height: '2px',
-	width: '40px',
+	height: 2,
+	width: 40,
 	backgroundColor: '#3A4047',
-	margin: '4px'
+	margin: 4
 }
 
 const menuStyle = {
-	marginTop: '3px',
-	marginLeft: '12px'
+	marginTop: 3,
+	marginLeft: 12
 }
 
 const firstSetStyle = {
-	marginLeft: '12px',
-	marginTop: '10px',
-	marginBottom: '8px'
+	marginLeft: 12,
+	marginTop: 10,
+	marginBottom: 8
 }
 
 const secondSetStyle = {
-	marginLeft: '12px',
-	marginBottom: '8px'	
+	marginLeft: 12,
+	marginBottom: 8	
 }
 
 const newsStyle = {
-	position: 'fixed',
-	marginLeft: '12px',
-	marginTop: '92vh'
+	position: 'absolute',
+	bottom: 15,
+	marginLeft: 12,
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
@@ -70,7 +71,9 @@ export default class extends Component {
 	render() {
 		const {
 			onChangeMapData,
-			mapdata
+			mapdata,
+			filterModal,
+			resetFilter
 		} = this.props
 
 		const changeState = (i) => {
@@ -80,7 +83,7 @@ export default class extends Component {
 		{this.state.arrayOfFeatures.length >= 3 ? changeState(false) : changeState(true)}
 		
 		return (
-			<div style={componentStyle}>
+			<div className='min-vh-100' style={componentStyle}>
 				<div style={menuStyle}>
 					<DrawerButton
 						icon={'menu'}
@@ -91,18 +94,24 @@ export default class extends Component {
 						icon={'building'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
+						resetFilter={resetFilter}
 					/>
 
 					<DrawerButton
 						icon={'bike'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
+						resetFilter={resetFilter}
 					/>
 
 					<DrawerButton
 						icon={'jeep'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
+						resetFilter={resetFilter}
 					/>	
 
 				</div>
@@ -114,12 +123,16 @@ export default class extends Component {
 						icon={'rental'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
+						resetFilter={resetFilter}
 					/>
 
 					<DrawerButton
 						icon={'toilet'}
 						onChangeMapData={onChangeMapData}
 						mapdata={mapdata}
+						filterModal={filterModal}
+						resetFilter={resetFilter}
 					/>
 				</div>
 
@@ -132,6 +145,8 @@ export default class extends Component {
 							icon={featureElement}
 							onChangeMapData={onChangeMapData}
 							mapdata={mapdata}
+							filterModal={filterModal}
+							resetFilter={resetFilter}
 							arrayOfFeatures={this.state.arrayOfFeatures}
 							removeFeature={this.removeFeature}
 							arrayForCategoryOne={arrayForCategoryOne}
