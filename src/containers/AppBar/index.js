@@ -1,24 +1,20 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
 
 const componentStyle = {
-	position: 'absolute',
-	display: 'flex',
-	flexDirection: 'row',
 	backgroundColor: '#A31F25',
-	width: 1226,
 	height: 54,
-	marginLeft: 54,
 	zIndex: 10,
 }
 
 const titleStyle = {
 	color: 'white',
 	fontFamily: 'Maven Pro',
-	marginLeft: 21,
-	fontSize: 24,
+	marginLeft: 70,
+	// fontSize: 24,
 	marginTop: 12
 }
 
@@ -29,7 +25,7 @@ const buttonStyle = {
 	fontFamily: 'Muli',
 	letterSpacing: 2,
 	cursor: 'pointer',
-	fontSize: 13
+	// fontSize: 13
 }
 
 const aboutLineStyle = {
@@ -49,14 +45,13 @@ const contactlineStyle = {
 }
 
 const contactStyle = {
-	marginLeft: 38
+	// marginLeft: 38
 }
 
 const buttonGroupStyle = {
-	display: 'flex',
-	flexDirection: 'row',
-	marginLeft: 780,
-	marginTop: 20	
+	marginTop: 20,
+	marginRight: 25,
+	width: 220
 }
 
 export default class extends Component {
@@ -72,43 +67,55 @@ export default class extends Component {
 
 	render() {
 		return (
-			<div style={componentStyle}>
-				<div style={titleStyle}>
+			<div
+				className='flex flex-row justify-between w-100 absolute top-0 left-0'
+				style={componentStyle}
+			>
+				<div
+					className='f3'
+					style={titleStyle}
+				>
 					{'UP Dashboard'}
 				</div>
 
-				<div style={buttonGroupStyle}>
-					<div>
-						<div
-							onClick={this.aboutModal}
-							style={buttonStyle}
-						>
-							ABOUT US
+				<MediaQuery minWidth={480}>
+					<div
+						className='flex flew-rox justify-between'
+						style={buttonGroupStyle}
+					>
+						<div>
+							<div
+								onClick={this.aboutModal}
+								style={buttonStyle}
+								className='f6 nowrap'
+							>
+								ABOUT US
+							</div>
+							<div style={aboutLineStyle} />
+							<AboutButton
+								show={this.state.aboutOpen}
+								onClose={this.aboutModal}
+							>
+							</AboutButton>
 						</div>
-						<div style={aboutLineStyle} />
-						<AboutButton
-							show={this.state.aboutOpen}
-							onClose={this.aboutModal}
-						>
-						</AboutButton>
-					</div>
 
-					<div style={contactStyle}>
-						<div
-							onClick={this.contactModal}
-							style={buttonStyle}
-						>
-							CONTACT US
+						<div style={contactStyle}>
+							<div
+								onClick={this.contactModal}
+								style={buttonStyle}
+								className='f6 nowrap'
+							>
+								CONTACT US
+							</div>
+							<div style={contactlineStyle} />
+							<ContactButton
+								show={this.state.contactOpen}
+								onClose={this.contactModal}
+							>
+							</ContactButton>
 						</div>
-						<div style={contactlineStyle} />
-						<ContactButton
-							show={this.state.contactOpen}
-							onClose={this.contactModal}
-						>
-						</ContactButton>
 					</div>
-				</div>
-
+				</MediaQuery>
 			</div>
 		)
 	}

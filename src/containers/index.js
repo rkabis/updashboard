@@ -8,8 +8,6 @@ import FilterMenu from './FilterMenu'
 const componentStyle = {
 	display: 'flex',
 	flexDirection: 'row',
-	height: 704,
-	width: 1280,
 	backgroundColor: 'white'	
 }
 
@@ -17,7 +15,7 @@ export default class extends Component {
 	constructor () {
 		super()
 		this.state = {
-			mapdata: null,
+			mapdata: 'event',
 			filterValue: [],
 			filterOpen: false
 		}
@@ -52,7 +50,7 @@ export default class extends Component {
 		} = this.state
 
 		return (
-			<div style={componentStyle}>
+			<div className='min-vh-100 w-100' style={componentStyle}>
 				<Drawer
 					onChangeMapData={this.onChangeMapData}
 					mapdata={mapdata}

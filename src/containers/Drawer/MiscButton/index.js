@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 import Weather from './Weather'
 import News from './News'
@@ -15,10 +16,10 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: 500,
+  width: 600,
   height: 300,
+  margin: 'auto',
   marginTop: 100,
-  marginLeft: 340,
   padding: 30,
   overflow: 'scroll',
   fontFamily: 'Lato',
@@ -26,7 +27,7 @@ const modalStyle = {
 }
 
 const lineStyle = {
-  width: 500,
+  width: 550,
   height: 2,
   backgroundColor: '#3A4047'
 }
@@ -34,7 +35,34 @@ const lineStyle = {
 const closeStyle = {
   position: 'fixed',
   marginTop: -25,
-  marginLeft: 500,
+  marginLeft: 540,
+  fontFamily: 'Lato',
+  fontSize: 26,
+  color: '#3A4047',
+  cursor: 'pointer'
+}
+
+const modalStyleTwo = {
+  backgroundColor: '#fff',
+  width: 300,
+  height: 400,
+  margin: 'auto',
+  padding: 30,
+  overflow: 'scroll',
+  fontFamily: 'Lato',
+  fontSize: 13,
+}
+
+const lineStyleTwo = {
+  width: 250,
+  height: 2,
+  backgroundColor: '#3A4047'
+}
+
+const closeStyleTwo = {
+  position: 'fixed',
+  marginTop: -25,
+  marginLeft: 240,
   fontFamily: 'Lato',
   fontSize: 26,
   color: '#3A4047',
@@ -47,15 +75,32 @@ export default class extends Component {
       return null
     }
     return (
-      <div style={backdropStyle}>
-        <div style={modalStyle}>
-          <div style={closeStyle} onClick={this.props.onClose}>
-            x
+      <div>
+      <MediaQuery minWidth={480}>
+        <div style={backdropStyle}>
+          <div style={modalStyle}>
+            <div style={closeStyle} onClick={this.props.onClose}>
+              x
+            </div>
+            <Weather />
+            <div style={lineStyle} />
+            <News />
           </div>
-          <Weather />
-          <div style={lineStyle} />
-          <News />
         </div>
+      </MediaQuery>
+
+      <MediaQuery maxWidth={480}>
+        <div style={backdropStyle}>
+          <div style={modalStyleTwo}>
+            <div style={closeStyleTwo} onClick={this.props.onClose}>
+              x
+            </div>
+            <Weather />
+            <div style={lineStyleTwo} />
+            <News />
+          </div>
+        </div>
+      </MediaQuery>
       </div>
     )
   }

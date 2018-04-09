@@ -13,10 +13,10 @@ const backdropStyle = {
 
 const modalStyle = {
   backgroundColor: '#fff',
-  width: 530,
+  width: 630,
   height: 330,
+  margin: 'auto',
   marginTop: 100,
-  marginLeft: 340,
   overflow: 'scroll',
   fontFamily: 'Lato',
   fontSize: 13,
@@ -33,7 +33,7 @@ const formTextStyle = {
 const closeStyle = {
   position: 'fixed',
   marginTop: 5,
-  marginLeft: 500,
+  marginLeft: 600,
   fontFamily: 'Lato',
   fontSize: 26,
   color: 'white',
@@ -45,13 +45,14 @@ const headerStyle = {
   position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
-  width: 530,
+  width: 630,
   height: 50,
   backgroundColor: '#A31F25',
   fontSize: 16
 }
 
 const formStyle = {
+  marginLeft: 50,
   marginTop: 50
 }
 
@@ -62,14 +63,14 @@ const changeButtonStyle = {
   flexDirection: 'row',
   marginTop: 11,
   marginLeft: 40,
-  width: 260,
+  width: 280,
 }
 
 const changeButtonStyleTwo = {
   display: 'flex',
   flexDirection: 'row',
-  width: 280,
-  height: 39,
+  width: 320,
+  height: 50,
   backgroundColor: '#79171C',
   paddingTop: 11,
   paddingLeft: 30

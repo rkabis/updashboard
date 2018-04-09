@@ -10,6 +10,7 @@
     "react-dom": "^15.6.2",
     "react-leaflet": "^1.9.1",
     "react-leaflet-control": "^1.4.1",
+    "react-responsive": "^4.1.0",
     "react-scripts": "1.1.1"
   },
   "scripts": {
@@ -18,7 +19,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "tachyons": "^4.9.1"
-  }
+  "devDependencies": {}
 }
