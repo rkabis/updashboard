@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 
 import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
@@ -44,14 +45,13 @@ const contactlineStyle = {
 }
 
 const contactStyle = {
-	marginLeft: 38
+	// marginLeft: 38
 }
 
 const buttonGroupStyle = {
-	display: 'flex',
-	flexDirection: 'row',
 	marginTop: 20,
-	marginRight: 25
+	marginRight: 25,
+	width: 220
 }
 
 export default class extends Component {
@@ -71,43 +71,48 @@ export default class extends Component {
 				className='flex flex-row justify-between w-100 absolute top-0 left-0'
 				style={componentStyle}
 			>
-				<div className='f3-l f4-m f6-ns dn-ns di-m di-l' style={titleStyle}>
+				<div className='f3-l f4-m f6-ns' style={titleStyle}>
 					{'UP Dashboard'}
 				</div>
-				<div style={buttonGroupStyle}>
-					<div>
-						<div
-							onClick={this.aboutModal}
-							style={buttonStyle}
-							className='f7-ns f6-l nowrap'
-						>
-							ABOUT US
-						</div>
-						<div style={aboutLineStyle} />
-						<AboutButton
-							show={this.state.aboutOpen}
-							onClose={this.aboutModal}
-						>
-						</AboutButton>
-					</div>
 
-					<div style={contactStyle}>
-						<div
-							onClick={this.contactModal}
-							style={buttonStyle}
-							className='f7-ns f6-m f6-l nowrap'
-						>
-							CONTACT US
+				<MediaQuery minWidth={480}>
+					<div
+						className='flex flew-rox justify-between'
+						style={buttonGroupStyle}
+					>
+						<div>
+							<div
+								onClick={this.aboutModal}
+								style={buttonStyle}
+								className='f7-ns f6-l dn-l nowrap'
+							>
+								ABOUT US
+							</div>
+							<div style={aboutLineStyle} />
+							<AboutButton
+								show={this.state.aboutOpen}
+								onClose={this.aboutModal}
+							>
+							</AboutButton>
 						</div>
-						<div style={contactlineStyle} />
-						<ContactButton
-							show={this.state.contactOpen}
-							onClose={this.contactModal}
-						>
-						</ContactButton>
-					</div>
-				</div>
 
+						<div style={contactStyle}>
+							<div
+								onClick={this.contactModal}
+								style={buttonStyle}
+								className='f7-ns f6-m f6-l nowrap'
+							>
+								CONTACT US
+							</div>
+							<div style={contactlineStyle} />
+							<ContactButton
+								show={this.state.contactOpen}
+								onClose={this.contactModal}
+							>
+							</ContactButton>
+						</div>
+					</div>
+				</MediaQuery>
 			</div>
 		)
 	}
