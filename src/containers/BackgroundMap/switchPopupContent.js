@@ -45,6 +45,8 @@ export default (
 			} else {
 				return "<strong>"+ feature.properties.adminName + "</strong><br/>" + feature.properties.adminAdd + "<br/><br/><strong>Headed by: </strong>" + feature.properties.vcName + "<br/><strong>Contact No: </strong>" + feature.properties.adminNum + "<br/><strong>Email: </strong>" + feature.properties.adminEmail
 			}
+		case 'event':
+				return "<strong>" + feature.properties.eventName + "</strong><br/>" + feature.properties.eventVenue + "<br/>" + feature.properties.eventDate + "<br/><br/><i>" + feature.properties.eventDescription + "</i>"
 		default:
 			return "pending"
 	}

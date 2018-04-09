@@ -15,7 +15,7 @@ export default class extends Component {
 	constructor () {
 		super()
 		this.state = {
-			mapdata: null,
+			mapdata: 'event',
 			filterValue: [],
 			filterOpen: false
 		}
