@@ -13,7 +13,7 @@ const mapboxId = 'mapbox.streets'
 const mapboxAccess = 'your.mapbox.access.token'
 
 const componentStyle = {
-	zIndex: 5
+	zIndex: 0
 }
 
 export default class extends Component {

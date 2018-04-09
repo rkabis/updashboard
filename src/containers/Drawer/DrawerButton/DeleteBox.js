@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const deleteSize = 24
 const arrayCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
 const deleteStyle = {
-	zIndex: 500,
+	zIndex: 5,
 	position: 'fixed',
 	marginLeft: 15
 }

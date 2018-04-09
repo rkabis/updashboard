@@ -10,7 +10,8 @@ const backdropStyle = {
   left: 0,
   right: 0,
   backgroundColor: 'rgba(0,0,0,0.3)',
-  padding: 50
+  padding: 50,
+  zIndex: 49
 }
 
 const modalStyle = {
@@ -20,7 +21,8 @@ const modalStyle = {
   margin: 'auto',
   marginTop: 100,
   padding: 30,
-  overflow: 'scroll'
+  overflow: 'scroll',
+  zIndex: 50
 }
 
 const closeStyle = {

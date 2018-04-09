@@ -5,6 +5,7 @@ body {
 }
 
 .leaflet-container {
+	z-index: 0;
 	overflow: hidden;
 	position: absolute;
 	left: 0;
