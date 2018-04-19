@@ -12,7 +12,6 @@ const backdropStyle = {
   right: 0,
   backgroundColor: 'rgba(0,0,0,0.3)',
   padding: 50,
-  zIndex: 49
 }
 
 const modalStyle = {
@@ -25,7 +24,6 @@ const modalStyle = {
   overflow: 'scroll',
   fontFamily: 'Lato',
   fontSize: 13,
-  zIndex: 50
 }
 
 const lineStyle = {

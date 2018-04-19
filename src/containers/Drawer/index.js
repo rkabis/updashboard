@@ -8,7 +8,6 @@ const componentStyle = {
 	position: 'absolute',
 	display: 'flex',
 	flexDirection: 'column',
-	// height: 704,
 	width: 54,
 	backgroundColor: '#1C232C',
 	overflow: 'hidden',
