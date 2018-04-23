@@ -14,7 +14,7 @@ const backdropStyle = {
 const modalStyle = {
   backgroundColor: '#fff',
   width: 630,
-  height: 330,
+  height: 380,
   margin: 'auto',
   marginTop: 100,
   overflow: 'scroll',

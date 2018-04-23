@@ -1,1 +1,272 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"","eventName":"Elvis Lives 2018","eventHostOrg":"UP Mountaineers","eventRSVPLink":" ","eventStartDate":"13/04/2018","eventEndDate":" ","eventStartTime":"7:00PM","eventEndTime":" ","eventLink":"https://www.facebook.com/events/412484985839794/","eventVenue":"FA Parking Lot"},"geometry":{"type":"Point","coordinates":[121.06194376945496,14.652457195159725]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"Cuban Film Festival","eventHostOrg":"UP Film Institute","eventStartDate":"12/04/2018","eventEndDate":"14/04/2018","eventStartTime":"4:00PM","eventLink":"https://www.facebook.com/pg/UPFIOfficialPage/events/?ref=page_internal","eventVenue":"UPFI Film Center - Cine Adarna","eventRSVPLink":" ","eventEndTime":" "},"geometry":{"type":"Point","coordinates":[121.06700509786606,14.657086587304684]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"The Kundiman Party","eventHostOrg":"Dulaang UP","eventRSVPLink":" ","eventStartDate":"12/04/2018","eventEndDate":"29/04/2018","eventStartTime":"7:00PM","eventEndTime":" ","eventLink":"https://www.facebook.com/events/194754934642877/","eventVenue":"Wilfrido Ma. Guerrero Theater - Palma Hall"},"geometry":{"type":"Point","coordinates":[121.06993675231932,14.653513348728422]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"4th CSSP Graduate Students Research Conference","eventHostOrg":"CSSP Graduate Students Research Conference","eventStartDate":"20/04/2018","eventEndDate":"21/04/2018","eventStartTime":"5:00PM","eventEndTime":"6:00PM","eventLink":"https://www.facebook.com/events/187420631893915/?active_tab=discussion","eventVenue":"Pavilion 1, Palma Hall","eventRSVPLink":" "},"geometry":{"type":"Point","coordinates":[121.06888532638548,14.65288536613894]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"University Job Fair: Passion at Work","eventHostOrg":"University Job Fair","eventRSVPLink":" ","eventStartDate":"10/04/2018","eventEndDate":"13/04/2018","eventStartTime":"10:00AM","eventEndTime":"5:00PM","eventLink":"https://www.facebook.com/upujf/","eventVenue":"Bahay ng Alumni"},"geometry":{"type":"Point","coordinates":[121.06658935546874,14.658033732275669]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"Let's Talk About Dagat - Marine Biodiversity Conservation Talk","eventHostOrg":"The Pisces Project and UP Paralegal Volunteers' Organization","eventStartDate":"18/04/2018","eventStartTime":"5:00PM","eventEndTime":"8:00PM","eventLink":"https://www.facebook.com/events/180922382635901/","eventVenue":"Malcolm Hall Theater","eventRSVPLink":" ","eventEndDate":" "},"geometry":{"type":"Point","coordinates":[121.07209324836731,14.656583171598614]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"You Will Be Alright","eventHostOrg":"UP Diliman University Student Council","eventVenue":"Malcolm Hall Theater","eventStartDate":"11/04/2018","eventRSVPLink":"https://tinyurl.com/YouWillBeAlright","eventStartTime":"4:00PM","eventEndTime":"7:00PM","eventLink":"https://www.facebook.com/events/192420368023338/","eventEndDate":" "},"geometry":{"type":"Point","coordinates":[121.07209324836731,14.656494943984605]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"UP Varsity Chess Team Tryouts","eventHostOrg":"UP Chess Varsity Team","eventRSVPLink":" ","eventStartDate":"14/04/2018","eventEndDate":"15/04/2018","eventStartTime":"8:00AM","eventEndTime":" ","eventLink":"https://www.facebook.com/events/196808017582858/","eventVenue":"UP Gym"},"geometry":{"type":"Point","coordinates":[121.06292009353636,14.659289666140605]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","eventName":"The Greatest Throwman Hat Tournament","eventHostOrg":"UP DUO Applicants Batch 13","eventRSVPLink":"tinyurl.com/thegreatestthrowman","eventStartDate":"14/04/2018","eventEndDate":" ","eventStartTime":"8:00AM","eventEndTime":"5:00PM","eventLink":"https://www.facebook.com/DUOBatch13Hat/","eventVenue":"UP Sunken Garden"},"geometry":{"type":"Point","coordinates":[121.07272088527678,14.65507291753968]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"","eventName":"Celebración Las fiestas del mundo hispanohablante","eventHostOrg":"UP Círculo Hispánico","eventRSVPLink":" ","eventStartDate":"10/04/2018","eventEndDate":"13/04/2018","eventStartTime":"4:00PM","eventEndTime":"8:00PM","eventLink":"https://www.facebook.com/events/1011480955697915/","eventVenue":"UP CAL Building"},"geometry":{"type":"Point","coordinates":[121.06745034456253,14.652545424399634]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "eventName": "The Kundiman Party",
+        "eventHostOrg": "Dulaang UP",
+        "eventRSVPLink": "",
+        "eventStartDate": "12/04/2018",
+        "eventEndDate": "29/04/2018",
+        "eventStartTime": "7:00PM",
+        "eventEndTime": "",
+        "eventLink": "https://www.facebook.com/events/194754934642877/",
+        "eventVenue": "pin Wilfrido Ma. Guerrero Theater - Palma Hall",
+        "eventType": "regular"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.06993675231932,
+          14.653513348728422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "eventName": "University Job Fair: Passion at Work",
+        "eventHostOrg": "University Job Fair",
+        "eventRSVPLink": "",
+        "eventStartDate": "10/04/2018",
+        "eventEndDate": "13/04/2018",
+        "eventStartTime": "10:00AM",
+        "eventEndTime": "5:00PM",
+        "eventLink": "https://www.facebook.com/upujf/",
+        "eventVenue": "Bahay ng Alumni",
+        "eventType": "regular"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.06658935546874,
+          14.658033732275669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "eventName": "13th Philippine Linguistics Congress",
+        "eventHostOrg": "UP Department of Linguistics",
+        "eventRSVPLink": "",
+        "eventStartDate": "14/11/2018",
+        "eventEndDate": "16/11/2018",
+        "eventStartTime": "8:00AM",
+        "eventEndTime": "5:00PM",
+        "eventLink": "",
+        "eventVenue": "National Institute for Science and Mathematics Education Development (NISMED) Auditorium ",
+        "eventDetails": "We are accepting abstracts for paper presentations at the conference until April 30, 2018.  Abstracts of studies from the following disciplines are welcome: structural linguistics, comparative linguistics, linguistic typology, historical linguistics, sociolinguistics, psycholinguistics, linguistic anthropology, ethnolinguistics, lexicography, language education, language acquisition, translation studies, and other related studies on Philippine languages.",
+        "eventType": "regular"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0675898194313,
+          14.651715030147312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-size": "medium",
+        "marker-color": "#7e7e7e",
+        "eventName": "Korean Arthouse Feature \"Joint Security Area\"",
+        "eventHostOrg": "UPFI Film Center and UP Korea Research Center",
+        "eventStartDate": "26/04/2018",
+        "eventVenue": "UPFI Film Center Videotheque",
+        "eventLink": "https://www.facebook.com/events/607165749634318/",
+        "eventRSVPLink": "https://www.facebook.com/events/607165749634318/",
+        "eventEndDate": "",
+        "eventStartTime": "7:00PM",
+        "eventEndTime": "9:00PM",
+        "eventDetails": "This film screening is FREE and open to the public, but online registration is required due to limited seats. * Registration:  https://goo.gl/forms/VEDhOzQNx4c8kKzt2",
+        "eventType": "regular"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.06700778007507,
+          14.65712032130549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "eventName": "Career.Start()",
+        "eventHostOrg": "UP ACM, IEEE UPD SB",
+        "eventRSVPLink": "https://fb.com/career.start.upd",
+        "eventStartDate": "10/04/2018",
+        "eventEndDate": "28/04/2018",
+        "eventStartTime": "10:00AM",
+        "eventEndTime": "8:00PM",
+        "eventLink": "https://tiny.cc/CareerStart2018",
+        "eventVenue": "UP EEEI",
+        "eventType": "regular",
+        "eventDetails": "Each company is scheduled a time slot in the whole month of April. There are 14 companies."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.06825768947601,
+          14.649815491464308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7E7E7E",
+        "marker-size": "medium",
+        "eventName": "Centenial Dorm Tour",
+        "eventHostOrg": "",
+        "eventRSVPLink": "",
+        "eventStartDate": "24/04/2018",
+        "eventEndDate": "",
+        "eventStartTime": "8:00PM",
+        "eventEndTime": "10:00PM",
+        "eventLink": "",
+        "eventVenue": "Centenial Dormitory",
+        "eventType": "election"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0625821,
+          14.64767979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7E7E7E",
+        "marker-size": "medium",
+        "eventName": "Sampaguita Dorm Tour",
+        "eventHostOrg": "",
+        "eventRSVPLink": "",
+        "eventStartDate": "25/04/2018",
+        "eventEndDate": "",
+        "eventStartTime": "7:00PM",
+        "eventEndTime": "9:00PM",
+        "eventLink": "",
+        "eventVenue": "Sampaguita Dormitory",
+        "eventType": "election"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0712618,
+          14.65223143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7E7E7E",
+        "marker-size": "medium",
+        "eventName": "Kamia Dorm Tour",
+        "eventHostOrg": "",
+        "eventRSVPLink": "",
+        "eventStartDate": "25/04/2018",
+        "eventEndDate": "",
+        "eventStartTime": "9:00PM",
+        "eventEndTime": "11:00PM",
+        "eventLink": "",
+        "eventVenue": "Kamia Dormitory",
+        "eventType": "election"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0702372,
+          14.6518863
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7E7E7E",
+        "marker-size": "medium",
+        "eventName": "Centenial Dorm Tour",
+        "eventHostOrg": "",
+        "eventRSVPLink": "",
+        "eventStartDate": "24/04/2018",
+        "eventEndDate": "",
+        "eventStartTime": "8:00PM",
+        "eventEndTime": "10:00PM",
+        "eventLink": "",
+        "eventVenue": "Centenial Dormitory",
+        "eventType": "election"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0625821,
+          14.64767979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7E7E7E",
+        "marker-size": "medium",
+        "eventName": "Sampaguita Dorm Tour",
+        "eventHostOrg": "",
+        "eventRSVPLink": "",
+        "eventStartDate": "25/04/2018",
+        "eventEndDate": "",
+        "eventStartTime": "7:00PM",
+        "eventEndTime": "9:00PM",
+        "eventLink": "",
+        "eventVenue": "Sampaguita Dormitory",
+        "eventType": "election"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0712618,
+          14.65223143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7E7E7E",
+        "marker-size": "medium",
+        "eventName": "Kamia Dorm Tour",
+        "eventHostOrg": "",
+        "eventRSVPLink": "",
+        "eventStartDate": "25/04/2018",
+        "eventEndDate": "",
+        "eventStartTime": "9:00PM",
+        "eventEndTime": "11:00PM",
+        "eventLink": "",
+        "eventVenue": "Kamia Dormitory",
+        "eventType": "election"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0702372,
+          14.6518863
+        ]
+      }
+    }
+  ]
+}
