@@ -15,7 +15,7 @@ const backdropStyle = {
 const modalStyle = {
   backgroundColor: '#fff',
   width: 600,
-  height: 300,
+  height: 400,
   margin: 'auto',
   marginTop: 100,
   padding: 30,
@@ -25,7 +25,7 @@ const modalStyle = {
 }
 
 const lineStyle = {
-  width: 550,
+  width: 540,
   height: 2,
   backgroundColor: '#3A4047'
 }
@@ -48,6 +48,22 @@ const titleStyle = {
 	marginBottom: 5
 }
 
+const alyansaStyle = {
+	backgroundColor: '#1645A2'
+}
+
+const standStyle = {
+	backgroundColor: '#FF312A'
+}
+
+const kaisaStyle = {
+	backgroundColor: '#FFC234'
+}
+
+const independentStyle = {
+	backgroundColor: '#378352'
+}
+
 export default class extends Component {
   render() {
     if(!this.props.showElection) {
@@ -66,20 +82,22 @@ export default class extends Component {
    						HALALAN 2018
    					</div>
    					<div style={lineStyle} />
+
    					<div className='pt2'>
-   						<div className='pa3 bg-blue'>
-   							ALYANSA
+   						<div className='pa4 white' style={alyansaStyle}>
+   							ALYANSA: [Insert Shit]
    						</div>
-   						<div className='pa3 bg-yellow'>
-   							KAISA
+   						<div className='pa4 white' style={kaisaStyle}>
+   							KAISA: [Insert Shit]
    						</div>
-   						<div className='pa3 bg-red'>
-   							STAND UP
+   						<div className='pa4 white' style={standStyle}>
+   							STAND UP: [Insert Shit]
    						</div>
-   						<div className='pa3 bg-black white'>
-   							INDEPENDENT
+   						<div className='pa4 white' style={independentStyle}>
+   							INDEPENDENT: [Insert Shit]
    						</div>
    					</div>
+
           </div>
         </div>
       </MediaQuery>
