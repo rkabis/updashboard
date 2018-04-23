@@ -49,7 +49,7 @@ export default class extends Component {
 			let newsTitle = news[newsNum].title.rendered
 			let newsContent = news[newsNum].content.rendered
 			let newsID = news[newsNum].id
-			if (newsID === 591 || newsID === 608) {
+			if (newsID === 591 || newsID === 608 || newsID === 633) {
 				newsNum = newsNum + 1
 				processNews()
 			} else {
