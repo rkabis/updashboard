@@ -14,7 +14,6 @@ const titleStyle = {
 	color: 'white',
 	fontFamily: 'Maven Pro',
 	marginLeft: 70,
-	// fontSize: 24,
 	marginTop: 12
 }
 
@@ -25,7 +24,6 @@ const buttonStyle = {
 	fontFamily: 'Muli',
 	letterSpacing: 2,
 	cursor: 'pointer',
-	// fontSize: 13
 }
 
 const aboutLineStyle = {
@@ -42,10 +40,6 @@ const contactlineStyle = {
 	backgroundColor: 'white',
 	marginTop: 14,
 	marginLeft: 6
-}
-
-const contactStyle = {
-	// marginLeft: 38
 }
 
 const buttonGroupStyle = {
@@ -99,7 +93,7 @@ export default class extends Component {
 							</AboutButton>
 						</div>
 
-						<div style={contactStyle}>
+						<div>
 							<div
 								onClick={this.contactModal}
 								style={buttonStyle}
