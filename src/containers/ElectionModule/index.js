@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
 
 import OnlineBulletin from './OnlineBulletin.js'
-import TwitterTimelineEmbed from 'react-twitter-embed'
 
 const backdropStyle = {
   position: 'absolute',
@@ -72,7 +71,7 @@ export default class extends Component {
    					<div style={lineStyle} />
 
             <OnlineBulletin />
-            
+
           </div>
         </div>
       </MediaQuery>
