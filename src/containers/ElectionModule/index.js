@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
 
+import OnlineBulletin from './OnlineBulletin.js'
+import TwitterTimelineEmbed from 'react-twitter-embed'
+
 const backdropStyle = {
   position: 'absolute',
   top: 0,
@@ -48,22 +51,6 @@ const titleStyle = {
 	marginBottom: 5
 }
 
-const alyansaStyle = {
-	backgroundColor: '#1645A2'
-}
-
-const standStyle = {
-	backgroundColor: '#FF312A'
-}
-
-const kaisaStyle = {
-	backgroundColor: '#FFC234'
-}
-
-const independentStyle = {
-	backgroundColor: '#378352'
-}
-
 export default class extends Component {
   render() {
     if(!this.props.showElection) {
@@ -78,26 +65,14 @@ export default class extends Component {
    					<div style={closeStyle} onClick={this.props.onClose}>
    						x
    					</div>
+
    					<div style={titleStyle}>
    						HALALAN 2018
    					</div>
    					<div style={lineStyle} />
 
-   					<div className='pt2'>
-   						<div className='pa4 white' style={alyansaStyle}>
-   							ALYANSA: [Insert Shit]
-   						</div>
-   						<div className='pa4 white' style={kaisaStyle}>
-   							KAISA: [Insert Shit]
-   						</div>
-   						<div className='pa4 white' style={standStyle}>
-   							STAND UP: [Insert Shit]
-   						</div>
-   						<div className='pa4 white' style={independentStyle}>
-   							INDEPENDENT: [Insert Shit]
-   						</div>
-   					</div>
-
+            <OnlineBulletin />
+            
           </div>
         </div>
       </MediaQuery>
