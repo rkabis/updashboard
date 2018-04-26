@@ -4,7 +4,6 @@ import Drawer from './Drawer'
 import AppBar from './AppBar'
 import BackgroundMap from './BackgroundMap'
 import FilterMenu from './FilterMenu'
-import ElectionModule from './ElectionModule'
 
 const componentStyle = {
 	display: 'flex',
@@ -19,13 +18,11 @@ export default class extends Component {
 			mapdata: 'event',
 			filterValue: [],
 			filterOpen: false,
-			showElection: true
 		}
 		this.onChangeMapData = (e) => this.setState({mapdata: e})
 		this.onChangeMapFilter = this.addArrayFilter.bind(this)
 		this.filterModal = (e) => this.setState({filterOpen: e})
 		this.resetFilter = this.resetFilter.bind(this)
-		this.electionModal = () => this.setState({showElection: !this.state.showElection})
 	}
 
 	addArrayFilter(num, e) {
@@ -54,10 +51,6 @@ export default class extends Component {
 
 		return (
 			<div className='min-vh-100 w-100' style={componentStyle}>
-				<ElectionModule
-					showElection={this.state.showElection}
-					onClose={this.electionModal}
-				/>
 				<Drawer
 					onChangeMapData={this.onChangeMapData}
 					mapdata={mapdata}
