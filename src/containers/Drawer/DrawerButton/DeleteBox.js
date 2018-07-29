@@ -20,7 +20,7 @@ export default class extends Component {
 		} = this.props
 
 		const addToCategory = (icon) => {
-			{arrayCategoryOne.includes(icon) ? arrayForCategoryOne.push(icon) : arrayForCategoryTwo.push(icon)}
+			arrayCategoryOne.includes(icon) ? arrayForCategoryOne.push(icon) : arrayForCategoryTwo.push(icon)
 		}
 
 		if (!this.props.show) {
