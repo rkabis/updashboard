@@ -31,7 +31,7 @@ export default class extends Component {
 			state = true
 		}
 
-		{removableFeatures.includes(icon) ? changeState() : null}
+		removableFeatures.includes(icon) ? changeState() : null
 
 		return (
 			<div style={componentStyle}>
