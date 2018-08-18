@@ -16,7 +16,8 @@ export default class extends Component {
 		} = this.props
 		
 		return (
-			
+			<div style={componentStyle}>
+				
 				<div>
 					<img
 						src={require('./icons/in.png')}
@@ -26,7 +27,6 @@ export default class extends Component {
 						onClick={zoomIn}
 					/>
 				</div>
-				<div style={componentStyle}>
 				<div>
 					<img
 						src={require('./icons/out.png')}
@@ -36,6 +36,8 @@ export default class extends Component {
 						onClick={zoomOut}
 					/>
 				</div>
+
+
 			</div>
 		)
 	}
