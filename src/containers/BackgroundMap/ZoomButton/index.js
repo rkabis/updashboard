@@ -17,15 +17,7 @@ export default class extends Component {
 		
 		return (
 			<div style={componentStyle}>
-				<div>
-					<img
-						src={require('./icons/out.png')}
-						alt={'out'}
-						width={iconSize}
-						height={iconSize}
-						onClick={zoomOut}
-					/>
-				</div>
+				
 				<div>
 					<img
 						src={require('./icons/in.png')}
@@ -35,6 +27,17 @@ export default class extends Component {
 						onClick={zoomIn}
 					/>
 				</div>
+				<div>
+					<img
+						src={require('./icons/out.png')}
+						alt={'out'}
+						width={iconSize}
+						height={iconSize}
+						onClick={zoomOut}
+					/>
+				</div>
+
+
 			</div>
 		)
 	}
