@@ -16,16 +16,7 @@ export default class extends Component {
 		} = this.props
 		
 		return (
-			<div style={componentStyle}>
-				<div>
-					<img
-						src={require('./icons/out.png')}
-						alt={'out'}
-						width={iconSize}
-						height={iconSize}
-						onClick={zoomOut}
-					/>
-				</div>
+			
 				<div>
 					<img
 						src={require('./icons/in.png')}
@@ -33,6 +24,16 @@ export default class extends Component {
 						width={iconSize}
 						height={iconSize}
 						onClick={zoomIn}
+					/>
+				</div>
+				<div style={componentStyle}>
+				<div>
+					<img
+						src={require('./icons/out.png')}
+						alt={'out'}
+						width={iconSize}
+						height={iconSize}
+						onClick={zoomOut}
 					/>
 				</div>
 			</div>
