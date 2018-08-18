@@ -69,7 +69,7 @@ export default class extends Component {
 					className='f3'
 					style={titleStyle}
 				>
-					{'UP Dashboard'}
+					{'UP Dashboard!!'}
 				</div>
 
 				<MediaQuery minWidth={480}>
