@@ -9,7 +9,7 @@ const componentStyle = {
 	display: 'flex',
 	flexDirection: 'column',
 	width: 54,
-	backgroundColor: '#1C232C',
+	backgroundColor: '#d87102',
 	overflow: 'hidden',
 	zIndex: 20
 }
