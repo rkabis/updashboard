@@ -44,7 +44,7 @@ const newsStyle = {
 }
 
 let arrayForCategoryOne = ['utility', 'gym', 'admin', 'library', 'museum']
-let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates']
+let arrayForCategoryTwo = ['org', 'parking', 'wifi', 'bucket', 'gates', 'canteens']
 
 export default class extends Component {
 	constructor() {

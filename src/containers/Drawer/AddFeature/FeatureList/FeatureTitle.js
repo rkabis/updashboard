@@ -22,6 +22,8 @@ export default (
  		return 'Museums & Galleries'
  	case 'admin':
  		return 'Admin Offices'
+ 	case 'canteens':
+ 		return 'Canteens'
  	default:
  		return "pending"
  }
