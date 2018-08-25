@@ -11,7 +11,7 @@ const componentStyle = {
 
 const iconSize = 25
 
-const removableFeatures = ['utility', 'gym', 'admin', 'library', 'museum', 'org', 'parking', 'wifi', 'bucket', 'gates']
+const removableFeatures = ['utility', 'gym', 'admin', 'library', 'museum', 'org', 'parking', 'wifi', 'bucket', 'gates','canteens']
 
 export default class extends Component {
 	render() {
