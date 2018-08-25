@@ -83,7 +83,11 @@ export default class extends Component {
 
 		return (
 			<div className='min-vh-100' style={componentStyle}>
-				
+				<div style={menuStyle}>
+					<DrawerButton
+						icon={'menu'}
+					/>
+				</div>
 				<div style={firstSetStyle}>
 					<DrawerButton
 						icon={'building'}
