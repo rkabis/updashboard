@@ -8,6 +8,7 @@ import UtilityToggle from './UtilityToggle.js'
 import AdminToggle from './AdminToggle.js'
 import ToiletToggle from './ToiletToggle.js'
 import LibraryToggle from './LibraryToggle.js'
+import CanteenToggle from './CanteenToggle.js'
 
 export default class extends Component {
 	render() {
@@ -42,6 +43,9 @@ export default class extends Component {
 				break
 			case 'library':
 				toggle = <LibraryToggle show={show} onChangeMapFilter={onChangeMapFilter} />
+				break
+			case 'canteens':
+				toggle = <CanteenToggle show={show} onChangeMapFilter={onChangeMapFilter} />
 				break
 			default:
 				toggle = <div/>

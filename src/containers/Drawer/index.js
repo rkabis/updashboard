@@ -34,7 +34,7 @@ const firstSetStyle = {
 
 const secondSetStyle = {
 	marginLeft: 12,
-	marginBottom: 8	
+	marginBottom: 8
 }
 
 const newsStyle = {
@@ -80,14 +80,10 @@ export default class extends Component {
 		}
 
 		{this.state.arrayOfFeatures.length >= 3 ? changeState(false) : changeState(true)}
-		
+
 		return (
 			<div className='min-vh-100' style={componentStyle}>
-				<div style={menuStyle}>
-					<DrawerButton
-						icon={'menu'}
-					/>
-				</div>
+				
 				<div style={firstSetStyle}>
 					<DrawerButton
 						icon={'building'}
@@ -111,7 +107,7 @@ export default class extends Component {
 						mapdata={mapdata}
 						filterModal={filterModal}
 						resetFilter={resetFilter}
-					/>	
+					/>
 
 				</div>
 
@@ -138,7 +134,7 @@ export default class extends Component {
 				<div style={lineStyle} />
 
 				<div style={secondSetStyle}>
-					{this.state.arrayOfFeatures.map(featureElement => 
+					{this.state.arrayOfFeatures.map(featureElement =>
 						<DrawerButton
 							key={featureElement}
 							icon={featureElement}
@@ -178,7 +174,7 @@ export default class extends Component {
 					>
 					</MiscButton>
 				</div>
-				
+
 			</div>
 		)
 	}

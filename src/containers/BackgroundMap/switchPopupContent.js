@@ -47,6 +47,8 @@ export default (
 			}
 		case 'event':
 				return "<strong>" + feature.properties.eventName + "</strong><br/>" + feature.properties.eventHostOrg + "<br/><br/>Details: <br/>" + feature.properties.eventVenue + "<br/>" + feature.properties.eventStartDate + " until " + feature.properties.eventEndDate + "<br/>" + feature.properties.eventStartTime + " to " + feature.properties.eventEndTime + "<br/><br/> Links: <br/><a href='" + feature.properties.eventLink + "'>" + feature.properties.eventLink + "</a><br/>" + feature.properties.eventRSVPLink
+		case 'canteens':
+			return "<strong>" + feature.properties.canteenName + "</strong><br/>" + feature.properties.Location + "<br/><br/>Menu: <br/> "+ feature.properties.Menu	
 		default:
 			return "pending"
 	}

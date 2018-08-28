@@ -6,6 +6,7 @@ import utilityFilter from './utilityFilter'
 import adminFilter from './adminFilter'
 import libraryFilter from './libraryFilter'
 import toiletFilter from './toiletFilter'
+import canteensFilter from './canteensFilter.js'
 
 let x
 
@@ -39,6 +40,9 @@ export default (
 		case 'library':
 			x = libraryFilter(feature, filterValue)
 			return x
+		case 'canteens':
+			x = canteensFilter(feature, filterValue)
+			return x	
 		default:
 			return true
 	}
