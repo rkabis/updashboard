@@ -3,6 +3,7 @@ import MediaQuery from 'react-responsive'
 
 import ContactButton from './ContactButton'
 import AboutButton from './AboutButton'
+import TriviaButton from './TriviaButton'
 
 const componentStyle = {
 	backgroundColor: '#A31F25',
@@ -42,10 +43,18 @@ const contactlineStyle = {
 	marginLeft: 6
 }
 
+const trivialineStyle = {
+	width: 90,
+	height: 7,
+	backgroundColor: 'orange',
+	marginTop: 14,
+	marginLeft: 6
+}
+
 const buttonGroupStyle = {
 	marginTop: 20,
 	marginRight: 25,
-	width: 220
+	width: 360
 }
 
 export default class extends Component {
@@ -53,10 +62,12 @@ export default class extends Component {
 		super()
 		this.state = {
 			aboutOpen: false,
-			contactOpen: false
+			contactOpen: false,
+			triviaOpen: false,
 		}
 		this.aboutModal = () => this.setState({aboutOpen: !this.state.aboutOpen})
 		this.contactModal = () => this.setState({contactOpen: !this.state.contactOpen})
+		this.triviaModal = () => this.setState({triviaOpen: !this.state.triviaOpen})
 	}
 
 	render() {
@@ -107,6 +118,22 @@ export default class extends Component {
 								onClose={this.contactModal}
 							>
 							</ContactButton>
+						</div>
+
+						<div>
+							<div
+								onClick={this.triviaModal}
+								style={buttonStyle}
+								className='f6 nowrap'
+							>
+								TRIVIA 
+							</div>
+							<div style={trivialineStyle} />
+							<TriviaButton
+								show={this.state.triviaOpen}
+								onClose={this.triviaModal}
+							>
+							</TriviaButton>
 						</div>
 					</div>
 				</MediaQuery>
