@@ -32,7 +32,7 @@ const aboutLineStyle = {
 	height: 7,
 	backgroundColor: 'white',
 	marginTop: 14,
-	marginLeft: 2
+	marginLeft: 6
 }
 
 const contactlineStyle = {
@@ -46,9 +46,9 @@ const contactlineStyle = {
 const trivialineStyle = {
 	width: 90,
 	height: 7,
-	backgroundColor: 'orange',
+	backgroundColor: 'green',
 	marginTop: 14,
-	marginLeft: 6
+	marginLeft: -12
 }
 
 const buttonGroupStyle = {

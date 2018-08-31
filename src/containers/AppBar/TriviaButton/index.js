@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 const backdropStyle = {
-  position: 'relative',
+  position: 'fixed',
   top: 0,
   bottom: 0,
   left: 0,
@@ -62,12 +62,15 @@ export default class extends Component {
     
           </div>
           <div style={titleStyle}>
-            TRIAL
+            TRIVIA
           </div>
           <div style={lineStyle} />
           <div style={bodyStyle}>
-            U P D A S H B O A R D is <b> awesome </b>
-            <br/><br/>
+            The University of the Philippines was established on June 18, 1908 under Act No.1870.
+              <br/><br/>
+            Presently, UP consists of 7 constituent universities in 15 campuses nationwide.
+             <br/><br/>
+            UP has already produced 7 Philippine presidents, 13 chief justices, 36 national scientists, 40 national artists, and a number of alumni of various professions in and out of the country.
           </div>
         </div>
       </div>
