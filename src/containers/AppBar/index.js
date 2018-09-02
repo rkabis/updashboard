@@ -23,8 +23,21 @@ const buttonStyle = {
 	display: 'flex',
 	flexDirection: 'column',
 	fontFamily: 'Muli',
+	textAlign: 'center',
 	letterSpacing: 2,
 	cursor: 'pointer',
+}
+
+const triviaButtonStyle = {
+	color: 'white',
+	display: 'flex',
+	flexDirection: 'column',
+	fontFamily: 'Muli',
+	textAlign: 'center',
+	letterSpacing: 2,
+	cursor: 'pointer',
+	width: 75,
+	marginLeft: 6,
 }
 
 const aboutLineStyle = {
@@ -46,15 +59,15 @@ const contactlineStyle = {
 const trivialineStyle = {
 	width: 90,
 	height: 7,
-	backgroundColor: 'green',
+	backgroundColor: 'white',
 	marginTop: 14,
-	marginLeft: -12
+	marginLeft: 2
 }
 
 const buttonGroupStyle = {
 	marginTop: 20,
 	marginRight: 25,
-	width: 360
+	width: 360,	
 }
 
 export default class extends Component {
@@ -123,10 +136,10 @@ export default class extends Component {
 						<div>
 							<div
 								onClick={this.triviaModal}
-								style={buttonStyle}
+								style={triviaButtonStyle}
 								className='f6 nowrap'
 							>
-								TRIVIA 
+								TRIVIA
 							</div>
 							<div style={trivialineStyle} />
 							<TriviaButton

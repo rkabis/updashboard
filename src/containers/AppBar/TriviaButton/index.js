@@ -47,7 +47,7 @@ const lineStyle = {
 }
 
 const bodyStyle = {
-  textAlign: 'center'
+  textAlign: 'left'
 }
 
 export default class extends Component {
@@ -71,6 +71,10 @@ export default class extends Component {
             Presently, UP consists of 7 constituent universities in 15 campuses nationwide.
              <br/><br/>
             UP has already produced 7 Philippine presidents, 13 chief justices, 36 national scientists, 40 national artists, and a number of alumni of various professions in and out of the country.
+              <br/><br/>
+            CASAA (or College of Arts and Sciences Alumni Association) used to be a favorite food court across the street from the east Wing of Palma Hall in Diliman. To the dismay of its many patrons, however, it was engulfed by fire on June 13.
+              <br/><br/>
+            Guillermo Tolentino created the Oblation with Professor Anastacio Caedo and Virgilio Raymundo as his models.
           </div>
         </div>
       </div>
