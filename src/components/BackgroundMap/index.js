@@ -16,9 +16,7 @@ const mapboxAccess = process.env.REACT_APP_MAPBOX_ACCESS
 
 const styles = theme => ({
   root: {
-    zIndex: -1,
-    height: 500,
-    width: 500
+    zIndex: -1
   }
 })
 

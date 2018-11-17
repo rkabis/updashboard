@@ -10,10 +10,7 @@ type Props = {
 }
 
 const styles = theme => ({
-  root: {
-    height: '100vh',
-    width: '100%'
-  }
+  root: {}
 })
 
 class Home extends Component {
