@@ -1,21 +1,25 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 
+import { Header, SideBar, BackgroundMap } from '../../components'
+
 const styles = theme => ({
-	root: {
-		height: '100vh',
-		width: '100%',
-	}
+  root: {
+    height: '100vh',
+    width: '100%'
+  }
 })
 
 class Home extends Component {
   render () {
-  	const { classes } = this.props
+    const { classes } = this.props
     return (
       <div className={classes.root}>
-      	Test
+        <Header />
+        <SideBar />
+        <BackgroundMap />
       </div>
-	)
+    )
   }
 }
 
