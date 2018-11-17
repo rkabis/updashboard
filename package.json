@@ -15,7 +15,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "format": "prettier-standard 'src/**/*.js'",
+    "format": "prettier-eslint --parser flow --write \"{src/**/*.js}\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
