@@ -13,6 +13,7 @@ const styles = theme => ({
 
 class SideBar extends Component {
   props: Props
+
   render () {
     const { classes } = this.props
     return <div className={classes.root}>SideBar</div>

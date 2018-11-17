@@ -18,6 +18,7 @@ const styles = theme => ({
 
 class Home extends Component {
   props: Props
+
   render () {
     const { classes } = this.props
     return (

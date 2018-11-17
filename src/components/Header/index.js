@@ -13,6 +13,7 @@ const styles = theme => ({
 
 class Header extends Component {
   props: Props
+
   render () {
     const { classes } = this.props
     return <div className={classes.root}>Header</div>
