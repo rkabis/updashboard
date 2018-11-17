@@ -9,7 +9,6 @@ import Hidden from '@material-ui/core/Hidden'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MailIcon from '@material-ui/icons/Mail'
 
@@ -19,7 +18,7 @@ type Props = {
   theme: Object
 }
 
-const drawerWidth = 240
+const drawerWidth = 50
 
 const styles = theme => ({
   root: {
@@ -27,29 +26,35 @@ const styles = theme => ({
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0
-    }
-  },
-  appBar: {
-    marginLeft: drawerWidth,
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`
-    }
-  },
-  menuButton: {
-    marginRight: 20,
-    [theme.breakpoints.up('sm')]: {
-      display: 'none'
+      width: drawerWidth
     }
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
-    width: drawerWidth
+    width: 100,
+    justifyContent: 'space-between'
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3
+  },
+  mainDiv: {
+    backgroundColor: 'pink',
+    width: drawerWidth,
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+  },
+  dist: {
+    backgroundColor: 'red',
+    textAlign: 'center',
+    width: '50px',
+    margin: 10,
+    padding: 10
+  },
+  red: {
+    backgroundColor: 'red'
   }
 })
 
@@ -68,33 +73,53 @@ class SideBar extends Component {
     const { classes, theme } = this.props
 
     const drawer = (
-      <div>
-        <Divider />
-        {
-          // "Divider" is a material-ui object to create a divider
-        }
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
+      <React.Fragment>
+        <div className={classes.mainDiv}>
+          <div>
+            <Divider />
+
+            <List>
+              {['Inbox', 'Starred', 'Send email'].map((text, index) => (
+                <div button key={text} className={classes.dist}>
+                  {text}
+                </div>
+              ))}
+            </List>
+            <Divider />
+            <List>
+              {['Inbox', 'Starred'].map((text, index) => (
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                </ListItem>
+              ))}
+            </List>
+            <Divider />
+            <List>
+              {['All mail'].map((text, index) => (
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                </ListItem>
+              ))}
+            </List>
+          </div>
+
+          <div>
+            <List>
+              {['All mail'].map((text, index) => (
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                </ListItem>
+              ))}
+            </List>
+          </div>
+        </div>
+      </React.Fragment>
     )
 
     return (
@@ -102,7 +127,7 @@ class SideBar extends Component {
         <CssBaseline />
         <nav className={classes.drawer}>
           {/* The implementation can be swap with js to avoid SEO duplication of links. */}
-          <Hidden smUp implementation="css">
+          <Hidden smUp implementation="js">
             <Drawer
               container={this.props.container}
               variant="temporary"
