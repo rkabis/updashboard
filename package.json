@@ -39,8 +39,6 @@
     "husky": "^1.1.4",
     "lint-staged": "^8.0.4",
     "prettier-eslint": "^8.8.2",
-    "prettier-eslint-cli": "^4.7.1",
-    "prettier-standard": "^8.0.1",
-    "standard": "^12.0.1"
+    "prettier-eslint-cli": "^4.7.1"
   }
 }
