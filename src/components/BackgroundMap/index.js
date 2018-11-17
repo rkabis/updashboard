@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 
 import { Map, TileLayer } from 'react-leaflet'
+import Control from 'react-leaflet-control'
+
+import ZoomButtons from './ZoomButtons'
 
 type Props = {
   classes: Object
@@ -31,6 +34,7 @@ class BackgroundMap extends Component {
   render () {
     const { classes } = this.props
     const { mapCenter, zoomLevel } = this.state
+
     return (
       <div className={classes.root}>
         <Map center={mapCenter} zoom={zoomLevel} zoomControl={false}>
@@ -40,6 +44,9 @@ class BackgroundMap extends Component {
             id={mapboxId}
             accessToken={mapboxAccess}
           />
+          <Control position="topleft">
+            <ZoomButtons />
+          </Control>
         </Map>
       </div>
     )
