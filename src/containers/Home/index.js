@@ -1,7 +1,13 @@
+// @flow
+
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 
 import { Header, SideBar, BackgroundMap } from '../../components'
+
+type Props = {
+  classes: Object
+}
 
 const styles = theme => ({
   root: {
@@ -11,6 +17,7 @@ const styles = theme => ({
 })
 
 class Home extends Component {
+  props: Props
   render () {
     const { classes } = this.props
     return (

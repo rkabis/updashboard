@@ -5,8 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^3.3.2",
     "@material-ui/icons": "^3.0.1",
+    "leaflet": "^1.3.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-leaflet": "^2.1.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "typeface-roboto": "0.0.54"
@@ -20,9 +22,9 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-standard",
-      "standard --fix",
+    "*.{js,jsx}": [
+      "prettier-eslint --parser flow --write \"{src/**/*.js}\"",
+      "eslint .",
       "git add"
     ]
   },
@@ -33,9 +35,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint": "^5.6.0",
+    "eslint": "^5.9.0",
     "husky": "^1.1.4",
     "lint-staged": "^8.0.4",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
     "prettier-standard": "^8.0.1",
     "standard": "^12.0.1"
   }

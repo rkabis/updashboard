@@ -9,11 +9,11 @@ class Containers extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' render={() => <Home />} />
-          <Route path='*' render={() => <NotFound />} />
+          <Route exact path="/" render={() => <Home />} />
+          <Route path="*" render={() => <NotFound />} />
         </Switch>
       </BrowserRouter>
-	)
+    )
   }
 }
 

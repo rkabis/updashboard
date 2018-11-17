@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.leaflet-container {
+	z-index: -1;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw
+}
