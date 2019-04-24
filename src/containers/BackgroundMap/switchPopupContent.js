@@ -47,6 +47,8 @@ export default (
 			}
 		case 'event':
 				return "<strong>" + feature.properties.eventName + "</strong><br/>" + feature.properties.eventHostOrg + "<br/><br/>Details: <br/>" + feature.properties.eventVenue + "<br/>" + feature.properties.eventStartDate + " until " + feature.properties.eventEndDate + "<br/>" + feature.properties.eventStartTime + " to " + feature.properties.eventEndTime + "<br/><br/> Links: <br/><a href='" + feature.properties.eventLink + "'>" + feature.properties.eventLink + "</a><br/>" + feature.properties.eventRSVPLink
+		case 'food':
+				return "<strong>" + feature.properties['Name of Establishment'] + "</strong><br/>" + feature.properties['Type of Establishment'] + "<br/><br/>Details: <br/>" + feature.properties['Operating Days and Hours'] + "<br/>" + feature.properties['Price Range'] + " until " + feature.properties['Types of Food Offered'] + "<br/>" + feature.properties['Facilities'] + " to " + feature.properties['Contact Details']
 		default:
 			return "pending"
 	}

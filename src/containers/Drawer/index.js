@@ -133,6 +133,14 @@ export default class extends Component {
 						filterModal={filterModal}
 						resetFilter={resetFilter}
 					/>
+
+					<DrawerButton
+						icon={'food'}
+						onChangeMapData={onChangeMapData}
+						mapdata={mapdata}
+						filterModal={filterModal}
+						resetFilter={resetFilter}
+					/>
 				</div>
 
 				<div style={lineStyle} />
