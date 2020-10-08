@@ -7,10 +7,10 @@ import switchFilter from './switchFilter/'
 import switchStyle from './switchStyle/'
 import ZoomButton from './ZoomButton'
 
-const mapboxTiles = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicmthYmlzIiwiYSI6ImNqNnZ5b2p5ZjE3OXkycW1uY2pobDJnaWgifQ.yCMd_pWrokn1fJ6xDFGvzg'
+const mapboxTiles = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}'
 const mapboxAttr =  'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
-const mapboxId = 'mapbox.streets'
-const mapboxAccess = 'your.mapbox.access.token'
+const mapboxId = 'mapbox/streets-v11'
+const mapboxAccess = 'pk.eyJ1IjoicmthYmlzIiwiYSI6ImNqNnZ5b2p5ZjE3OXkycW1uY2pobDJnaWgifQ.yCMd_pWrokn1fJ6xDFGvzg'
 
 const componentStyle = {
 	zIndex: 0
